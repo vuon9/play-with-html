@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/inner.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+   
+	<link href="css/player.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
+    <link href="css/skin/daftstar/jplayer.daftstar.skin3.css" rel="stylesheet" type="text/css" />
+	<link href="css/challenge.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+	<script src="js/assets/bootstrap-transition.js"></script>
+    
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script src="js/popbox.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$('.challenge-rules .item').popbox();
+		});
+	
+       $(document).ready(function() {
+             if( navigator.userAgent.match(/iPad/i) != null ){
+                  viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+              }
+
+
+              // Social Share box
+              $('.list ul li .share a.y-btn').bind('click',function(){
+                $(this).parent().parent().parent().parent().find('.btns').hide();
+                $(this).next().show();
+
+              })
+
+              $(document).mouseup(function (e)
+              {
+                  var container = $(".btns");
+                  if (container.has(e.target).length === 0)
+                  {
+                      container.hide();
+                  }
+              });
+
+              //HTML5 Player
+        var myPlayer = $("#jquery_jplayer_p"),
+		myPlayerData,
+		fixFlash_mp4, // Flag: The m4a and m4v Flash player gives some old currentTime values when changed.
+		fixFlash_mp4_id, // Timeout ID used with fixFlash_mp4
+		ignore_timeupdate, // Flag used with fixFlash_mp4
+		options = {
+			ready: function (event) {
+				// Hide the volume slider on mobile browsers. ie., They have no effect.
+				if(event.jPlayer.status.noVolume) {
+					// Add a class and then CSS rules deal with it.
+					$(".jp-gui").addClass("jp-no-volume");
+				}
+				// Determine if Flash is being used and the mp4 media type is supplied. BTW, Supplying both mp3 and mp4 is pointless.
+				fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
+				// Setup the player with media.
+				$(this).jPlayer("setMedia", {
+				    mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+					m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+					oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+				});
+			},
+            play: function() { // To avoid both jPlayers playing together.
+    			$(this).jPlayer("pauseOthers");
+    		},
+			timeupdate: function(event) {
+				if(!ignore_timeupdate) {
+					myControl.progress.slider("value", event.jPlayer.status.currentPercentAbsolute);
+				}
+			},
+			volumechange: function(event) {
+				if(event.jPlayer.options.muted) {
+					myControl.volume.slider("value", 0);
+				} else {
+					myControl.volume.slider("value", event.jPlayer.options.volume);
+				}
+			},
+			swfPath: "js",
+			supplied: "mp3, m4a, oga",
+			cssSelectorAncestor: "#jp_container_p",
+			wmode: "window"
+		},
+		myControl = {
+			progress: $(options.cssSelectorAncestor + " .jp-progress"),
+			volume: $(options.cssSelectorAncestor + " .jp-volume-slider")
+		};
+
+	// Instance jPlayer
+	myPlayer.jPlayer(options);
+
+	// A pointer to the jPlayer data object
+	myPlayerData = myPlayer.data("jPlayer");
+
+	// Define hover states of the buttons
+
+
+	// Create the progress slider control
+	myControl.progress.slider({
+		animate: "fast",
+		max: 100,
+		range: "min",
+		step: 0.1,
+		value : 0,
+		slide: function(event, ui) {
+			var sp = myPlayerData.status.seekPercent;
+			if(sp > 0) {
+				// Apply a fix to mp4 formats when the Flash is used.
+				if(fixFlash_mp4) {
+					ignore_timeupdate = true;
+					clearTimeout(fixFlash_mp4_id);
+					fixFlash_mp4_id = setTimeout(function() {
+						ignore_timeupdate = false;
+					},1000);
+				}
+				// Move the play-head to the value and factor in the seek percent.
+				myPlayer.jPlayer("playHead", ui.value * (100 / sp));
+			} else {
+				// Create a timeout to reset this slider to zero.
+				setTimeout(function() {
+					myControl.progress.slider("value", 0);
+				}, 0);
+			}
+		}
+	});
+
+	// Create the volume slider control
+	myControl.volume.slider({
+		animate: "fast",
+		max: 1,
+		range: "min",
+		step: 0.01,
+		value : $.jPlayer.prototype.options.volume,
+		slide: function(event, ui) {
+			myPlayer.jPlayer("option", "muted", false);
+			myPlayer.jPlayer("option", "volume", ui.value);
+		}
+	});
+
+
+    //playlist
+    var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_p",
+		cssSelectorAncestor: "#jp_container_p"
+	}, [
+		{
+		    mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+  			m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+  			oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+		}
+	], {
+		playlistOptions: {
+			enableRemoveControls: true
+		},
+		swfPath: "js",
+		supplied: "mp3, m4a, oga",
+	});
+    myPlaylist.setPlaylist([
+			{
+			    mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+    			m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+    			oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+
+			},
+		   {
+			    mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+    			m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+    			oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+
+			},
+            {
+			    mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+    			m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+    			oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+
+			}
+		]);
+
+              //HTML5 Player
+
+
+
+      });
+
+    </script>
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content">
+	<div class="container-fluid">
+		<div class="challenge">
+			<div class="banner">
+				<img src="upload//banner.png" alt=""/>
+			</div>
+			<div class="type">HIP HOP CHALLENGE</div>
+			<div class="clear"></div>
+			<div class="body">
+				<div class="challenge-rules row">
+					<div class="span4 item">
+						<h4 class="open title">THE CHALLENGE</h4>
+						<p>Put some guitar licks to the latest Dylan Dog song provided.</p>
+						<div class="pop-up">
+							<div class="pop-up-body">
+								<div class="pop-up-header">
+									<span class="pop-up-title">THE CHALLENGE</span>
+									<a href="#" class="close"><img width="15" height="14" alt="" src="img/close.png"></a>
+								</div>
+								<div class="pop-up-content">
+									<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy. Marzipan candy macaroon lemon drops carrot cake gummies cupcake sugar plum. Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice.</p>
+									<p>Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. Gingerbread bear claw soufflé chocolate bar chupa chups jujubes. Jujubes danish jelly beans tart powder carrot cake. Caramels jujubes applicake pastry pudding gummi bears brownie icing macaroon.</p>
+									<p>Halvah gummi bears apple pie brownie. Dragée donut candy canes gummi bears cake marshmallow pie carrot cake chocolate cake. Cotton candy chocolate bar bonbon pie. Bear claw topping sesame snaps muffin. Pudding chocolate cake chocolate.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span4 item">
+						<h4 class="open title">THE RULES</h4>
+						<p>Download the sample MP4 and re-record it with your own guitar play. When finished upload the file with a new name. 
+							<a href="#">See all Rules</a>
+						</p>
+						<div class="pop-up">
+							<div class="pop-up-body">
+								<div class="pop-up-header">
+									<span class="pop-up-title">THE RULES</span>
+									<a href="#" class="close"><img width="15" height="14" alt="" src="img/close.png"></a>
+								</div>
+								<div class="pop-up-content">
+									<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy. Marzipan candy macaroon lemon drops carrot cake gummies cupcake sugar plum. Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice.</p>
+									<p>Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. Gingerbread bear claw soufflé chocolate bar chupa chups jujubes. Jujubes danish jelly beans tart powder carrot cake. Caramels jujubes applicake pastry pudding gummi bears brownie icing macaroon.</p>
+									<p>Halvah gummi bears apple pie brownie. Dragée donut candy canes gummi bears cake marshmallow pie carrot cake chocolate cake. Cotton candy chocolate bar bonbon pie. Bear claw topping sesame snaps muffin. Pudding chocolate cake chocolate.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span4 item prize">
+						<h4 class="open title">THE PRIZE</h4>
+						<p>A brand new Ibiza Stratocaster VZ1 signed by Dylan Dog.</p>
+						<div class="pop-up">
+							<div class="pop-up-body">
+								<div class="pop-up-header clearfix">
+									<span class="pop-up-title">THE PRIZE</span>
+									<a href="#" class="close"><img width="15" height="14" alt="" src="img/close.png"></a>
+								</div>
+								<div class="pop-up-content clearfix">
+									<div class="clearfix">
+										<div class="left-content">
+											<h3>A brand new Ibiza VZ1 Autographed by Dylan Dog</h3>
+											<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy. Marzipan candy macaroon lemon drops carrot cake gummies cupcake sugar plum. Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice.</p>
+											<p>Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. Gingerbread bear claw soufflé chocolate bar chupa chups jujubes. Jujubes danish jelly beans tart powder carrot cake. Caramels jujubes applicake pastry pudding gummi bears brownie icing macaroon.</p>
+										</div>
+										<div class="right-content">
+											<img src="img/guitar.png" alt=""/>
+										</div>
+									</div>
+									<div class="clearfix intro">
+										<div class="span3 first">
+											<img src="img/guitar1.png" alt=""/>
+											<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy.</p>
+										</div>
+										<div class="span3">
+											<img src="img/guitar2.png" alt=""/>
+											<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy.</p>
+										</div>
+										<div class="span3">
+											<img src="img/guitar3.png" alt=""/>
+											<p>Jelly-o cheesecake tart danish jujubes brownie pudding cake cotton candy.</p>
+										</div>
+									</div>
+									<div class="specs clearfix">
+										<h3>FULL SPECS</h3>
+										<ul>
+											<li> Jelly-o cheesecake tart danish jujubes</li>
+											<li>brownie pudding cake cotton candy</li>
+											<li>Marzipan candy macaroon lemon drops carrot cake</li>
+											<li>Gummies cupcake sugar plum</li>
+											<li>Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu.</li>
+											<li>Bonbon gummies powder croissant bonbon liquorice.</li>
+											<li>Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake</li>
+											<li>Gingerbread bear claw soufflé chocolate bar chupa chups jujubes</li>
+											<li>Jujubes danish jelly beans tart powder carrot cake </li>
+											<li>Caramels jujubes applicake pastry</li>
+											<li>Pudding gummi bears brownie icing macaroon.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="challenge-info">
+					<ul>
+						<li class="time-left">
+							<span class="count">1:25:35 hr</span>
+							<span class="title">TIME LEFT</span>
+						</li>
+						<li class="submissions">
+							<span class="count">345</span>
+							<span class="title">SUBMISSIONS</span>
+						</li>
+						<li class="vote">
+							<span class="count">1,906</span>
+							<span class="title">VOTES</span>
+						</li>
+						<li class="share">
+							<span class="icon"></span>
+							<span class="title">Share</span>
+							<div class="share-social">
+								<a class="fb" href="#"></a>
+								<a class="tw" href="#"></a>
+								<a class="gg" href="#"></a>
+								<a class="ma" href="#"></a>
+							</div>
+						</li>
+						<li class="sign-up">
+							UP TO THE CHALLENGE?<br/>
+							<span>UPLOAD</span> YOUR MEDIA
+						</li>
+					</ul>
+				</div>
+				<div class="submissions">
+					<div class="head">
+						<span class="title">TOP 20 SUBMISSIONS (most voted)</span>
+						<div class="right">
+							<ul>
+								<li><a class="active" href="#"><span class="icon"></span>Top 20</a></li>
+								<li><a href="#"><span class="icon"></span>Newest</a></li>
+								<li><a href="#"><span class="icon"></span>Hot!</a></li>
+								<li><a href="#"><span class="icon"></span>See all</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="list">
+						<div class="list-head row">
+							<div class="before">BEFORE</div>
+							<div class="now">NOW</div>
+							<div class="avatar"></div>
+							<div class="name-time">ARTIST<br/>SONG NAME / TIME</div>
+							<div class="rate-step"></div>
+							<div class="votes">VOTES</div>
+							<div class="like">LIKE IT</div>
+							<div class="social">SOCIAL</div>
+						</div>
+						<div class="list-body">
+							<div class="clicked item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">1</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+										<div class="html5player">
+											<div class="player">
+												<div id="jquery_jplayer_p" class="jp-jplayer"></div>
+												<div id="jp_container_p" class="jp-audio">
+													<div class="jp-type-single">
+														<div class="jp-gui jp-interface">
+															<ul class="jp-controls">
+																<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+																<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>						
+															</ul>
+															<ul class="jp-controls vol-controls">
+																<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+																<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+																<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+															</ul>
+															<div class="jp-progress">
+																<div class="jp-seek-bar">
+																	<div class="jp-play-bar"></div>
+																</div>
+															</div>
+															<div class="jp-volume-slider"></div>
+															<div class="jp-volume-bar">
+																<div class="jp-volume-bar-value"></div>
+															</div>
+															<div class="jp-time-holder">
+																<div class="jp-duration"></div>
+															</div>
+														</div>
+														<div class="jp-playlist">
+															<ul>
+																<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+																<li></li>
+															</ul>
+														</div>
+
+														<div class="jp-no-solution">
+															<span>Update Required</span>
+															To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="top-five item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+										<div class="html5player">
+											<div class="player">
+												<div id="jquery_jplayer_p" class="jp-jplayer"></div>
+												<div id="jp_container_p" class="jp-audio">
+													<div class="jp-type-single">
+														<div class="jp-gui jp-interface">
+															<ul class="jp-controls">
+																<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+																<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>						
+															</ul>
+															<ul class="jp-controls vol-controls">
+																<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+																<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+																<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+															</ul>
+															<div class="jp-progress">
+																<div class="jp-seek-bar">
+																	<div class="jp-play-bar"></div>
+																</div>
+															</div>
+															<div class="jp-volume-slider"></div>
+															<div class="jp-volume-bar">
+																<div class="jp-volume-bar-value"></div>
+															</div>
+															<div class="jp-time-holder">
+																<div class="jp-duration"></div>
+															</div>
+														</div>
+														<div class="jp-playlist">
+															<ul>
+																<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+																<li></li>
+															</ul>
+														</div>
+
+														<div class="jp-no-solution">
+															<span>Update Required</span>
+															To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>					
+								</div>
+							</div>
+							
+							<div class="clicked item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">1</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="decrease">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+										<div class="html5player">
+											<div class="player">
+												<div id="jquery_jplayer_p" class="jp-jplayer"></div>
+												<div id="jp_container_p" class="jp-audio">
+													<div class="jp-type-single">
+														<div class="jp-gui jp-interface">
+															<ul class="jp-controls">
+																<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+																<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>						
+															</ul>
+															<ul class="jp-controls vol-controls">
+																<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+																<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+																<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+															</ul>
+															<div class="jp-progress">
+																<div class="jp-seek-bar">
+																	<div class="jp-play-bar"></div>
+																</div>
+															</div>
+															<div class="jp-volume-slider"></div>
+															<div class="jp-volume-bar">
+																<div class="jp-volume-bar-value"></div>
+															</div>
+															<div class="jp-time-holder">
+																<div class="jp-duration"></div>
+															</div>
+														</div>
+														<div class="jp-playlist">
+															<ul>
+																<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+																<li></li>
+															</ul>
+														</div>
+
+														<div class="jp-no-solution">
+															<span>Update Required</span>
+															To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="top-five item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="top-five item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now first">2</div>
+									<div class="avatar"><img src="upload//img-avatar-small.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="voted like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+									<div class="item-info">
+										<div class="info">
+											Chocolate cake donut jujubes macaroon. Wypas sweet sugar plum tiramisu. Bonbon gummies powder croissant bonbon liquorice. 
+											Gummies tiramisu ice cream marzipan bonbon candy dessert cheesecake. 
+											Gingerbread bear claw soufflé chocolate bar chupa chups jujubes.
+										</div>
+									</div>					
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="list">
+						<div class="list-head row">
+							<div class="before">BEFORE</div>
+							<div class="now">NOW</div>
+							<div class="avatar"></div>
+							<div class="name-time">ARTIST<br/>SONG NAME / TIME</div>
+							<div class="rate-step"></div>
+							<div class="votes">VOTES</div>
+							<div class="like">LIKE IT</div>
+							<div class="social">SOCIAL</div>
+						</div>
+						<div class="list-body">
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="decrease">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="left">
+									<div class="before">3</div>
+									<div class="now">11</div>
+									<div class="avatar"><img src="upload//img-avatar.png" alt=""/></div>
+								</div>
+								<div class="right">
+									<div class="name-time">
+										<h4 class="name"><a href="#">Matt Stone and the Light Orchestra</a></h4>
+										<span class="time">Let My Guitar Gently Weep (Basement Version) / 5:39 min</span>
+										<span class="author">Arista Productions</span>
+									</div>
+									<div class="rate-step"><span class="increase">1</span></div>
+									<div class="votes">282</div>
+									<div class="like"><span></span></div>
+									<div class="social"><span></span>Share
+										<ul class="social-icon">
+											<li><a class="fb" href="#"></a></li>
+											<li><a class="tw" href="#"></a></li>
+											<li><a class="gg" href="#"></a></li>
+											<li><a class="ma" href="#"></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="head">
+						<span class="title">TOP 20 SUBMISSIONS (most voted)</span>
+						<div class="right">
+							<ul>
+								<li><a class="active" href="#"><span class="icon"></span>Top 20</a></li>
+								<li><a href="#"><span class="icon"></span>Newest</a></li>
+								<li><a href="#"><span class="icon"></span>Hot!</a></li>
+								<li><a href="#"><span class="icon"></span>See all</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="footer">
+					<p class="author">2014 © DAFTSTAR. All rights reserved. All names and brands are the property of their respective owners.</p>
+					<a class="link" href="#">Terms & Conditions</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="space40"></div>
+		</div>
+	</div>
+</div>
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+      <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+      <div  class="footer-menu-cols">
+        <ul>
+            <!-- WHO WE ARE Menu -->
+            <li class="first">
+                <ul class="foot-menu">
+                    <li class="title">WHO WE ARE</li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </li>
+
+            <!-- CATEGORIES Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CATEGORIES</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">MP3s</a></li>
+                    <li><a href="#">RADIO</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">INTERVIEWS</a></li>
+                    <li><a href="#">CHALLENGE</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">STORE</a></li>
+
+                </ul>
+            </li>
+
+            <!-- MOBILE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">MOBILE</li>
+                    <li><a href="#">IPHONE</a></li>
+                    <li><a href="#">IPAD</a></li>
+                    <li><a href="#">ANDROID</a></li>
+                </ul>
+            </li>
+
+            <!-- LEGAL Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">LEGAL</li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COPYRIGHT</a></li>
+                </ul>
+            </li>
+
+            <!-- CONNECT Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CONNECT</li>
+                    <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                    <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                    <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                    <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                </ul>
+            </li>
+
+            <!-- WEBSITE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">WEBSITE</li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </li>
+
+            <!-- LANGUAGE Menu -->
+            <li class="last">
+                <ul class="foot-menu">
+                    <li class="title">LANGUAGE</li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SPANISH</a></li>
+                    <li><a href="#">FRENCH</a></li>
+                    <li><a href="#">GERMAN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

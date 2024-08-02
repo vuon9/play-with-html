@@ -1,0 +1,282 @@
+/*Challenge sprite*/
+.challenge-info .share .icon,
+.challenge-info .share-social a,
+.challenge .head .right .icon,
+.submissions .list-body .like span,
+.submissions .list-body .voted span,
+.submissions .list-body .social span,
+.submissions .list .rate-step span,
+.challenge .html5player .player a.jp-play, 
+.challenge .html5player .player a.jp-pause,
+.challenge .html5player .player .ui-state-default, 
+.challenge .html5player .player .ui-widget-content .ui-state-default, 
+.challenge .html5player .player .ui-widget-header .ui-state-defaul { background-image: url(../img/challenge-sprites.png); background-repeat: no-repeat; }
+/*General*/
+.challenge  { margin-top: 20px; position: relative; }
+.challenge .body { border: 3px solid #00ccff; }
+.challenge .type { background: #00ccff; color: #373832; float: left; font-size: 18px; margin: -31px 10px 0 0;
+	padding: 8px 12px 5px; position: relative; z-index: 1; 
+}
+.challenge .close { color: #fff; height: 20px; opacity: 1; margin-top: -2px; position: relative; width: 20px; z-index: 2; } 
+.challenge .close img { display: block; margin: 3px auto; } 
+
+/*Challenge media*/
+.challenge .media { background: #000; background: rgba(0,0,0,0.9); border: 3px solid #00ccff; padding: 15px 18px; position: absolute; top: 0; width: 918px; z-index: 10001; }
+.challenge .media .media-header .title { color: #fff; float: left; font-size: 30px; line-height: 1; margin: 0; }
+.challenge .media .media-header .close { background-color: #ed1c24; }
+.challenge .media .media-content { margin-top: 20px; }
+
+/*Challenge share the media*/
+.challenge .share-media .item { color: #fff; float: left; height: 156px; padding: 12px 25px; width: 409px; }
+.challenge .share-media .item p { font-family: 'Tahoma',sans-serif; font-weight: bold; }
+.challenge .share-media .item input { height: 20px; }
+.challenge .share-media .item .title { color: #fff100; display: block; font-size: 24px; line-height: 1; margin-bottom: 12px; }
+.challenge .share-media .social { background: #00ccff; }
+.challenge .share-media .y-media { background: #fff100; color: #464646; }
+.challenge .share-media .y-media .title { color: #0f0f0f; }
+.challenge .share-media .y-media input { margin-left: 50px; width: 290px; }
+.challenge .share-media .email { background: #ed1c24; }
+.challenge .share-media .email input { width: 390px; }
+.challenge .share-media .code { background: #464646; }
+.challenge .share-media .code textarea { height: 48px; overflow: hidden; resize: none; width: 390px; }
+/*Social*/
+.challenge .share-media .social ul { margin-left: 60px; }
+.challenge .share-media .social li { float: left; list-style: none; }
+.challenge .share-media .social li a { background: url(../../src/img/media.png) no-repeat; display: block; height: 52px; margin-right: 10px;  width: 50px; }
+.challenge .share-media .social li:nth-child(2) a { background-position: -62px 0; }
+.challenge .share-media .social li:nth-child(3) a { background-position: -124px 0; }
+.challenge .share-media .social li:nth-child(4) a { background-position: -187px 0; }
+.challenge .share-media .social li:nth-child(5) a { background-position: -249px 0; }
+
+/*/*Challenge upload media*/
+.challenge .upload-media .cancel { height: 37px; margin-top: -1px; margin-right: 10px; }
+.challenge .upload-media .fullscreen { display: block; float: right; }
+.challenge .upload-bar { background: #f1038f; bottom: 0;  height: 3px; position: absolute; }
+.challenge .upload-progress .signs ul { font-family: 'Tahoma',sans-serif; float: left; margin-top: 8px; }
+.challenge .upload-progress .signs ul li { color: #959595; margin-left: 0; margin-right: 10px; }
+.challenge .size { color: #fff; float: left; font-family: 'Tahoma',sans-serif; font-weight: bold; }
+.challenge .upload-progress .signs ul li.media-size {  margin-left: 140px; }
+.challenge .upload-list { border-bottom: 1px solid #C2C2C2; border-top: 1px solid #C2C2C2; position: relative; }
+.challenge .upload-list .upload-bar,
+.challenge .upload-list .uploaded { display: none; }
+.challenge .upload-list .name { color: #fff; display: none; font-family: 'Tahoma',sans-serif; font-weight: bold; margin-top: 4px; }
+.challenge .upload-list .actions .uploaded { background: url("../img/uploaded.jpg") no-repeat; margin-right: 5px; margin-top: 4px; }
+.challenge .upload-list .size { margin-top: 5px; }
+.challenge .upload-list .actions { width: auto; }
+.challenge .upload-list .actions .remove { background: url("../img/dark-remove.png") no-repeat; float: left; margin-top: 3px; }
+.challenge .upload-list .actions .preview { background: #c2c2c2; color: #959595; display: block; float: left; font-size: 24px; height: 30px; line-height: 30px; text-align: center; width: 280px; }
+.challenge .upload-list.progress-up .uploaded,
+.challenge .upload-list.progress-up .upload-bar,
+.challenge .upload-list.progress-up .actions .uploaded,
+.challenge .upload-list.progress-up .name { display: block; }
+.challenge .upload-list.progress-up .actions .remove { background: url("../img/remove.png") no-repeat; }
+.challenge .upload-list.progress-up .preview { color: #fff100; }
+.challenge .upload-list.review .preview { background: #00ccff; color: #fff; font-size: 19px; }
+
+/*Information*/
+.information .body { border: none; color: #fff; }
+.information fieldset { float: left; margin-left: 18px; width: 366px; }
+.information .avatar { margin-left: 0; width: 148px; }
+.information .avatar .yellow-btn { margin-top: 10px; padding-left: 13px; padding-right: 13px; }
+.information .avatar img { border: 1px solid #fff; height: 148px; width: 148px; }
+.information .control-label { font-weight: bold; margin-bottom: 10px; }
+.information input { height: 20px; margin-bottom: 5px; width: 340px; }
+.information textarea { width: 340px; height: 87px; }
+.information .submit { padding-left: 100px; padding-right: 100px; }
+.information .accept { font-size: 14px; }
+.information .accept a { color: #fff100; font-weight: bold; text-decoration: underline; }
+
+/*Challenge rules*/
+.challenge-rules { background: #0f0f0f; color: #fefefe; padding: 12px 0 10px; position: relative; }
+.challenge-rules.row { margin-bottom: 0; }
+.challenge-rules .item { cursor: pointer; margin-left: 10px; width: 300px !important; }
+.challenge-rules .title { color: #fff100; font-size: 18px; font-weight: normal; margin: 0 10px 0 0;  }
+.challenge-rules p { font-family: 'Tahoma',sans-serif; }
+.challenge-rules p a { color: #fff100; text-decoration: underline; }
+/*Challenge rules popup*/
+.challenge-rules .pop-up { left: 124px; position: absolute; top: -3px; width: 700px; z-index: 1000; }
+.challenge-rules .pop-up-body { background: #fcfcfc; border: 3px solid #00ccff; 
+	box-shadow: 0 0 5px 2px #454747; -webkit-box-shadow: 0 0 5px 2px #454747; -moz-box-shadow: 0 0 5px 2px #454747;
+	color: #0f0f0f; display: none; padding: 12px 10px; }
+.challenge-rules .pop-up-content { font-family: 'Tahoma',sans-serif; line-height: 1.4; margin: 12px 0; }
+.challenge-rules .pop-up-content  p { margin-bottom: 12px; }
+.challenge-rules .pop-up-title { font-size: 18px; line-height: 1.2; }
+.challenge-rules .close { background: #0f0f0f;  } 
+.challenge-rules .close:hover { background: #4d4c4c; } 
+.challenge-rules .left-content { float: left; width: 360px }
+.challenge-rules .right-content { float: right; margin-top: -55px; }
+/*Challenge rules popup prize*/
+.challenge-rules .prize .pop-up-title { display: block; float: left; font-size: 36px; }
+.challenge-rules .prize .left-content h3 { color: #fff100; font-weight: normal; line-height: 1; margin: 20px 0 30px; text-shadow: 0 0 1px #000; }
+.challenge-rules .prize .intro { border-bottom: 3px solid #00ccff; border-top: 3px solid #00ccff; padding: 22px 0; }
+.challenge-rules .prize .intro .span3 { margin-left: 37px; width: 200px; }
+.challenge-rules .prize .intro .span3.first { margin-left: 0; }
+.challenge-rules .prize .intro img { border: 2px solid #959595; display: block; }
+.challenge-rules .prize .intro p { margin: 10px 4px 0; }
+
+.challenge-rules .prize .specs { font-size: 14px; }
+.challenge-rules .prize .specs ul { margin-left: 15px; }
+.challenge-rules .prize .specs li { float: left; margin-right: 5%; width: 45%; }
+.challenge-rules .prize .specs h3 { font-family:'Fjalla One',sans-serif; font-weight: normal; }
+
+/*Challenge Info bar*/
+.challenge-info { background: #000; border-top: 3px solid #00ccff; overflow: hidden; }
+.challenge-info ul { margin: 0; }
+.challenge-info li { float: left; height: 51px; list-style: none; padding-top: 9px; width: 190px; }
+.challenge-info .count,
+.challenge-info .title { display: block; line-height: 25px; text-align: center; }
+.challenge-info .count { color: #fff100; font-size: 26px; }
+.challenge-info .title { color: #fefefe; font-family: 'Tahoma',sans-serif; font-size: 14px; }
+.challenge-info .submissions,
+.challenge-info .share { background: #464646; position: relative; width: 192px; }
+.challenge-info .share:hover .share-social { display: block; transition: all 2s; -webkit-transition: all 2s; }
+.challenge-info .share .icon { background-position: 0 0; display: block; float: left; height: 23px; margin: 8px 11px 19px 48px; 
+	width: 23px; 
+}
+.challenge-info .share .title { font-size: 20px; font-weight: bold; text-align: left; margin-top: 5px; }
+.challenge-info .share-social { display: none; left: 0; position: absolute; top: 0; }
+.challenge-info .share-social a { display: block; float: left; height: 32px; width: 48px; }
+.challenge-info .share-social .fb { background: url(../img/bs_fb2.jpg) no-repeat; }
+.challenge-info .share-social .tw { background-position: -81px 0; }
+.challenge-info .share-social .gg { background-position: -129px 0; }
+.challenge-info .share-social .ma { background-position: -177px 0; }
+.challenge-info .sign-up { background: #ed1c24; color: #fff; font-size: 18px; text-align: center; }
+.challenge-info .sign-up span{ color: #fff100; }
+
+/*Challenge winner*/
+.challenge .winner { background: #191919; color: #fff; font-family: 'Tahoma',sans-serif; padding: 15px 10px; }
+.challenge .winner-head { border-bottom: 1px solid #00ccff; margin-bottom: 20px; }
+.challenge .winner-head h2 { float: left; font-size: 48px; font-family: 'Fjalla One',sans-serif; line-height: 1.2; width: 200px; }
+.challenge .winner-head .play-control { float: left; margin-left: 16px; padding-left: 10px; width: 560px; }
+.challenge .winner-head .play-control h5 { color: #fff100; font-size: 20px; font-weight: bold; }
+.challenge .winner-head .play-control p{ font-size: 18px; }
+.challenge .video .ui-state-default, 
+.challenge .video .ui-widget-content .ui-state-default, 
+.challenge .video .ui-widget-header .ui-state-defaultt { background: none; border: none; }
+.challenge .video .videoPlayer { width: 492px; } 
+.challenge .video ul.jpv-controls.small a.jpv-play { display: none !important; } 
+.challenge .winner-head  .position { float: right; background: #ed1c24; font-size: 57px; font-family: 'Fjalla One',sans-serif; line-height: 1; padding: 17px 20px; }
+
+.winner-body .avatar { float: left; width: 200px; }
+.winner-body .avatar img { border: 1px solid #fff; width: 198px; }
+.winner-body .avatar .yellow-btn { display: block; float: none; font-size: 24px; height: 36px; line-height: 36px; margin-top: 10px; padding: 0; text-align: center; }
+.winner-body .social-icon { margin: 0; padding: 0; }
+.winner-body .social-icon li { margin-right: 10px; margin-top: 5px; }
+.winner-body .details { float: left; font-size: 13px; line-height: 1.2; margin: 0 15px; width: 208px; }
+
+/*Challenge submissions*/
+/*Challenge submissions head*/
+.submissions .head  { font-size: 25px; padding: 22px 10px 20px; }
+.submissions .head .right { float: right; }
+.submissions .head .right a { color: #959595; }
+.submissions .head .right a:hover { text-decoration: none; }
+.submissions .head .right a:hover,
+.submissions .head .right .active { color: #353434; }
+.submissions .head .right ul { float: right; }
+.submissions .head .right li { float: left; list-style: none; margin-left: 24px; }
+.submissions .head .right .icon { background-position: 0 -70px; display: block; float: left; height: 22px; margin-right: 5px; width: 19px; }
+/*Challenge submissions list*/
+.submissions .list { border-bottom: 1px solid #959595; margin: 10px 0; }
+.submissions .list .before { width: 50px; }
+.submissions .list .now { margin: 0 5px; width: 50px; }
+.submissions .list .rate-step { width: 50px; }
+.submissions .list .votes { margin: 0 5px; width: 80px; }
+.submissions .list .like { margin-right: 5px; width: 80px; }
+.submissions .list .social { width: 82px; }
+.submissions .list .avatar { width: 70px; }
+.submissions .list .name-time { text-align: left; width: 462px; }
+/*Challenge submissions list head*/
+.submissions .list .list-head { color: #ebebeb; overflow: hidden; }
+.submissions .list .list-head.row { margin-bottom: 0; }
+.submissions .list .list-head div { background: #0f0f0f; float: left; font-size: 18px; height: 40px; line-height: 2.23; text-align: center; }
+.submissions .list .list-head .before { font-size: 14px; line-height: 2.85;  }
+.submissions .list .list-head .now { background: #ed1c24; }
+.submissions .list .list-head .name-time { font-size: 14px; height: 36px; line-height: 1.2; padding: 4px 0 0 5px; text-align: left; }
+/*Challenge submissions list body*/
+.submissions .list-body { margin: 10px 0 0; }
+.submissions .list-body .before,
+.submissions .list-body .now,
+.submissions .list-body .votes { font-weight: bold; line-height: 64px; }
+.submissions .list-body .before { font-size: 18px; }
+.submissions .list-body .now { border-left: 1px solid #959595; font-size: 24px; width: 46px; }
+/*Challenge Rate step */
+.submissions .list .rate-step span { background-position: -118px -182px; color: #fff; display: block; font-size: 14px; height: 10px; margin: 12px auto; padding: 15px 0; text-indent: -1984em; width: 38px; }
+.submissions .list .rate-step span.increase { background-position: 0 -182px; text-indent: 0; }
+.submissions .list .rate-step span.decrease { background-position: -55px -182px; height: 16px; padding: 9px 0; text-indent: 0; }
+
+.submissions .list-body .votes { font-size: 22px; }
+.submissions .list-body .avatar { margin-right: 5px; height: 64px; overflow: hidden; width: 70px; }
+.submissions .list-body .name-time { text-align: left; }
+.submissions .list-body .name-time span { color: #0f0f0f; display: block; font-size: 13px; }
+.submissions .list-body .name-time .name { font-size: 16px; font-weight: bold; margin: 0; padding-top: 7px; }
+.submissions .list-body .name-time .name a { color: #000; }
+.submissions .list-body .like span,
+.submissions .list-body .voted span { cursor: pointer; display: block; height: 35px; margin: 14px auto; width: 76px; }
+.submissions .list-body .like span { background-position: 0 -103px; }
+.submissions .list-body .voted span { background-position: -89px -103px; }
+/*Challenge submissions social*/
+.submissions .list-body .social { color: #464646; font-size: 15px; font-weight: bold; position: relative; text-align: center; }
+.submissions .list-body .social span { background-position: 0 -26px; display: block; margin: 12px auto 0; height: 21px; width: 21px; }
+.submissions .list-body .social-icon { display: none; list-style: none; right: 0; margin: 0; padding: 0; position: absolute; top: 0; width: 68px; }
+.submissions .list-body .social:hover .social-icon { display: block; }
+.submissions .social-icon li { float: left; }
+.submissions .social-icon a { display: block; height: 32px; width: 34px; }
+.submissions .social-icon .fb { background: url(../../src/img/bs_fb2.jpg) no-repeat; }
+.submissions .social-icon .tw { background: url(../../src/img/bs_tw2.jpg) no-repeat; }
+.submissions .social-icon .gg { background: url(../../src/img/bs_google2.jpg) no-repeat; }
+.submissions .social-icon .ma { background: url(../../src/img/bs_email2.jpg) no-repeat; }
+/*Challenge submissions charts*/
+.submissions .top-five { background: #ccf5ff; }
+.submissions .first { color: #ef1c23; }
+/*Challenge submissions item*/
+.submissions .item div { float: left; font-family: 'Tahoma',sans-serif; text-align: center; }
+.submissions .item .item-info { display: none; }
+.submissions .item .left { float: left; width: 185px; }
+.submissions .item .right { float: left; width: 769px; }
+.submissions .list .item { border-top: 1px solid #959595; height: 64px; }
+.submissions .list .item:after { content: ''; clear: both; display: block; }
+.submissions .list .clicked { background: #fff100; height: 148px; }
+.submissions .clicked .item-info { display: block; }
+.submissions .clicked .left { float: left; width: 265px; }
+.submissions .clicked .right { float: left; width: 689px; }
+.submissions .list .clicked .now { height: 148px; }
+.submissions .list .clicked .avatar { height: 148px; width: 150px; }
+.submissions .list .clicked .name-time { width: 382px; }
+
+.submissions .list .item-info { float: left; line-height: 1.2; }
+.submissions .list .info { height: 43px; overflow: hidden; text-align: left; }
+
+/*Challenge media*/
+.challenge .jp-type-single { width: 100%; }
+.challenge .html5player .player div.jp-audio { height: auto; margin: 0; }
+.challenge .html5player .player div.jp-audio div.jp-type-single div.jp-interface { height: auto; }
+.challenge .html5player .player div.jp-audio ul.jp-controls { margin: 10px 0; padding: 0; top: -5px; }
+.challenge .html5player .player div.jp-audio, 
+.challenge .html5player .player div.jp-audio-stream, 
+.challenge .html5player .player div.jp-video,
+.challenge .html5player .player div.jp-interface { background: transparent; }
+.challenge .html5player .player a.jp-play, 
+.challenge .html5player .player a.jp-pause { height: 21px; margin: 0; width: 17px; }
+.challenge .html5player .player a.jp-play { background-position: 0 -148px; }
+.challenge .html5player .player a.jp-pause { background-position: -26px -148px; }
+.challenge .html5player .player div.jp-play-bar,
+.challenge .html5player .player div.jp-volume-bar-value { background: #00ccff; }
+.challenge .html5player .player div.jp-audio div.jp-type-single div.jp-progress { left: 35px; top: 19px; width: 382px;}
+.challenge .html5player .player div.jp-audio div.jp-volume-bar { top: 19px; }
+.challenge .html5player .player .jp-volume-slider { top: 19px; }
+.challenge .html5player .player .ui-state-default, 
+.challenge .html5player .player .ui-widget-content .ui-state-default, 
+.challenge .html5player .player .ui-widget-header .ui-state-default { background-position: -53px -148px; }
+.challenge .html5player .player div.jp-audio div.jp-type-single div.jp-time-holder { left: 30px; top: 11px; width: 430px; }
+
+/*Challenge Footer*/
+.challenge .footer { background: #464646; font-family: 'Tahoma',sans-serif; font-size: 14px; overflow: hidden; padding: 20px 10px 0 20px; }
+.challenge .footer .author { color: #fff; float: left; }
+.challenge .footer .link { color: #fff; display: block; float: right; }
+
+/*Page 71 - completed*/
+.challenge .completed { background: #00ccff; position: absolute; right: -169px; top: 150px; width: 171px; z-index: 1000; }
+.challenge .completed  h3 { color: #fff; float: left; font-size: 24px; margin: 6px 0 0 10px; }
+.challenge .completed  .fullscreen { float: right; margin-right: 3px; margin-top: 3px; }
+.challenge .completed  p { background: #000; color: #fff; margin: 0 3px; padding: 10px; }
+.challenge .completed  .yellow-btn { border: none; font-size: 24px; height: 35px; margin: 0 3px 3px; padding: 0; width: 165px;  }

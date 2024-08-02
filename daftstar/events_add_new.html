@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet" >
+    <link href="css/inner.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/assets/bootstrap-modal.js"></script>
+    <script src="js/search.js"></script>
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+             if( navigator.userAgent.match(/iPad/i) != null ){
+                  viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+              }
+            //$('.add-btn').click(function(){
+                $('#AddNewEventModal').modal('show');
+            //});
+
+
+            // select element styling
+            $('select.select4').each(function(){
+                var title = $(this).attr('title');
+                var classn = $(this).attr('class');
+                if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+                $(this)
+                    .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+                    .after('<span class="'+classn+'">' + title + '</span>')
+                    .change(function(){
+                        val = $('option:selected',this).text();
+                        $(this).next().text(val);
+                        })
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+            });
+      });
+
+    </script>
+
+
+</head>
+<body>
+<!-- Modal -->
+<div class="modal hide fade span12" id="AddNewEventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="img/close.png" width="15" height="14" alt="" /></button>
+      <div class="title">ADD NEW EVENT</div>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="Artist / Bandname" />
+                    </div>
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="Event Name" />
+                    </div>
+                    <div class="row">
+                        <div class="select select-style1">
+                            <select class="select4" title="TYPE">
+                                <option value='1'>January</option>
+                                <option value='2'>February</option>
+                                <option value='3'>March</option>
+                                <option value='4'>April</option>
+                                <option value='5'>May</option>
+                                <option value='6'>June</option>
+                                <option value='7'>July</option>
+                                <option value='8'>August</option>
+                                <option value='9'>September</option>
+                                <option value='10'>October</option>
+                                <option value='11'>November</option>
+                                <option selected value='12'>December</option>
+                            </select>
+                        </div>
+
+                        <div class="select select-style2">
+                            <select class="select4" title="TYPE">
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option selected value="31">31</option>
+                            </select>
+                        </div>
+
+                        <div class="select select-style2">
+                            <select class="select4" title="TYPE">
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option selected value="2013">2013</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="Address" />
+                    </div>
+
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="City" />
+                    </div>
+
+                    <div class="row">
+                        <div class="select select-style3">
+                            <select class="select4" title="TYPE">
+                                <option value="1">State 1</option>
+                                <option value="2">State 2</option>
+                                <option value="3">State 3</option>
+                                <option selected value="4">State 4</option>
+                            </select>
+                        </div>
+                        <input type="text" class="w145" placeholder="Zip">
+                    </div>
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="Contact Phone">
+                    </div>
+                    <div class="row">
+                        <input class="w450" type="text" placeholder="Email">
+                    </div>
+                    <div class="row">
+                        <textarea class="w450" placeholder="Event Details"></textarea>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="row choose-image">
+                        <div class="file">
+                            <input type="file" class="file-control">
+                            <div class="file-control-label"><p>Choose Image</p></div>
+                        </div>
+                        <div class="btn-area">
+                            <div class="row remember">
+                                <input type="checkbox" id="remember" name="remember" class="checkbox" checked="checked">
+                                <label for="remember" class="step-ForCheck"></label>
+                                <span>I accept Daftstar <a href="#">Terms & Conditions</a></span>
+                            </div>
+                            <div class="row">
+                                <a href="#" class="btn-yellow">Cancel</a>
+                                <a href="#" class="btn-yellow">Add Event</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner events">
+<div class="container-fluid">
+    <div class="page-title">EVENTS</div>
+    <div class="space40"></div>
+
+    <div class="right-sidebar">
+    <div class="section">
+        <div class="body">
+            <img src="img/temp_r4.jpg" width="261" height="250" alt="" />
+        </div>
+    </div>
+    <div class="section">
+        <div class="body">
+            <img src="img/temp_r4.jpg" width="261" height="250" alt="" />
+        </div>
+    </div>
+    <div class="fb-container">
+        <img src="img/fb-box.jpg" width="262" height="290" alt="" />
+    </div>
+    </div>
+    <div class="left-content">
+     <!-- UPCOMING  Section -->
+      <div class="section">
+        <div class="head">
+            <span class="title">UPCOMING EVENTS</span>
+             <span class="more"><a href="#">more</a></span>
+             <span class="more-right2"><div class="add-btn"><a href="#">ADD NEW EVENT</a></div></span>
+        </div>
+        <div class="body">
+            <div class="row">
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+     <!-- TO DIE FOR  Section -->
+      <div class="section">
+        <div class="head">
+            <span class="title">TO DIE FOR</span>
+             <span class="more"><a href="#">more</a></span>
+        </div>
+        <div class="body">
+            <div class="row">
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+     <!-- BY CITY  Section -->
+      <div class="section">
+        <div class="head">
+            <span class="title">BY CITY</span>
+             <span class="more"><a href="#">more</a></span>
+        </div>
+        <div class="body">
+            <div class="row">
+                <div class="search-city">
+                    <form>
+                        <input type="text" value="City Search" name="keyword" class="search-input2">
+                        <input type="submit" value="" class="search-btn2">
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2 first">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+                <div class="span3 blockB2">
+                    <div class="image">
+                        <a href="#"><img src="img/temp_r5.jpg" width="62" height="62" alt="" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="title"><a href="#">Super Star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="location">Edinburgh, UK - Jun 17</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </div>
+
+
+
+    </div>
+    <div class="clear"></div>
+    <div class="space40"></div>
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+        <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+          <div  class="footer-menu-cols">
+            <ul>
+                <!-- WHO WE ARE Menu -->
+                <li class="first">
+                    <ul class="foot-menu">
+                        <li class="title">WHO WE ARE</li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="advertisement.html">ADVERTISING</a></li>
+                        <li><a href="press_100.html">PRESS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+
+                <!-- CATEGORIES Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CATEGORIES</li>
+                        <li><a href="home_login.html">HOME</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="mp3_albums.html">MP3s</a></li>
+                        <li><a href="radio.html">RADIO</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="interviews.html">INTERVIEWS</a></li>
+                        <li><a href="challenge_73.html">CHALLENGE</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+
+                <!-- MOBILE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">MOBILE</li>
+                        <li><a href="#">IPHONE</a></li>
+                        <li><a href="#">IPAD</a></li>
+                        <li><a href="#">ANDROID</a></li>
+                    </ul>
+                </li>
+
+                <!-- LEGAL Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">LEGAL</li>
+                        <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="copyright.html">COPYRIGHT</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONNECT Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CONNECT</li>
+                        <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                        <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                        <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                        <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                    </ul>
+                </li>
+
+                <!-- WEBSITE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">WEBSITE</li>
+                        <li><a href="sitemap.html">SITEMAP</a></li>
+                    </ul>
+                </li>
+
+                <!-- LANGUAGE Menu -->
+                <li class="last">
+                    <ul class="foot-menu">
+                        <li class="title">LANGUAGE</li>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SPANISH</a></li>
+                        <li><a href="#">FRENCH</a></li>
+                        <li><a href="#">GERMAN</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

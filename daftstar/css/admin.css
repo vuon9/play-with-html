@@ -1,0 +1,107 @@
+/**
+*   ADMIN
+*/
+.admin .tab-content .row .container-fluid {     width:100%;  }
+.admin .page-title {     line-height:18px;  }
+.admin .section ul.nav {     margin:12px 0 15px;     border-bottom:1px solid #E0E0E0;     padding:2px 0;  }
+.admin .section ul.nav li > a {     float:left;     width:auto;     padding:7px 19px;     font-size:19px;     font-weight:normal;     color:#fff;     margin-right:4px;     border:none;     -webkit-border-radius:0px;     -moz-border-radius:0px;     border-radius:0px;  }
+.admin .section ul.nav li.active > a {    color:#373832;     border:none;     outline:none;  cursor: pointer;}
+.admin .section ul.nav li.right {     float:right;     padding-bottom:0;  }
+.admin .section .more-right {     display:block;     margin:20px 0 0px;     font:11px Tahoma,sans-serif;  }
+.admin .tab-content {     font:12px Tahoma;  }
+.admin .tab-content .tab-pane .note {     font-weight:bold;     margin:16px 0;     width:790px;  }
+.admin .tab-content .tab-pane form > .row {     border-bottom:1px solid #E0E0E0;     padding:13px 20px 6px;  }
+.admin .tab-content .tab-pane form > .row.buttons-row {     border:none;     text-align:right;     padding-right:0;  }
+.admin .tab-content .tab-pane form > .row.buttons-row .span2 {     float:right;     width:185px;  }
+.admin .tab-content .tab-pane form > .row.buttons-row .span2 input {     float:left;     margin:0 0 0 5px;  }
+.admin .tab-content .tab-pane form > .row .title {     font-weight:bold;     width:115px;     margin-top:3px;  }
+.admin .tab-content .tab-pane form > .row .title2 {     font-weight:bold;     width:130px;     margin-top:4px;     text-align:right;  }
+.admin .tab-content .tab-pane form > .row .title3 {     font-weight:bold;     margin-top:3px;     text-align:right;     margin-left:0;     width:50px;  }
+.admin .tab-content .tab-pane form > .row .fields {     font-weight:bold;     margin-left:5px;     min-height:35px;  }
+.admin .tab-content .tab-pane form > .row .fields3 {     font-weight:bold;     margin-left:5px;     width:70%;  }
+.admin .tab-content textarea {     height:190px;     width:603px;     color:#1B1B1B;     font-size:13px;     margin-left:5px;     resize:none;     margin-bottom:10px;  }
+.admin .tab-content input[type='text'] {     height:16px;     width:286px;     color:#1B1B1B;     font-size:13px;  }
+.admin .tab-content input.fullWidth[type='text'] {     width:604px;  }
+.admin .tab-content .span4 {     width:55.915%;  }
+.admin .tab-content .span6 {     width:68%;  }
+.admin .tab-content .span4 > input[type='text'] {     height:16px;     width:159px;     color:#1B1B1B;     font-size:13px;     margin:0 10px 0 5px;  }
+.admin .tab-content .span4 > input.first[type='text'] {     margin-left:0;  }
+.input-line {     clear:both;  }
+.admin .tab-content .member-name {     position:relative;     width:300px;  }
+.admin .tab-content .add-member-name {     text-align:right;     position:relative;     width:300px;  }
+.admin .tab-content .remove-member {     position:absolute;     right:1px;     top:1px;     display:block;     width:23px;     height:24px;     background:#EE1B24 url(../img/red_remove.png) no-repeat;     cursor:pointer;  }
+.admin .tab-content .add-member-name .yellow-btn {     float:right;  }
+.yellow-btn {     background:none repeat scroll 0 0 #FFF100;     border:1px solid #9A9A90;     color:#181617;     display:block;     font-family:'Fjalla One',sans-serif;     font-size:16px;     padding:1px 10px 0px;  }
+.gray-btn {     background:none repeat scroll 0 0 #D7D7D7;     border:1px solid #9A9A90;     color:#181617;     display:block;     font-family:'Fjalla One',sans-serif;     font-size:16px;     padding:1px 10px 0px;  }
+.admin .tab-content .span6.url {     width:475px;  }
+.admin .tab-content .span6.validate {     width:300px;  }
+.admin .tab-content .result {     font-size:14px;     padding-top:2px;  }
+.admin .tab-content .span2.result {     margin-left:5px;     width:170px;  }
+.admin .tab-content .span2.green .icon,.admin .tab-content .span4.green .icon {     background:url("../img/green_check.png") no-repeat scroll 0 0 transparent;     display:block;     float:left;     height:26px;     margin-right:8px;     width:25px;  }
+.admin .tab-content .span2.green .bold,.admin .tab-content .span4.green .bold {     color:#197A30;     font-weight:bold;  }
+.admin .tab-content .span2.red .icon,.admin .tab-content .span4.red .icon {     background:url("../img/red_cross.png") no-repeat scroll 0 0 transparent;     display:block;     float:left;     height:26px;     margin-right:8px;     width:25px;  }
+.admin .tab-content .span2.red .bold,.admin .tab-content .span4.red .bold {     color:#ED1C24;     font-weight:bold;  }
+/* ========== Social Sync Tab ========== */
+.social-sync .sync-btn {     border:1px solid #9A9A90;     color:#fff;     display:block;     font-family:'Fjalla One',sans-serif;     font-size:20px;     font-weight:normal;     height:40px;     width:320px;     padding:0px 10px 1px 15px;     text-align:left;     float:left;     margin-right:13px;     margin-bottom:18px;  }
+.social-sync .unsync-btn {     border:1px solid #9A9A90;     background:#E91A20;     color:#fff;     display:block;     font-family:'Fjalla One',sans-serif;     font-size:19px;     height:40px;     width:100px;     padding:2px 14px 1px 16px;     text-align:left;     float:left;     margin-bottom:18px;  }
+.social-sync .fb {     background:#3D5C94;  }
+.social-sync .tw {     background:#47B7E5;  }
+.social-sync .tw,.social-sync .unsync-btn-tw {     margin-top:5px;  }
+.admin .tab-content #SOCIAL.tab-pane form > .row .title {     width:125px;  }
+.admin .tab-content #SOCIAL.tab-pane form > .row .title2 {     width:120px;  }
+/* ========== Security Sync Tab ========== */
+.admin .tab-content .tab-pane form > .row.noLeftPAdding {     padding-left:0;  }
+.admin .tab-content .tab-pane form > .row.noRightPAdding {     padding-right:0;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .left {     margin-top:3px;     width:170px;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .left .title {     font-weight:bold;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .left .description {     font-size:12px;     color:#888888;     width:154px;     margin-top:12px;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .left .description2 {     font-size:12px;     width:186px;     margin-top:12px;     color:#353333;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .left .description3 {     font-size:12px;     width:343px;     margin-top:12px;     color:#0F0F0F;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .right {     margin-top:3px;     width:555px;     margin-left:15px;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .right .button {     float:right;     width:345px;     margin-right:50px;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .right .button button,.admin .tab-content .tab-pane form > .row .input-line2 .right .button input,.admin .tab-content .tab-pane form > .row .input-line2 .right .button a {     float:right;     padding:0 23px 1px;  }
+#SECURITY .input-line2 .right input[type='text'] {     border:1px solid #000;  }
+.admin .tab-content #SECURITY.tab-pane form > .row .input-line2 .right {     margin-left:15px;     margin-top:3px;     width:755px;  }
+.admin .tab-content #SECURITY.tab-pane .span4 {     width:300px;     margin-left:5px;  }
+.admin .tab-content #SECURITY.tab-pane form > .row .input-line2 .right .button {     float:right;     margin-right:105px;     width:343px;  }
+/* ========== FEATURES Sync Tab ========== */
+.admin .tab-content #FEATURES.tab-pane form > .row .input-line2 .right .title2 {     width:94px;  }
+.admin .tab-content .tab-pane form > .row .input-line2 .right .title2 {     width:145px;  }
+/* ========== DISPLAY Sync Tab ========== */
+.admin .tab-content #DISPLAY.tab-pane form > .row .input-line2 .left {     margin-top:3px;     width:343px;  }
+.admin .tab-content #DISPLAY.tab-pane form > .row .title {     font-weight:bold;     margin-top:3px;     width:145px;  }
+#DISPLAY.tab-pane ul.order {     list-style:none;     margin:0;  }
+#DISPLAY.tab-pane ul.order li {     margin:0 0 0 39px;  }
+#DISPLAY.tab-pane ul.order li .number {     float:left;     margin-left:-20px;     margin-top:6px;     font-size:14px;  }
+#DISPLAY.tab-pane ul.order li a {     background:#FDF100;     color:#000000;     font-family:'Fjalla One',sans-serif;     font-size:19px;     font-weight:normal;     padding:9px 0 0;     display:block;     text-align:center;     width:150px;     height:25px;     margin:8px 0 10px;  }
+#DISPLAY.tab-pane ul.order li a:hover {     text-decoration:none;  }
+#DISPLAY .order-btns {     float:right;     width:185px;  }
+#DISPLAY .order-btns input {     float:left;     margin:0 0 0 5px;  }
+.admin .tab-content #DISPLAY .span6 {     width:60%;  }
+.admin .tab-content .tab-pane form > .row.noLeftPAdding.orderRow {     padding-left:0;     padding-right:0;  }
+.admin .tab-content .tab-pane form > .row.orderRow .input-line2 .right {     margin-left:15px;     margin-top:3px;     width:602px;  }
+.admin .tab-content form > .row.media-row {     padding:10px 0;     border-bottom:0;  }
+.admin .tab-content form > .row.media-row.last {     border-bottom:none;     padding:10px 0;     margin-bottom:10px;  }
+.admin .tab-content .head {     border-bottom:1px solid #E0E0E0;     margin:0 0 17px;     padding:1px 0;  }
+.admin .tab-content .body {     margin-bottom:10px;     border-bottom:2px solid #494949;  }
+.admin .tab-content form > .row.media-row .head .title {     background:#FDF100 url(../img/media_arrow.png) no-repeat right 11px;     border-right:4px solid #FDF100;     color:#373832;     font-family:'Fjalla One',sans-serif;     font-size:18px;     font-weight:normal;     margin-right:10px;     padding:6px 60px 3px 12px;     width:auto;     position:relative;  }
+.admin .tab-content form > .row.media-row .head .closed {     background:#FDF100 url(../img/nav-player-arrow.png)no-repeat right 11px;     border-right:4px solid #FDF100;     color:#373832;     font-family:'Fjalla One',sans-serif;     font-size:18px;     font-weight:normal;     margin-right:10px;     padding:6px 60px 3px 12px;     width:auto;     position:relative;  }
+.top-link {     position:absolute;     right:4px;     top:11px;     display:block;     width:21px;     height:15px;     float:right;     cursor:pointer;  }
+.admin .tab-content form > .row.media-row .head .more-right {     display:block;     font:11px Tahoma,sans-serif;     margin:0 0 4px;     text-align:right;  }
+.admin .tab-content form > .row.media-row .body .left {     margin-left:20px;  }
+.admin .tab-content form > .row.media-row .body .left .description {     color:#8A8A8A;     font-size:12px;     margin-top:5px;     width:185px;     line-height:14px;  }
+.admin .tab-content form > .row.media-row .body .left .button {     margin:20px 0;  }
+.admin .tab-content form > .row.media-row .body .left .button .yellow-btn {     padding:1px 17px 0px;     height:24px;  }
+.media-row .body .right {     width:715px;     margin-left:0;  }
+.media-row .body .right .row.first {     border-top:1px solid #E0E0E0;     border-bottom:1px solid #E0E0E0;     margin-top:12px;  }
+.media-row .body .right .row {     border-bottom:1px solid #E0E0E0;     padding:8px 0;  }
+.media-row .body .right [class*="span"] {     margin-left:0;  }
+.media-row .body .right .id {     width:51px;     font-size:15px;     text-align:right;     font-weight:bold;     margin-right:9px;     padding-top:4px;     color:#0F0F0F;  }
+.media-row .body .right .icon {     margin-right:15px;     width:30px;  }
+.media-row .body .right .name {     font-size:13px;     padding-top:6px;     color:#0F0F0F;  }
+.media-row .body .right .btns {     float:right;     padding-top:4px;  }
+.media-row .body .right .btns .edit-btn {     background:none repeat scroll 0 0 #FFF100;     border:1px solid #9A9A90;     color:#181617;     display:block;     font-family:'Fjalla One',sans-serif;     font-size:15px;     width:75px;     text-align:center;     padding:2px 0 0;     float:left;  }
+.media-row .body .right .btns .plus-btn {     background:none repeat scroll 0 0 #FFF100;     border:1px solid #9A9A90;     color:#181617;     display:block;     font-family:Tahoma,sans-serif;     font-size:17px;     line-height:14px;     height:22px;     width:20px;     text-align:center;     padding:0 0 3px;     float:right;  }
+.media-row .body .right .buttons-row {     font-size:13px;     padding-top:6px;     color:#0F0F0F;     border-bottom:0;  }
+.media-row .body .right .buttons-row .span2 {     float:right;     padding-top:4px;     width:185px;  }
+.media-row .body .right .buttons-row .span2 input {     float:left;     margin:0 0 0 5px;  }

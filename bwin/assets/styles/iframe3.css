@@ -1,0 +1,29 @@
+.main-deposit-visa, .main-deposit-mastercard, .main-deposit-neteller, .main-deposit-paypal, .main-deposit-moneybookers, .main-deposit-entropay, .main-deposit-4b_mb, .main-deposit-abaqoos,
+.main-deposit-banktransfer, .main-deposit-wire, .main-deposit-bpay, .main-deposit-cartasi_mb, .main-deposit-clicknbuy, .main-deposit-click2pay, .main-deposit-dineromail-ar,
+.main-deposit-directpay24, .main-deposit-dk_mb, .main-deposit-canadianeft, .main-deposit-directdebit, .main-deposit-entropay, .main-deposit-eps
+{
+width:140px;
+height:42px;
+background:url(../images/main_deposit_logos_one--0.png) no-repeat -5px -5px;
+display:block;
+}
+.main-deposit-euro6000_mb, .main-deposit-ewire, .main-deposit-giropay, .main-deposit-ideal, .main-deposit-instantbanking, .main-deposit-instaewallet, .main-deposit-laser, .main-deposit-mistercash,
+.main-deposit-moneta, .main-deposit-multibanco, .main-deposit-citadel, .main-deposit-nordea_mb, .main-deposit-partycashiermc, .main-deposit-paysafecard, .main-deposit-poli, .main-deposit-poli_moneybookers,
+.main-deposit-postepay_mb, .main-deposit-przelewy24, .main-deposit-switch, .main-deposit-ticketpremium, .main-deposit-pcard
+{
+width:140px;
+height:42px;
+background:url(/generic/images/main_deposit_logos_two--0.png) no-repeat -5px -5px;
+display:block;
+}
+.main-deposit-ukash, .main-deposit-usemybank, .main-deposit-webmoney, .main-deposit-westernunion, .main-deposit-teleingreso, .main-deposit-maestro, .main-deposit-dankort, .main-deposit-lacaixa,
+.main-deposit-visa_qiwi, .main-deposit-check, .main-deposit-monedero, .main-deposit-visa_postepay, .main-deposit-check_fedex,
+.main-deposit-maestro_mb, .main-deposit-internetbanking, .main-deposit-switch-maestro, .main-deposit-kalixa, .main-deposit-mplatba,
+.main-deposit-diners, .main-deposit-ekonto, .main-deposit-freebet, .main-deposit-paybox, .main-deposit-dineromail-mx, .main-deposit-qiwi, .main-deposit-dineromail, .main-deposit-instantbank,
+.main-deposit-visa-be, .main-deposit-mastercard-be
+{
+width:140px;
+height:42px;
+background:url(../images/main_deposit_logos_three--4.png) no-repeat -5px -5px;
+display:block;
+}

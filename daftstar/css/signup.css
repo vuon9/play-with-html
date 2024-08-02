@@ -1,0 +1,52 @@
+/**
+*  CSS SIGN UP
+*/
+.inner {     padding:50px 0 20px;     color:#0D0D0D;  }
+.signup .span3 {     margin-left:0;  }
+.signup .span6 {     width:500px;     margin-right:20px;     margin-left:0;  }
+.signup .span5 {     width:360px;     padding-top:4px;  }
+.signup .span2 {     width:114px;  }
+.page-title {     float:right;     font-size:40px;     line-height:40px;  }
+.section2 {     margin-top:50px;  }
+.section2 .head {     font-size:35px;     line-height:45px;  }
+.section2 .body {     font:12px Tahoma,sans-serif;  }
+.section2 .body .container {     border:1px solid #959595;     padding:20px 20px 5px;     width:918px;  }
+.section2 .body .container.noborder {     border:none;     padding:0;     margin:0;  }
+.section2 .body .signup h3 {     font:18px Tahoma,sans-serif;  }
+.section2 .body .signup h2 {     font:16px Tahoma,sans-serif;  }
+.section2 .h4 {     font-size:14px;     color:#545454;     margin-top:12px;     margin-left:15px;  }
+.section2 .row.border-btm {     padding-bottom:20px;     margin-bottom:27px;     border-bottom:1px solid #959595;  }
+.section2 .span3.fb_login {     margin-left:0;     width:240px;  }
+.inner .span5.green .icon {     width:25px;     height:26px;     margin-right:10px;     display:block;     float:left;     background:url(../img/green_check.png) no-repeat 0 0px;  }
+.inner .span5.green .bold {     font-weight:bold;     color:#197A30;  }
+.inner .span5.red .icon {     width:25px;     height:26px;     margin-right:10px;     display:block;     float:left;     background:url(../img/red_cross.png) no-repeat 0 0px;  }
+.inner .span5.red .bold {     font-weight:bold;     color:#ED1C24;  }
+.signup form {     margin:0;  }
+.signup .result {     font-size:14px;     padding-top:4px;  }
+.signup .row {     margin-bottom:12px;  }
+.signup a.terms {     font-size:14px;     font-weight:bold;     color:#0D0D0D;     text-decoration:underline;  }
+.signup .sign-btn {     float:right;     text-align:right;  }
+.signup .type {     margin-bottom:20px;  }
+.signup .type .name {     width:150px;     height:40px;     background:#959595;     color:#fff;     text-align:center;     font:24px 'fjalla_r', sans-serif;     padding-top:10px;     float:left;     margin-right:10px;  }
+.signup .type .info {     font-size:14px;     padding:5px 10px 7px;     border:1px solid #959595;     width:735px;     height:36px;     margin-left:160px;  }
+.signup .type .info2 {     font-size:14px;     padding:5px 10px 7px;     border:1px solid #959595;     width:735px;     margin-left:160px;  }
+.signup a.join .type:hover .name,.signup .type .name.active {     background:#FDF100;     color:#0C1011;  }
+.signup a.join .type:hover .info,.signup .type .infoactive {     background:#FFFFE5;  }
+.signup a.join {     color:#000;  }
+.signup a.join:hover {     text-decoration:none;  }
+.reset h3 {     font:16px Tahoma;     font-weight:bold;     margin:0;  }
+.reset h4 {     font:14px Tahoma;     font-weight:bold;     margin-bottom:0;  }
+.reset h5 {     font:13px Tahoma;     font-weight:bold;     margin-bottom:0;  }
+.reset .steps {     font:14px Tahoma;     margin-left:20px;     margin-top:0px;  }
+.reset .steps li a {     font-weight:bold;     color:#0D0D0D;     text-decoration:underline;  }
+.reset-input {     margin:30px 0 10px;     font:12px Tahoma;  }
+.reset-input .row {     margin-bottom:0;  }
+.reset-input .row {     margin-bottom:10px;  }
+.reset-input .span2 {     width:70px;     margin-left:0;     font-weight:bold;     text-align:right;     padding:7px 5px 0;  }
+.reset-input .span2.w170 {     width:120px;  }
+.reset-input .span6 {     width:320px;     margin-left:0;  }
+.reset-input .span6 .change-btn {     float:right;     width:70px;     margin-right:6px;  }
+.reset-input .span6 input[type='text'] {     width:320px;     height:20px;  }
+.reset-input .note {     width:490px;     margin-top:-3px;     text-align:center;  }
+.reset .login-link {     margin-top:15px;  }
+.reset .login-link a {     font:14px Tahoma;     font-weight:bold;     color:#3F90C8;  }

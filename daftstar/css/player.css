@@ -1,0 +1,176 @@
+/**
+*  CSS player
+*/
+.player .head {     border-bottom:none;     margin:0;     padding:2px 0;  }
+.player .body {     background:none repeat scroll 0 0 #0F0F0F;     padding:13px 10px;     color:#D6D6D6;     font:12px Tahoma;  }
+.player .head .more-right {     display:block;     font:11px Tahoma,sans-serif;     margin:14px 0 4px;     text-align:right;  }
+.player .body .nav-bar {     background:#545454;     height:28px;     margin-bottom:10px;  }
+.player .nav-bar .breadcrumb {     background-color:transparent;     border-radius:0;     list-style:none outside none;     margin:0px;     padding:4px;     float:left;  }
+.player .nav-bar .breadcrumb > li {     display:inline-block;     text-shadow:none;     font:14px Tahoma;     color:#BBBBBB;  }
+.player .nav-bar .breadcrumb > li > .divider {     color:#BBBBBB;     padding:0 4px;  }
+.player .nav-bar .breadcrumb > li a {     text-shadow:none;     font:14px Tahoma;     color:#BBBBBB;  }
+.player .nav-bar .breadcrumb > li.active a {     color:#FFF100;  }
+.player .nav-bar .go-back {     float:right;  }
+.player .nav-bar .go-back .yellow-btn {     border:none;     height:28px;     color:#353333;  }
+.player .nav-bar .go-back button.yellow-btn:hover {color:#666;  }
+
+.player .content-area .left {     width:251px;     margin:0;  }
+.player .content-area .left .photo {     width:250px;     height:250px;     background:#fff;     border:1px solid #939393;  }
+.player .content-area .left .photo img {     width:250px;     height:250px;  }
+.player .content-area .left .info {     margin:20px 5px;  }
+.player .content-area .left .info .name {     font-size:13px;     font-weight:bold;     color:#FFF100;     margin-bottom:3px;  }
+.player .content-area .left .info p {     font-size:12px;     line-height:18px;  }
+.player .content-area .left .go-back .yellow-btn {     width:102px;     padding:0;     text-align:center;     color:#353434;     margin-right:15px;  }
+.player .content-area .left .social {     padding-top:1px;  }
+.player .content-area .left .social ul {     list-style:none outside none;     margin:0px 0 0 12px;  }
+.player .content-area .left .social ul li {     float:left;  }
+.player .content-area .left .social ul li a {     display:block;     height:28px;     margin:0;     width:30px;  }
+.player .content-area .left .social ul li a.fb {     background:url("../img/sprite3.png") no-repeat scroll 0 0 transparent;  }
+.player .content-area .left .social ul li a.tw {     background:url("../img/sprite3.png") no-repeat scroll -30px 0 transparent;  }
+.player .content-area .left .social ul li a.gplus {     background:url("../img/sprite3.png") no-repeat scroll -60px 0 transparent;  }
+.player .content-area .left .social ul li a.email {     background:url("../img/sprite3.png") no-repeat scroll -90px 0 transparent;  }
+.player .content-area .left .social ul li a.fb:hover {     background:url("../img/sprite3.png") no-repeat scroll 0 -28px #3C5B91;  }
+.player .content-area .left .social ul li a.tw:hover {     background:url("../img/sprite3.png") no-repeat scroll -30px -28px #47B6E4;  }
+.player .content-area .left .social ul li a.gplus:hover {     background:url("../img/sprite3.png") no-repeat scroll -60px -28px #D44837;  }
+.player .content-area .left .social ul li a.email:hover {     background:url("../img/sprite3.png") no-repeat scroll -90px -28px #FFF600;  }
+/*=========== Right Side ===========*/
+.player .content-area .right {     width:680px;     margin:0;     border-left:1px solid #939393;     min-height:600px;     padding-left:5px;  }
+.player .right .album-info {     border-bottom:1px solid #E6CD59;     margin-bottom:0;  }
+.player .right .album-info .cover {     margin:0;     width:250px;     height:250px;     background:#fff;     border:1px solid #E6CD59;     border-bottom:none;  }
+.player .right .album-info .cover img {     width:250px;     height:250px;  }
+.player .right .album-info .info {     margin:0;     width:410px;     padding-left:10px;  }
+.player .right .album-info .info .title {     font-size:20px;     font-weight:bold;     color:#FFF100;     margin-bottom:3px;  }
+.player .right .album-info .info .subtitle {     font-size:16px;     font-weight:bold;     color:#fff;  }
+.player .right .album-info .info .text {     height:87px;  }
+.player .right .album-info .info .text,.player .right .album-info .info .text p {     font-size:12px;     line-height:15px;     color:#D6D6D6;     margin-top:5px;  }
+.player .right .album-info .info .copyright {     font-size:12px;     color:#626262;  }
+.player .right .album-info .info .sotres {     height:48px;  }
+.player .right .album-info .info .sotres ul {     list-style:none;     margin:0;  }
+.player .right .album-info .info .sotres ul li {     float:left;  }
+.player .right .album-info .info .sotres ul li.download {     margin:0 22px;  }
+.player .right .album-info .info .sotres ul li .digit {     float:right;     color:#FFF100;  }
+.player .right .album-info .info .sotres ul li .yellow-btn {     width:99px;     height:42px;     padding:1px;     font-size:15px;  }
+.player .right .album-info .info .sotres ul li button.yellow-btn:hover { background: #000;  color:#FFF100; }
+.player .right .album-info .rate-social {     height:37px;     margin-top:4px;  }
+.player .right .album-info .rate-social .rate {     font-size:11px;     color:#626262;     padding-top:7px;     float:left;     width:150px;     margin-right:5px;  }
+.player .right .album-info .rate-social .rate span {     line-height:17px;     margin:0 9px;  }
+.player .right .album-info .rate ul {     list-style:none;     margin:5px 4px;  }
+.player .right .album-info .rate ul li {     float:left;     margin-right:3px;  }
+.player .right .album-info .rate ul li a {     display:block;     width:16px;     height:16px;     background:url(../img/rate_gray.png) no-repeat;  }
+.player .right .album-info .rate ul li.active a,.player .right .album-info .rate ul li:hover a {     background:url(../img/rate_yellow.png) no-repeat;  }
+.player .right .album-info .rate-social .fb-like {     float:left;     font-size:12px;     font-weight:bold;     color:#FFFFFF;     padding-top:11px;  }
+.player .right .album-info .rate-social .fb-like div {     float:left;  }
+.player .right .album-info .rate-social .fb-like span.likes-conut {     line-height:18px;     margin-left:8px;  }
+.player .album-info .likes {     float:right;     font:14px Tahoma;     padding-top:10px;     width:138px;  }
+.player .album-info .likes ul {     list-style:none;     margin:0;  }
+.player .album-info .likes ul li {     float:left;     width:63px;     color:#FFF100;     font-size:16px;     line-height:19px;  }
+.player .album-info .likes ul li:first-child {     float:left;     width:75px;  }
+.player .album-info .likes ul li .number {  }
+.player .album-info .likes .full .icon a {     background:url("../img/sprite3.png") no-repeat scroll -200px -53px transparent;     display:block;     float:left;     height:22px;     margin-right:7px;     width:23px;     opacity:0.7;  }
+.player .album-info .likes .full .icon a:hover, .player .album-info .likes .full .icon a:focus {     opacity:1;     background:url("../img/sprite3.png") no-repeat scroll -200px -93px transparent;  }
+.player .album-info .likes .half .icon a {     background:url("../img/sprite3.png") no-repeat scroll -244px -53px transparent;     display:block;     float:left;     height:22px;     margin-right:5px;     width:23px;     opacity:0.7;  }
+.player .album-info .likes .half .icon a:hover, .player .album-info .likes .half .icon a:focus {     opacity:1;     background:url("../img/sprite3.png") no-repeat scroll -244px -93px transparent;  }
+/* ========== Section ========= */
+.player .section2 {     text-align:center;     padding-bottom:20px;  }
+.player .section2 .head {     border-top:1px solid #969696;     padding:0;     height:28px;  }
+.player .section2 > .head .title {     background:none repeat scroll 0 0 #FDF100;     color:#353333;     float:none;     font:16px/28px 'Fjalla One';     text-align:center;     margin:0 auto;     padding:0;     height:28px;     width:150px;  }
+.player .section2 .body {     background:none repeat scroll 0 0 #0F0F0F;     color:#ffffff;     font:12px Tahoma;     padding:13px 0px;  }
+.player .section2 .comment_total {     text-align:right;     font-weight:bold;     line-height:7px;     font-size:13px;     color:#fff;  }
+.player .section2 .comment_total a {     font-weight:normal;     font-size:11px;     color:#418FC9;  }
+.player .section2 .comments ul li {     border-bottom:none;     margin:16px 0;     background:#464646;     padding:10px;  }
+.player .section2 .comments ul li.replay {     background:transparent;     padding:0px;  }
+.player .section2 .comments ul li .comment-bg {     padding:10px;     background:#636363;     width:600px;  }
+.player .section2 .comments ul li.replay .arow {     text-align:center;     width:65px;  }
+.player .section2 .comments ul li.first {     border-top:none;  }
+.player .section2 .comments ul li .input {     margin-left:0;     width:592px;     text-align:left;  }
+.player .section2 .comments ul li.replay .input {     width:512px;  }
+.player .section2 .comments ul li .input .top .name {     color:#FFF100;     font-weight:bold;  }
+.player .section2 .comments ul li .input .text {     color:#ffffff;     font-size:12px;     line-height:18px;     padding-top:6px;  }
+.player .section2 .comments ul li .input .top .action .black_heart:hover {     background:url("../img/sprite3.png") no-repeat scroll -218px -20px transparent;  }
+.player .section2 .comments ul li .input .top .action .half_heart {     background:url("../img/sprite3.png") no-repeat scroll -197px 4px #FFF100;  }
+.player .section2 .comments ul li .input .top .action .half_heart:hover {     background:url("../img/sprite3.png") no-repeat scroll -218px 4px transparent;  }
+/* ========== Tab Nav =========== */
+.player .section2 ul.nav {     border-bottom:none;     margin:0 auto;     padding:0;     font:16px/28px 'Fjalla One';     text-align:center;     width:462px;  }
+.player .section2 ul.nav li > a {     background:none repeat scroll 0 0 #555555;     border:medium none;     border-radius:0 0 0 0;     color:#ABABAB;     float:left;     font:16px/28px 'Fjalla One';     margin-right:4px;     padding:0;     width:150px;     height:28px;  }
+.player .section2 ul.nav li > a:hover {  background: #666;  }
+.player .section2 ul.nav li.active > a
+, .player .section2 ul.nav li.active > a:hover {     background:none repeat scroll 0 0 #FDF100;     color:#353333;     float:none;     font:16px/28px 'Fjalla One';     height:28px;     padding:0;     text-align:center;     width:150px;  }
+/* ========== List =========== */
+.player .section2 .list {     font:13px Tahoma;     color:#fff;     padding:15px 6px 10px;  }
+.player .section2 .list ul {     margin:0;     list-style:none;     text-align:left;  }
+.player .section2 .list ul li {     border-bottom:1px solid #969696;     padding:2px 0;  }
+.player .section2 .list ul li .song-wrp {     padding:0;     height:23px;     margin-bottom:0;  }
+.player .section2 .list ul li .song-wrp [class*="span"] {     min-height:23px;  }
+.player .section2 .list ul li .song-wrp.active {     background:#333333;  }
+.player .section2 .list ul li.head {     font-weight:bold;     color:#FFF100;     border-top:none;  }
+.player .section2 .list ul li.head .number {     float:left;     padding:0 8px;  }
+.player .section2 .list ul li.head .title {     width:330px;  }
+.player .section2 .list ul li.head .duration {     text-align:left;     width:54px;     margin-top:0;  }
+.player .section2 .list ul li.head .popularity {     text-align:center;  }
+.player .section2 .list ul li.head .title {     margin:0 0 0 5px;  }
+.player .section2 .list ul li .number {     float:left;     padding:0 11px;     color:#FFF100;     width:26px;  }
+.player .section2 .list ul li .title {     width:350px;     margin-left:0;  }
+.player .section2 .list ul li .duration {     margin-top:2px;  }
+.player .section2 .list ul li .popularity {     width:73px;     margin-left:18px;  }
+.player .section2 .list ul li .actions {     width:49px;     margin-left:27px;  }
+.player .section2 .list ul li .actions .add {     display:block;     float:left;     height:16px;     padding:2px 7px 5px 3px;     width:14px;  }
+.player .section2 .list ul li .actions .add:hover {     background:none repeat scroll 0 0 #FFF100;     display:block;     text-align:center;  }
+.player .section2 .list ul li .actions .add a {     background:url("../img/sprite3.png") no-repeat scroll -122px -1px transparent;     display:block;     float:left;     height:18px;     width:17px;  }
+.player .section2 .list ul li .actions .add:hover a {     background:url("../img/sprite3.png") no-repeat scroll -142px -1px #FFF100;     float:left;  }
+.player .section2 .list ul li .actions .download {     display:block;     float:left;     height:16px;     padding:2px 5px 5px;     width:14px;  }
+.player .section2 .list ul li .actions .download:hover {     background:none repeat scroll 0 0 #FFF100;     display:block;     text-align:center;  }
+.player .section2 .list ul li .actions .download a {     background:url("../img/sprite3.png") no-repeat scroll -164px -1px transparent;     display:block;     float:left;     height:17px;     width:14px;  }
+.player .section2 .list ul li .actions .download:hover a {     background:url("../img/sprite3.png") no-repeat scroll -164px -1px #FFF100;     float:left;  }
+.player .section2 .list ul li .actions .download {     float:right;  }
+.player .section2 .list ul li .actions .share {     width:50px;  }
+.player .section2 .list ul li .share .y-btn {     background:none repeat scroll 0 0 #FFF100;     color:#353333;     display:block;     float:left;     font:16px/22px 'Fjalla One';     height:22px;     margin-left:4px;     text-align:center;     width:50px;     cursor:pointer;  }
+.player .section2 .list ul li .share {  }
+.player .section2 .list ul li .share .btns {     position:absolute;     width:78px;     height:80xp;     background:#FFF100;     border:1px solid #636363;     margin:0 4px;     display:none;  }
+.player .section2 .list ul li .share .btns.hide {  }
+.player .section2 .list ul li .share .btns.show {     display:block;  }
+.player .section2 .list ul li .share ul {     list-style:none outside none;     margin:0 3px;  }
+.player .section2 .list ul li .share ul li {     float:left;     border:none;     padding:0;     margin:2px 0px;  }
+.player .section2 .list ul li .share ul li a {     display:block;     height:36px;     margin:0;     width:36px;  }
+.player .section2 .list ul li .share ul li a.fb {     background:url("../img/sprite3.png") no-repeat scroll 0 -60px transparent;  }
+.player .section2 .list ul li .share ul li a.tw {     background:url("../img/sprite3.png") no-repeat scroll -36px -60px transparent;  }
+.player .section2 .list ul li .share ul li a.gplus {     background:url("../img/sprite3.png") no-repeat scroll -72px -60px transparent;  }
+.player .section2 .list ul li .share ul li a.email {     background:url("../img/sprite3.png") no-repeat scroll -108px -60px transparent;  }
+.player .section2 .list ul li .share ul li a.fb:hover {     background:url("../img/sprite3.png") no-repeat scroll 0 -96px #3C5B91;  }
+.player .section2 .list ul li .share ul li a.tw:hover {     background:url("../img/sprite3.png") no-repeat scroll -36px -96px #47B6E4;  }
+.player .section2 .list ul li .share ul li a.gplus:hover {     background:url("../img/sprite3.png") no-repeat scroll -72px -96px #D44837;  }
+.player .section2 .list ul li .share ul li a.email:hover {     background:url("../img/sprite3.png") no-repeat scroll -108px -96px #000;  }
+.other .body {     margin-left:10px;  }
+.player .section2 .blockG, .player .section2 .span3.blockG {     margin:0 12px 18px;     width:105px;     text-align:left;  }
+.player .section2 .blockG .image {     background:#000000;     border:1px solid #939393;     height:105px;     position:relative;     width:105px;  }
+.player .section2 .blockG .image img {     height:105px;     width:105px;  }
+.player .section2 .blockG .title-views .title a {     color:#FFF100;  }
+.player .section2 .blockG .title-views .subtitle {     color:#fff;     font-size:11px;     font-weight:bold;  }
+.player .section2 .blockG .title-views .downloads {     color:#C9C9C9;     font-weight:normal;  }
+.player .tab-pane .section .head {     border-top:none;     border-bottom:1px solid #969696;     height:28px;     padding:0;     margin-bottom:10px;  }
+.player .tab-pane .section .head .title {     background:none repeat scroll 0 0 #FDF100;     color:#373832;     float:left;     font:16px 'Fjalla One';     line-height:24px;     margin-right:10px;     padding:0;     height:25px;     width:100px;  }
+.player .tab-pane .section .head .more-right {     float:right;     margin-top:8px;  }
+.player .tab-pane .section .body {     padding:0;  }
+.player .tab-pane .section.related .body .row {     margin-bottom:0;  }
+.player .tab-pane .section.related .span3.blockG {     margin:0 32px;     text-align:left;     width:105px;  }
+.player .tab-pane .section .span3.blockG.first {     margin-left:0;  }
+.player .blockL,.player .span3.blockL {     margin:0 32px 7px;     width:300px;  }
+.player .blockL.first {     margin-right:6px;     margin-left:0;  }
+.player .blockL.last {     margin-right:0;     margin-left:6px;  }
+.blockL .image {     background:#70ABD6;     width:140px;     height:85px;     position:relative;     border:1px solid #959595;     float:left;     margin-right:10px;  }
+.blockL .image img {     width:140px;     height:85px;  }
+.blockL .title-views {     font:11px Tahoma,sans-serif;     font-weight:bold;     margin:18px 0;     height:10px;     color:#fff;     text-align:left;  }
+.blockL .title-views .title {     font-size:13px;     color:#FFF100;  }
+.blockL .title-views .title a {     color:#FFF100;  }
+.blockL .title-views .views {     float:right;  }
+.blockL .title-views .views .icon {     float:left;     background:url(../img/views-icon.png) 0 2px no-repeat;     width:24px;     height:14px;  }
+.blockL .title-views .subtitle {     color:#fff;     font-size:11px;     font-weight:bold;  }
+.blockL .title-views .downloads {     color:#C9C9C9;     font-weight:normal;  }
+.blockL .title-views .downloads .icon {     background:url("../img/views-icon.png") no-repeat scroll 0 2px transparent;     float:left;     height:15px;     width:24px;  }
+.blockL .title-views .added {     color:#626262;     font-weight:normal;  }
+.tab-pane .span3.blockG {     width:145px !important;  }
+.tab-pane .span3.blockG .image, .tab-pane .blockG .image img {     width:85px !important;     height:85px !important;  }
+.tab-pane .span6.blockG {     width:325px !important;     height:85px !important;     margin:0 7px;  }
+.tab-pane .span6.blockG:after {     display:block;     clear:both;     width:1px;  }
+.tab-pane .span6.blockG .image,.tab-pane .span6.blockG .image img {     width:185px !important;     height:85px !important;  }
+.tab-pane .span6.blockG .image {     float:left;  }
+.tab-pane .span6.blockG .title-views {     float:left;     padding-left:10px;     margin-top:20px;     height:73px;  }

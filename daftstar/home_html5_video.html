@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css">
+    <link href="css/skin/daftstar/jplayer.daftstar.css" rel="stylesheet" type="text/css" />
+    <link href="css/skin/daftstar/jplayer.video.css" rel="stylesheet" type="text/css" />
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+    <script src="js/players.js"></script>
+    <script src="js/players_video.js"></script>
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+           if( navigator.userAgent.match(/iPad/i) != null ){
+                viewport = document.querySelector("meta[name=viewport]");
+                viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+            }
+
+            $('#SlidePlayer').click(function(){
+              var elm=$('#PlayerWrp')
+              var top=parseInt(elm.css('top'),10);
+              //alert(left);
+              if(top<0){
+                   $('#SlidePlayer').addClass('active');
+                  elm.animate({"top":"50"}, 300);
+                  elm.removeClass('close');
+              }else{
+                  elm.animate({"top":"-272px"}, 300);
+                   $('#SlidePlayer').removeClass('active');
+              }
+
+            });
+
+
+       });
+
+    </script>
+
+
+</head>
+<style>
+
+</style>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+		<div id="jp_container_1" class="jp-audio">
+			<div class="jp-type-single">
+				<div class="jp-gui jp-interface">
+					<ul class="jp-controls">
+
+						<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+						<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+						<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+						<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                        <li><a href="javascript:;" class="jp-volume-max" tabindex="1"title="max volume" >max volume</a></li>
+					</ul>
+					<div class="jp-progress">
+						<div class="jp-seek-bar">
+							<div class="jp-play-bar"></div>
+						</div>
+					</div>
+
+					<div class="jp-volume-slider"></div>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+					<div class="jp-time-holder">
+						<div class="jp-current-time"></div>
+					</div>
+      				<div class="jp-title">
+					<ul>
+						<li><span class="bold">Sam Sparro</span> - Under the Cherry Moonlight</li>
+					</ul>
+				</div>
+				</div>
+
+				<div class="jp-no-solution">
+					<span>Update Required</span>
+					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="player-arrow" id="SlidePlayer">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-links">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li class="divider">|</li>
+            <li><a href="#">Signup</a></li>
+        </ul>
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">VIDEOS</a></li>
+            <li><a href="#">MP3s</a></li>
+            <li><a href="#">RADIO</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">INTERVIEWS</a></li>
+            <li><a href="#">CHALLENGE</a></li>
+            <li><a href="#">PHOTOS</a></li>
+            <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="playlist-wrp close" id="PlayerWrp">
+      <div class="container">
+        <a href="#" class="left-arrow"></a>
+        <a href="#" class="right-arrow"></a>
+
+        <div class="content">
+            <div class="info">
+                <div class="left">
+                    <div class="cover"><img src="img/temp6.jpg" width="198" height="198" alt="" /></div>
+                    <div class="button">
+                        <a href="#">GO BACKSTAGE</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title">Sam Sparro</div>
+                    <div class="subtitle">The Light of Being is the Dark of Dying</div>
+                    <div class="text">
+                    Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop.
+                    </div>
+                    <div class="icons">
+                        <ul>
+                            <li>
+                                <a class="heart_full" href="#">
+                                </a>
+                                <div class="no">2537</div>
+                            </li>
+                            <li>
+                                <a class="heart_half" href="#">
+
+                                </a>
+                                <div class="no">537</div>
+                            </li>
+                            <li class="last">
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#" class="fb"></a></li>
+                                        <li><a href="#" class="tw"></a></li>
+                                        <li><a href="#" class="gplus"></a></li>
+                                        <li><a href="#" class="email"></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="head">
+                        <div class="duration">
+                            Duration
+                        </div>
+                        <div class="number"><img src="img/list_arrow.png" width="12" height="9" alt="" /></div>
+                        <div class="title">Songs</div>
+
+                    </li>
+                    <li>
+                    <div class="song-wrp active">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                    <!-- Song Row -->
+                    <li>
+                    <div class="song-wrp">
+                        <div class="duration">
+                            <div class="add"><a href="#"></a></div>
+                            <div class="time">3:47</div>
+                        </div>
+                        <div class="number">1</div>
+                        <div class="title">Under the Cherry Moonlight</div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="add-album">
+                <a href="#">Add Album to Playlist</a>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content">
+<div class="container-fluid">
+
+    <div class="player-wrp">
+      <div class="videoPlayer">
+  		<div id="jp_container_2" class="jpv-video jpv-video-735p">
+  			<div class="jpv-type-playlist">
+  				<div id="jquery_jplayer_2" class="jpv-jplayer"></div>
+                  <div class="jpv-gui">
+                    <div class="jpv-title">
+    					<div class="video-title"><span class="artist">Sam Sparro</span>  Hyperspace Sport (DJ McClaren Mix)</div>
+                            <div class="likes">
+                                <ul>
+                                    <li class="heart">
+                                      <div class="full">
+                                          <div class="icon"><a href="#"></a></div>
+                                          <div class="number">2537</div>
+                                      </div>
+                                    </li>
+                                    <li class="heart">
+                                      <div class="half">
+                                          <div class="icon"><a href="#"></a></div>
+                                          <div class="number">573</div>
+                                      </div>
+                                    </li>
+                                    <li>
+                                        <div class="embed"><a href="#">Embed</a></div>
+                                    </li>
+                                    <li>
+                                        <div class="share"><a href="#">Share</a></div>
+                                    </li>
+                                </ul>
+                                </div>
+    				        </div>
+
+    					<div class="jpv-interface">
+      					<ul class="jpv-controls">
+      						
+      						<li><a href="javascript:;" class="jpv-play" tabindex="1">play</a></li>
+      						<li><a href="javascript:;" class="jpv-pause" tabindex="1">pause</a></li>
+
+                              <!--<li><a href="javascript:;" class="jpv-mute" tabindex="1" title="mute">mute</a></li>
+            					<li><a href="javascript:;" class="jpv-unmute" tabindex="1" title="unmute">unmute</a></li>-->
+      					</ul>
+  					</div>
+
+
+                      <div class="control-wrp">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <div class="logo"></div>
+                                      </td>
+                                      <td>
+                                      <div class="jpv-interface small">
+                                      <ul class="jpv-controls small">
+            								<li><a href="javascript:;" class="jpv-play" tabindex="1">play</a></li>
+            								<li><a href="javascript:;" class="jpv-pause" tabindex="1">pause</a></li>
+            							</ul>
+                                      </div>
+                                      </td>
+                                      <td style="width: 100%;">
+
+                                          <div class="progress">
+                                              <div class="jpv-progress">
+                        							<div class="jpv-seek-bar">
+                        								<div class="jpv-play-bar">
+                                                          <div class="jpv-play-bar-win"><div class="jpv-current-time"></div></div>
+                                                      </div>
+                        							</div>
+                        						</div>
+                                          </div>
+                                      </td>
+                                      <td>
+                                          <div class="controls">
+                                              <div class="jpv-duration"></div>
+
+                                              <div class="jpv-volume-mute">
+                                                   <a href="javascript:;" class="jpv-mute" tabindex="1" title="mute"></a>
+                                                   <a href="javascript:;" class="jpv-unmute" tabindex="1" title="unmute"></a>
+                                                   <a href="javascript:;" class="jpv-volume-max" tabindex="1" title="max volume"></a>
+                                              </div>
+                                              <div class="jpv-volume-bar">
+                  								<div class="jpv-volume-bar-value"></div>
+                  							</div>
+
+                                              <div class="jpv-quality">
+
+
+                                              </div>
+                  							<ul class="jpv-toggles">
+                  								<li><a href="javascript:;" class="jpv-full-screen" tabindex="1" title="full screen">full screen</a></li>
+                  								<li><a href="javascript:;" class="jpv-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+                                                  <li><a href="javascript:;" class="jpv-hd-on" tabindex="1" title="HD on"></a></li>
+                                                  <li><a href="javascript:;" class="jpv-hd-off" tabindex="1" title="HD off"></a></li>
+                  							</ul>
+                                          </div>
+
+                                      </td>
+                                  </tr>
+                              </table>
+
+
+
+
+                      </div>
+
+
+                  </div>
+
+  				<div class="jpv-no-solution">
+  					<span>Update Required</span>
+  					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+  				</div>
+  			</div>
+  		</div>
+      </div>
+        <div class="spotlight">
+            <div class="head">SPOTLIGHT ON</div>
+            <div class="body">
+                <div class="title">Sam Sparro</div>
+                <div class="img-social">
+                    <div class="image"><img src="img/temp5.png" width="90" height="90" alt="" /></div>
+                    <div class="social">
+                        <ul>
+                            <li><a class="fb" href="#"></a></li>
+                            <li><a class="tw" href="#"></a></li>
+                            <li><a class="gplus" href="#"></a></li>
+                            <li><a class="email" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    Cupcake candy canes lollipop ginger bread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake cookie croissant sweet.
+                </p>
+                <div class="info">
+                    <div class="line">
+                        <span class="title">Date Added:</span>
+                        <span class="value">December 17, 2013</span>
+                    </div>
+                    <div class="line">
+                        <span class="title">Year Released:</span>
+                        <span class="value">2013</span>
+                    </div>
+                    <div class="line">
+                        <span class="title">Director:</span>
+                        <span class="value">Willhelm Nakamura</span>
+                    </div>
+                </div>
+                <div class="copyright">Copyright 2013 © Sam Sparro Productions. All rights reserved</div>
+                <div class="button">
+                    <a href="#">GO BACKSTAGE</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- What's new section -->
+    <div class="row">
+        <div class="section">
+            <div class="head">
+                <span class="title">WHAT'S NEW</span>
+                <span class="more"><a href="#">more</a></span>
+            </div>
+            <div class="body">
+              <!-- section content -->
+                <div class="row">
+                    <div class="span3 blockA first">
+                        <div class="image">
+                            <div class="media-type">VIDEO</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA ">
+                        <div class="image">
+                            <div class="media-type">VIDEO</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA ">
+                        <div class="image">
+                            <div class="media-type">MP3</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA last">
+                        <div class="image">
+                            <div class="media-type">MP3</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+
+                </div>
+
+              <!-- section content End -->
+            </div>
+        </div>
+    </div>
+    <!-- What's new section end -->
+
+    <div class="row">
+        <div class="span6 homeSection leftSction">
+            <!-- Video sction -->
+            <div class="section video">
+                <div class="head">
+                    <span class="title">VIDEO</span>
+                    <span class="more"><a href="#">more</a></span>
+                </div>
+                <div class="body">
+                  <!-- section content -->
+                    <!-- Video row -->
+                    <div class="row">
+                        <div class="span3 blockA first">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                        <div class="span3 blockA last">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video row end -->
+                    <!-- Video row -->
+                    <div class="row">
+                        <div class="span3 blockA first">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                        <div class="span3 blockA last">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video row end -->
+                  <!-- section content End -->
+                </div>
+            </div>
+            <!-- Video sction end -->
+        </div>
+        <div class="span6">
+            <!-- Music sction -->
+            <div class="section Music">
+                <div class="head">
+                    <span class="title">Music</span>
+                    <span class="more"><a href="#">more</a></span>
+                </div>
+                <div class="body">
+                  <!-- section content -->
+                    <div class="row">
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                  <!-- section content End -->
+                </div>
+            </div>
+            <!-- Music sction end -->
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="row">
+        <div class="section">
+            <div class="head">
+                <span class="title">ABOUT</span>
+                <span class="more"><a href="#">more</a></span>
+            </div>
+            <div class="body">
+              <!-- section content -->
+                <div class="row">
+                    <div class="span3 blockC first">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="span3 blockC">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="span3 blockC last">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+              <!-- section content End -->
+            </div>
+        </div>
+    </div>
+    <!-- What's new section end -->
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+      <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+      <div  class="footer-menu-cols">
+        <ul>
+            <!-- WHO WE ARE Menu -->
+            <li class="first">
+                <ul class="foot-menu">
+                    <li class="title">WHO WE ARE</li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </li>
+
+            <!-- CATEGORIES Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CATEGORIES</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">MP3s</a></li>
+                    <li><a href="#">RADIO</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">INTERVIEWS</a></li>
+                    <li><a href="#">CHALLENGE</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">STORE</a></li>
+
+                </ul>
+            </li>
+
+            <!-- MOBILE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">MOBILE</li>
+                    <li><a href="#">IPHONE</a></li>
+                    <li><a href="#">IPAD</a></li>
+                    <li><a href="#">ANDROID</a></li>
+                </ul>
+            </li>
+
+            <!-- LEGAL Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">LEGAL</li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COPYRIGHT</a></li>
+                </ul>
+            </li>
+
+            <!-- CONNECT Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CONNECT</li>
+                    <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                    <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                    <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                    <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                </ul>
+            </li>
+
+            <!-- WEBSITE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">WEBSITE</li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </li>
+
+            <!-- LANGUAGE Menu -->
+            <li class="last">
+                <ul class="foot-menu">
+                    <li class="title">LANGUAGE</li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SPANISH</a></li>
+                    <li><a href="#">FRENCH</a></li>
+                    <li><a href="#">GERMAN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

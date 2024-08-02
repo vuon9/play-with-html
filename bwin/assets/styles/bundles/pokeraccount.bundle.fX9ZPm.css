@@ -1,0 +1,519 @@
+/*-=- Contents of pokeraccount/styles/pokeraccount.min.css -=-*/
+ .span-19 {
+    width:185px;
+    margin-right:5px
+}
+.span-77 {
+    width:765px
+}
+.span-25 {
+    width:240px
+}
+.span-71 {
+    width:705px;
+    margin-right:5px
+}
+#main .pm-nav-layout .pm-area-main {
+    width:765px
+}
+.pm-page .pm-area-main {
+    background-color:transparent;
+    margin-right:0
+}
+.pm-page .pm-area-main .pc-widget {
+    margin-bottom:10px;
+    width:100%
+}
+.pm-page .pm-area-main .pc-widget>section {
+}
+.pm-page .pm-area-main .poker-account-link {
+    margin-bottom:15px;
+    text-align:right
+}
+.pm-page .pm-area-main .poker-account-link-left {
+    margin-bottom:15px;
+    text-align:left
+}
+.pm-page .pm-area-main #poker-account-monetary-actions>a:last-child {
+    float:right
+}
+.pm-page .pm-area-main .account-content, .pm-page .pm-area-main .bonus-content {
+    padding-left:0;
+    padding-right:0
+}
+.pm-page .pm-area-main .account-content table.tournament-tickets, .pm-page .pm-area-main .bonus-content table.tournament-tickets {
+    border-top:1px solid #3b3b3b
+}
+.pm-page .pm-area-main .account-content table.tournament-tickets tr, .pm-page .pm-area-main .bonus-content table.tournament-tickets tr {
+    border-top:1px solid #3b3b3b
+}
+.pm-page .pm-area-main .account-content table.tournament-tickets td:first-child, .pm-page .pm-area-main .bonus-content table.tournament-tickets td:first-child {
+    text-align:left
+}
+.pm-page .pm-area-main .account-content table, .pm-page .pm-area-main .bonus-content table {
+    border-collapse:collapse;
+    margin-bottom:10px;
+    border-top:1px solid #3b3b3b;
+    border-bottom:1px solid #3b3b3b;
+    border-left:none;
+    border-right:none;
+    color:#999;
+    background-color:transparent
+}
+.pm-page .pm-area-main .account-content table caption, .pm-page .pm-area-main .bonus-content table caption {
+    font-weight:bold;
+    font-size:15px;
+    padding-bottom:9px;
+    color:#fff;
+    text-align:left
+}
+.pm-page .pm-area-main .account-content table caption p, .pm-page .pm-area-main .bonus-content table caption p {
+    display:inline;
+    float:right
+}
+.pm-page .pm-area-main .account-content table th, .pm-page .pm-area-main .bonus-content table th {
+    font-weight:normal;
+    border-bottom:0;
+    padding:5px 0
+}
+.pm-page .pm-area-main .account-content table tr:first-child th, .pm-page .pm-area-main .bonus-content table tr:first-child th {
+    font-weight:bold
+}
+.pm-page .pm-area-main .account-content table tr:first-child td, .pm-page .pm-area-main .bonus-content table tr:first-child td {
+    font-weight:bold;
+    color:#fc0
+}
+.pm-page .pm-area-main .account-content table tr:first-child td.poker-account-loyalty-status, .pm-page .pm-area-main .bonus-content table tr:first-child td.poker-account-loyalty-status {
+    color:#fff;
+    font-weight:normal;
+    padding-top:3px;
+    text-align:left;
+    width:83px
+}
+.pm-page .pm-area-main .account-content table tr:first-child td.poker-account-loyalty-status-green, .pm-page .pm-area-main .bonus-content table tr:first-child td.poker-account-loyalty-status-green {
+    background:url('../../images/loyalty-status.d9D8Xg.png') no-repeat scroll right top transparent
+}
+.pm-page .pm-area-main .account-content table tr:first-child td.poker-account-loyalty-status-white, .pm-page .pm-area-main .bonus-content table tr:first-child td.poker-account-loyalty-status-white {
+    background:url('../../images/loyalty-status.d9D8Xg.png') no-repeat scroll right center transparent
+}
+.pm-page .pm-area-main .account-content table tr:first-child td.poker-account-loyalty-status-yellow, .pm-page .pm-area-main .bonus-content table tr:first-child td.poker-account-loyalty-status-yellow {
+    background:url('../../images/loyalty-status.d9D8Xg.png') no-repeat scroll right bottom transparent
+}
+.pm-page .pm-area-main .account-content table td, .pm-page .pm-area-main .bonus-content table td {
+    color:#fff;
+    padding:5px 0;
+    border-bottom:0;
+    text-align:right
+}
+.pm-page .pm-area-main .account-content table tr, .pm-page .pm-area-main .bonus-content table tr {
+    background:transparent
+}
+.pm-page .pm-area-main .pm-widget-box section ul {
+    margin-left:0
+}
+.pm-page .pm-area-main .pm-widget-box section ul li {
+    float:left;
+    list-style:none;
+    margin-right:12px;
+    width:236px
+}
+.pm-page .pm-area-main .pm-widget-box section ul li.double-li {
+    float:left;
+    list-style:none;
+    margin-right:12px;
+    width:486px;
+    min-height:104px
+}
+.pm-page .pm-area-main .pm-widget-box section ul li:last-child {
+    margin-right:0
+}
+#main div.menu.ui-widget-content-body ul li ul li ul {
+    margin-left:10px
+}
+#main div.menu.ui-widget-content-body ul li ul li ul li a {
+    margin-left:30px
+}
+#main div.menu.ui-widget-content-body ul li ul li span {
+    margin-left:13px;
+    padding-left:18px;
+    font-weight:normal;
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-205px -1025px;
+    color:#fff;
+    cursor:pointer
+}
+#main div.menu.ui-widget-content-body ul li ul li a:hover {
+    text-decoration:underline
+}
+#main div.menu.ui-widget-content-body ul li ul li a.expanded {
+    margin-left:13px;
+    padding-left:18px;
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-205px -1025px
+}
+#main div.menu.ui-widget-content-body ul li ul li span:hover {
+    text-decoration:underline
+}
+#main div.menu.ui-widget-content-body ul li ul li span.contracted {
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-205px -962px
+}
+#main div.menu.ui-widget-content-body ul li ul li a.contracted {
+    margin-left:17px;
+    padding-left:17px;
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-208px -962px
+}
+#main div.menu.ui-widget-content-body ul {
+    padding-top:5px
+}
+.bonus-content {
+    float:left
+}
+.bonus-content h4 {
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    padding-bottom:9px;
+    margin-bottom:45px
+}
+.bonus-content .bonus-no-active {
+    color:#ccc;
+    font-size:10px;
+    padding:5px 0
+}
+.bonus-content .bonus-pending {
+    display:block;
+    text-align:right
+}
+.bonus-content .bonus-pending p {
+    color:#999
+}
+.bonus-content .bonus-pending p.left-align-link {
+    display:inline;
+    float:left
+}
+.bonus-content #progressbar {
+    position:relative;
+    overflow:visible;
+    font-size:10px;
+    color:#404040;
+    width:485px;
+    margin:42px auto
+}
+.bonus-content #progressbar .bonus-pending {
+    float:right;
+    margin-top:5px
+}
+.bonus-content #progressbar .bonus-pending p {
+    color:#999
+}
+.bonus-content #progressbar .bonus-last-cleared {
+    float:left;
+    width:250px;
+    max-width:250px;
+    margin-top:5px
+}
+.bonus-content #progressbar .bonus-last-cleared p {
+    color:#999
+}
+.bonus-content #progressbar .ui-progressbar-value {
+    background-color:#fc0;
+    border-radius:0;
+    height:18px;
+    margin:0
+}
+.bonus-content #progressbar .slab-legend {
+    background:url('../../images/segment-empty.Scw7D0.png') no-repeat right;
+    display:block;
+    float:left;
+    height:19px;
+    text-align:center;
+    position:absolute;
+    top:0;
+    vertical-align:middle
+}
+.bonus-content #progressbar .slab-legend-cleared {
+    background:url('../../images/segment-completed.zHdpGV.png') no-repeat right;
+    display:block;
+    float:left;
+    height:19px;
+    text-align:center;
+    position:absolute;
+    top:0;
+    vertical-align:middle
+}
+.bonus-content #progressbar .slab-legend-active {
+    background:url('../../images/progress.TYeaRG.png') repeat-x right;
+    display:block;
+    float:left;
+    height:19px;
+    text-align:center;
+    position:absolute;
+    top:0;
+    vertical-align:middle
+}
+.bonus-content #progressbar .bonus-info-current-slab {
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-212px -1137px;
+    bottom:-20px;
+    position:absolute;
+    font-size:10px;
+    min-width:130px;
+    text-align:left;
+    color:#fc0;
+    margin-left:-5px;
+    padding-left:5px;
+    padding-top:5px
+}
+.bonus-content #progressbar .bonus-info-current-cash {
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:-212px -1059px;
+    color:#ccc;
+    font-size:10px;
+    padding:0 0 4px 5px;
+    position:absolute;
+    margin-left:-5px;
+    top:-22px
+}
+.bonus-content #progressbar .bonus-info-current-slab-right {
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:right -1137px;
+    bottom:-20px;
+    position:absolute;
+    font-size:10px;
+    min-width:130px;
+    text-align:right;
+    color:#fc0;
+    margin-right:-3px;
+    padding-right:3px;
+    padding-top:5px
+}
+.bonus-content #progressbar .bonus-info-current-cash-right {
+    background-image:url('../../images/poker-sprite.WjgYAo.png');
+    background-repeat:no-repeat;
+    background-position:right -1059px;
+    color:#ccc;
+    font-size:10px;
+    padding:0 3px 4px 0;
+    position:absolute;
+    margin-right:-3px;
+    top:-22px
+}
+.bonus-content #progressbar .bonus-info-start-amount {
+    bottom:-20px;
+    color:#ccc;
+    display:block;
+    font-size:10px;
+    position:absolute
+}
+.bonus-content #progressbar .bonus-info-end-amount {
+    bottom:-20px;
+    color:#ccc;
+    display:block;
+    font-size:100%;
+    position:absolute
+}
+.bonus-content #progressbar .slab-legend-active-single-progress {
+    color:#ccc;
+    position:relative;
+    margin-left:5px;
+    top:2px;
+    font-size:10px
+}
+.bonus-content #progressbar .bonus-info-current-payout {
+    color:#ccc;
+    font-size:10px;
+    padding:0 0 4px 5px;
+    position:absolute;
+    margin-left:-5px;
+    top:-35px
+}
+.bonus-content #progressbar .bonus-info-current-payout-right {
+    color:#ccc;
+    font-size:10px;
+    padding:0 3px 4px 0;
+    position:absolute;
+    margin-right:-3px;
+    top:-35px
+}
+.pc-widget.pm-widget-box.pc-component div.freeroll-content {
+    width:744px
+}
+.pc-widget.pm-widget-box.pc-component div.freeroll-content table td:last-child {
+    padding-right:0
+}
+.pbt-oldbonus {
+    width:734px;
+    padding:20px
+}
+.pbt-oldbonus ul li {
+    width:734px!important
+}
+.pbt-oldbonus table {
+    border-collapse:collapse;
+    margin-bottom:10px;
+    border-top:1px solid #3b3b3b;
+    border-bottom:1px solid #3b3b3b;
+    color:#999;
+    vertical-align:middle
+}
+.pbt-oldbonus table caption {
+    font-weight:bold;
+    font-size:15px;
+    padding-left:10px;
+    padding-bottom:9px;
+    color:#fff
+}
+.pbt-oldbonus table caption p {
+    display:inline;
+    float:right
+}
+.pbt-oldbonus table th {
+    font-weight:bold;
+    border-bottom:1px solid #333;
+    border-top:1px solid #333;
+    padding:14px 10px 9px;
+    background-color:#222
+}
+.pbt-oldbonus table td {
+    color:#fff;
+    padding:6px 10px 6px 9px;
+    border-bottom:1px solid #555;
+    text-align:left
+}
+.pbt-oldbonus table tr {
+    background:transparent!important
+}
+#alert-settings-control {
+    height:430px;
+    width:755px
+}
+.poker-client-layout #main-wrap {
+    width:803px;
+    height:542px;
+    margin-left:0
+}
+.poker-client-layout #poker-account-tabs {
+    background:none;
+    background-color:transparent;
+    height:inherit;
+    padding:0;
+    overflow:hidden
+}
+.poker-client-layout #poker-account-tabs .ui-widget-header {
+    float:none
+}
+.poker-client-layout #poker-account-tabs #poker-account-tabs-header {
+    background:none;
+    padding-left:0;
+    border:0
+}
+.poker-client-layout #poker-account-tabs #poker-account-tabs-header li {
+    background:none;
+    background-color:#444
+}
+.poker-client-layout #poker-account-tabs #poker-account-tabs-header li a {
+    color:#fff;
+    font-size:11px;
+    font-weight:normal;
+    padding:3px 11px
+}
+.poker-client-layout #poker-account-tabs #poker-account-tabs-header>p {
+    padding-left:10px;
+    padding-top:10px;
+    color:#999;
+    font-size:11px
+}
+.poker-client-layout #poker-account-tabs #poker-account-tabs-header>p a {
+    color:#999;
+    text-decoration:underline
+}
+.poker-client-layout .poker-account-content {
+    margin-bottom:0
+}
+.poker-client-layout #poker-account-tabs.ui-corner-all {
+    border-radius:0
+}
+.poker-linkbutton-style1 {
+    z-index:2000;
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -842px;
+    float:left;
+    padding:0 0 0 12px;
+    height:19px;
+    font-size:12px;
+    margin-right:0;
+    cursor:pointer;
+    position:static
+}
+.poker-linkbutton-style1 span {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -818px;
+    padding:1px 12px 0 0;
+    border:0 none;
+    color:#000;
+    font-size:10px;
+    font-weight:bold;
+    text-decoration:none;
+    float:left;
+    height:19px;
+    cursor:pointer
+}
+.poker-linkbutton-style1 span:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -866px
+}
+.poker-linkbutton-style1:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -890px
+}
+.poker-linkbutton-style2 {
+    z-index:2000;
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -458px;
+    float:left;
+    padding:0 0 0 12px;
+    height:19px;
+    font-size:12px;
+    margin-right:0;
+    margin-top:1px;
+    cursor:pointer;
+    position:static
+}
+.poker-linkbutton-style2>span {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -434px;
+    padding:1px 12px 0 0;
+    border:0 none;
+    color:#fff;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:bold;
+    float:left;
+    height:19px;
+    cursor:pointer
+}
+.poker-linkbutton-style2 span:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -482px
+}
+.poker-linkbutton-style2:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -506px
+}

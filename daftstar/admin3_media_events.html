@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/extend.css" rel="stylesheet">
+
+    <!-- Scripts -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/extend.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      if( navigator.userAgent.match(/iPad/i) != null ){
+          viewport = document.querySelector("meta[name=viewport]");
+          viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+      }
+
+      if (!$.browser.opera) {
+
+            // select element styling
+            $('select.select4').each(function(){
+                var title = $(this).attr('title');
+                var classn = $(this).attr('class');
+                if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+                $(this)
+                    .css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+                    .after('<span class="'+classn+'">' + title + '</span>')
+                    .change(function(){
+                        val = $('option:selected',this).text();
+                        $(this).next().text(val);
+                        })
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+            });
+
+        };
+
+    });
+</script>
+
+
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-links">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li class="divider">|</li>
+            <li><a href="#">Signup</a></li>
+        </ul>
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner admin">
+<div class="container-fluid">
+    <div class="page-title">SETTINGS | BACKSTAGE</div>
+    <div class="space40"></div>
+
+    <div class="row-fluid section">
+        <ul class="nav nav-tabs" id="myTab">
+          <li><a href="admin1_basic_bio.html">BASIC INFO</a></li>
+          <li><a href="admin2_socialsync_index.html">SOCIAL SYNC</a></li>
+          <li class="active"><a href="admin3_media_videos_table.html">MEDIA</a></li>
+          <li><a href="admin4_security_change_mail.html">SECURITY</a></li>
+          <li><a href="#FEATURES">FEATURES</a></li>
+          <li class="right"><span class="more-right"><a href="#">back to Backstage page</a></span></li>
+        </ul>
+
+
+        <div class="tab-content ac-parent">
+            <!-- Basic info Tab Conent  -->
+          <div class="tab-pane active" id="INFO">
+            <div class="container-fluid access-control">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                  <div class="row">
+                    <a href="admin3_media_videos_list.html" class="btn-y2">VIDEOS</a>
+                    <a href="admin3_media_photos.html" class="btn-y2">PHOTOS</a>
+                    <a href="admin3_media_mp3_albums.html" class="btn-y2">MP3 / ALBUMS</a>
+                    <a href="admin3_media_events.html" class="btn-y2 active">EVENTS</a>
+                    <a href="admin3_media_i_am_fan.html" class="btn-y2">I AM FAN</a>
+                  </div>
+                  <div class="row description">
+                    <h6>Order of appearance</h6>
+                    <p>Choose the order of appearance of the Videos, Photos, MP3s / Albums & I Am Fan tabs (the order they will be seen on the Backstage page). Just grab, drag and drop the box to the desired location. Once the boxes are in the desired location press ‘Save Changes’ or ‘Cancel’.</p>
+                    <a href="#" class="btn-y4">Create new event</a>
+                  </div>
+                  <div class="row group-btn">
+                    <a href="#" class="btn-y4">Save changes</a>
+                    <a href="#" class="btn-y5">Cancel</a>
+                  </div>
+                </div>
+                <!-- //end-Sidebar -->
+                <form>
+                  <!-- Content -->
+                  <div class="content">
+                    <div class="col-4">
+                        <div class="head-col">
+                            <span class="title">Uploaded</span>
+                            <div class="mode-view">
+                                <span class="mode-view-title">View</span>
+                                <ul class="mode-view-menu">
+                                    <li class="active"><a href="#">Most Viewed</a></li>
+                                    <li><a href="#">Newest to Oldest</a></li>
+                                    <li><a href="#">Oldest to Newest</a></li>
+                                </ul>
+                            </div>
+                            <span class="title pull-right">8 PHOTOS</span>
+                        </div>
+                        <div class="content-col">
+                            <div class="photos-gallery">
+                              <div class="media-item-3 active">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="media-item-3">
+                                <div class="img">
+                                    <img src="img/ladygaga.jpg" alt="">
+                                </div>
+                                <div class="overlay">
+                                    <a href="#" class="image-title">Lady Gaga in Concert</a>
+                                    <div class="group-btn">
+                                      <a href="#" class="btn-edit">Edit</a>
+                                      <div class="statistic-number">
+                                          <span class="num-sta seen"><i></i>2.2k</span>
+                                          <span class="num-sta comments-2"><i></i>96</span>
+                                          <span class="num-sta like-2"><i></i>2.3k</span>
+                                          <span class="num-sta unlike"><i></i>573</span>
+                                      </div>
+                                      <a href="#" class="btn-delete"></a>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- //end-Content -->
+                </form>
+            </div>
+          </div>
+          <!-- Basic info Tab Conent end -->
+          <!-- Social Sync Tab Conent -->
+          <div class="tab-pane" id="SOCIAL"></div>
+          <!-- Social Sync Tab Conent end -->
+          <!-- MEDIA Tab Conent -->
+          <div class="tab-pane" id="MEDIA"></div>
+          <!-- MEDIA Tab Conent end -->
+          <!-- SECURITY Sync Tab Conent -->
+          <div class="tab-pane" id="SECURITY"></div>
+          <!-- SECURITY Tab Conent end -->
+          <!-- FEATURES Tab Conent -->
+          <div class="tab-pane" id="FEATURES"></div>
+          <!-- FEATURES Sync Tab Conent end -->
+          <!-- DISPLAY Sync Tab Conent -->
+          <div class="tab-pane" id="DISPLAY"></div>
+          <!-- DISPLAY Sync Tab Conent end -->
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<div class="space80"></div>
+<div class="space40"></div>
+<div class="space20"></div>
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+            <div class="container">
+              <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+              <div  class="footer-menu-cols">
+                <ul>
+                    <!-- WHO WE ARE Menu -->
+                    <li class="first">
+                        <ul class="foot-menu">
+                            <li class="title">WHO WE ARE</li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="advertisement.html">ADVERTISING</a></li>
+                            <li><a href="press_100.html">PRESS</a></li>
+                            <li><a href="contact.html">CONTACT US</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- CATEGORIES Menu -->
+                    <li>
+                        <ul class="foot-menu">
+                            <li class="title">CATEGORIES</li>
+                            <li><a href="home_login.html">HOME</a></li>
+                            <li><a href="videos.html">VIDEOS</a></li>
+                            <li><a href="mp3_albums.html">MP3s</a></li>
+                            <li><a href="radio.html">RADIO</a></li>
+                            <li><a href="events.html">EVENTS</a></li>
+                            <li><a href="interviews.html">INTERVIEWS</a></li>
+                            <li><a href="challenge_73.html">CHALLENGE</a></li>
+                            <li><a href="photos.html">PHOTOS</a></li>
+                            <li><a href="#">STORE</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- MOBILE Menu -->
+                    <li>
+                        <ul class="foot-menu">
+                            <li class="title">MOBILE</li>
+                            <li><a href="#">IPHONE</a></li>
+                            <li><a href="#">IPAD</a></li>
+                            <li><a href="#">ANDROID</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- LEGAL Menu -->
+                    <li>
+                        <ul class="foot-menu">
+                            <li class="title">LEGAL</li>
+                            <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                            <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                            <li><a href="copyright.html">COPYRIGHT</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- CONNECT Menu -->
+                    <li>
+                        <ul class="foot-menu">
+                            <li class="title">CONNECT</li>
+                            <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                            <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                            <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                            <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- WEBSITE Menu -->
+                    <li>
+                        <ul class="foot-menu">
+                            <li class="title">WEBSITE</li>
+                            <li><a href="sitemap.html">SITEMAP</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- LANGUAGE Menu -->
+                    <li class="last">
+                        <ul class="foot-menu">
+                            <li class="title">LANGUAGE</li>
+                            <li><a href="#">ENGLISH</a></li>
+                            <li><a href="#">SPANISH</a></li>
+                            <li><a href="#">FRENCH</a></li>
+                            <li><a href="#">GERMAN</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,2065 @@
+/*-=- Contents of poker/styles/poker.min.css -=-*/
+ .button-s2 .uni-button {
+    background-position:0 -602px;
+    height:19px;
+    float:left;
+    margin-top:1px
+}
+.button-s2 .uni-button span {
+    background-position:right -578px;
+    color:#000;
+    font-size:11px;
+    height:16px;
+    padding-top:4px;
+    text-transform:none;
+    min-width:25px
+}
+.button-s2 .uni-button.hover, .button-s2 .uni-button:hover {
+    background-position:0 -698px
+}
+.button-s2 .uni-button.hover span, .button-s2 .uni-button:hover span {
+    background-position:right -674px
+}
+.button-l3 .uni-button {
+    background-position:0 -1308px;
+    height:29px;
+    float:left;
+    margin-top:1px
+}
+.button-l3 .uni-button span {
+    background-position:right -1274px;
+    color:#000;
+    font-size:12px;
+    font-weight:bold;
+    height:24px;
+    padding-top:8px;
+    text-transform:none;
+    min-width:55px
+}
+.button-l3 .uni-button.hover, .button-l3 .uni-button:hover {
+    background-position:0 -1444px
+}
+.button-l3 .uni-button.hover span, .button-l3 .uni-button:hover span {
+    background-position:right -1410px
+}
+.button-t3 .uni-button {
+    background-position:0 -1998px;
+    height:35px;
+    float:left;
+    margin-top:1px
+}
+.button-t3 .uni-button span {
+    background-position:right -1958px;
+    color:#000;
+    font-size:15px;
+    font-weight:bold;
+    height:27px;
+    padding-top:8px;
+    text-transform:none;
+    min-width:69px
+}
+.button-t3 .uni-button.hover, .button-t3 .uni-button:hover {
+    background-position:0 -2158px
+}
+.button-t3 .uni-button.hover span, .button-t3 .uni-button:hover span {
+    background-position:right -2118px
+}
+.span-19 {
+    width:185px;
+    margin-right:5px
+}
+.span-77 {
+    width:765px
+}
+.span-25 {
+    width:240px
+}
+.span-71 {
+    width:705px;
+    margin-right:5px
+}
+.home-layout {
+}
+.home-layout .pm-area-banner {
+    position:relative
+}
+.home-layout .pm-area-banner div.pc-component {
+    float:left;
+    margin:0 10px 10px 0
+}
+.home-layout .poker-home-teaser-box section {
+    padding:10px 0 10px
+}
+.home-layout .poker-home-teaser-box section .pc-folder section {
+    padding:0
+}
+.home-layout .pm-area-2col .pm-area-contentleft {
+    width:715px;
+    margin-right:0
+}
+.home-layout .pm-area-2col .pm-area-contentright {
+    width:250px
+}
+.pm-nav1col {
+}
+.pm-nav1col .pm-area-main {
+    width:765px
+}
+.pm-nav2col {
+}
+.pm-nav2col .pm-area-2col .pm-area-contentleft {
+    width:525px;
+    margin-right:0
+}
+.pm-nav2col .pm-area-2col .pm-area-contentright {
+    width:240px
+}
+.pm-nav2col .pm-area-2col .pm-area-contentright .pm-widget-box {
+    margin-right:0
+}
+.pc-widget.pc-component>section>.playnow-container {
+    background-color:#000;
+    margin:0 10px 10px 0;
+    padding:9px 10px 12px;
+    position:relative
+}
+.pc-widget.pc-component>section>.playnow-container h4.mobile {
+    margin-top:5px;
+    float:left
+}
+.pc-widget.pc-component>section>.playnow-container img {
+    float:right;
+    position:relative
+}
+.pc-widget.pc-component>section>.playnow-container .top-divider {
+    border-top:1px solid #272727;
+    margin-top:10px;
+    padding-top:10px
+}
+.pc-widget.pc-component>section>.playnow-container #register-push {
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #272727
+}
+.pc-widget.pc-component>section>.playnow-container p {
+    clear:both
+}
+.pm-nav1col.offer-page section.pm-area-main {
+    background-color:#000
+}
+.pm-nav1col.promotion-detail {
+}
+.pm-nav1col.promotion-detail .pm-area-2col {
+    background-color:#000;
+    margin-right:10px
+}
+.pm-nav1col.promotion-detail .pm-area-2col .pm-area-contentleft {
+    width:515px;
+    margin-right:0;
+    margin-top:10px
+}
+.pm-nav1col.promotion-detail .pm-area-2col .pm-area-contentright {
+    width:250px;
+    margin-top:10px
+}
+.pm-nav1col.promotion-detail .pm-area-main {
+    padding-bottom:10px
+}
+.pm-nav1col.promotion-detail .pm-area-main section.pm-area-banner {
+    padding-right:10px
+}
+.pm-nav1col.promotion-offer-detail .pm-area-main {
+    background-color:#000;
+    margin-right:0
+}
+.pm-nav1col.promotion-offer-detail header h3 {
+    margin-left:10px
+}
+.pm-nav1col.promotion-offer-detail .step-container-style1 section .pc-image-container-image .step-box.step-box-right {
+    left:450px;
+    top:20px
+}
+.pm-nav2col.gb-promotion-page .pm-area-contentleft {
+    width:570px;
+    margin-right:0;
+    margin-top:10px
+}
+.pm-nav2col.gb-promotion-page .pm-area-contentright {
+    width:195px;
+    margin-top:10px
+}
+.pm-nav132col .pm-widget-box.link-teaser .exposed-link-style3 {
+    background-position:right -65px
+}
+.pm-nav132col .pm-widget-box.image-right section .text h3 {
+    color:#fff
+}
+#how-to-play-home .pm-area-2col .pm-area-contentleft {
+    width:516px
+}
+#how-to-play-home .pm-area-2col .pm-area-contentleft .pc-image-text>section {
+    padding:0 10px 0 10px
+}
+#how-to-play-home .pm-area-2col .pm-area-contentleft .pc-image-text>section .text {
+    padding-top:10px
+}
+#how-to-play-home .pm-area-2col .pm-area-contentright {
+    width:258px
+}
+#software-features .pm-area-contentleft .pm-widget-box section {
+    padding:10px
+}
+#software-features .pm-area-contentleft .features-title header {
+    padding-left:0
+}
+#software-features .pm-area-contentleft .features-title header h3 {
+    color:#fc0;
+    font-size:12px
+}
+#software-features .pm-area-contentleft .features-title section {
+    padding:0
+}
+#software-features .pm-area-contentleft .image-left {
+    padding-top:5px
+}
+#software-features .pm-area-contentleft .image-left .image {
+    padding-right:20px
+}
+#software-features .pm-tabs-content {
+    width:100%
+}
+.half-width-left-box {
+    float:left;
+    margin-bottom:0;
+    width:347px
+}
+.third-width-left-box {
+    float:left;
+    margin-left:10px;
+    width:305px
+}
+.third-width-left-box .pc-image.pc-component {
+    margin-left:10px
+}
+.poker-static-size1 section {
+    height:158px
+}
+.poker-static-size2 section {
+    height:135px;
+    padding-bottom:20px
+}
+.poker-static-size4 section {
+    width:268px
+}
+.poker-static-size5 section {
+    height:110px
+}
+.poker-static-size6 {
+    float:left;
+    padding-bottom:10px
+}
+.poker-static-size6 section {
+    width:305px
+}
+.poker-static-size7 section {
+    width:955px
+}
+.poker-static-size8 {
+    width:240px;
+    float:left
+}
+.poker-static-size9 {
+    width:155px;
+    float:left
+}
+.poker-static-button1 {
+    width:160px;
+    float:left;
+    text-align:center
+}
+.poker-3column-box1 div {
+    float:left
+}
+.poker-3column-box1 section {
+    float:left;
+    position:relative
+}
+.poker-3column-box1 h4 {
+    font:bold 14px Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+.poker-3column-box1 .requirements {
+    float:left
+}
+.poker-3column-box1 .requirements hr {
+    color:#666;
+    background-color:#666
+}
+.poker-3column-box1 .requirements h4 {
+    color:#666
+}
+.poker-3column-box1 .requirements p {
+    color:#666
+}
+.poker-3column-box1 .pc-image.pc-component.poker-static-size3 {
+    padding:20px 10px 0 10px
+}
+.step-container-style1 {
+    width:955px
+}
+.step-container-style1 section {
+    padding:0
+}
+.step-container-style1 section .pc-image-container-image {
+    position:relative
+}
+.step-container-style1 section .pc-image-container-image .step-box {
+    position:absolute
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-left {
+    left:185px;
+    top:42px;
+    width:186px
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-left .text>h2 {
+    margin-bottom:2px
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right {
+    left:405px;
+    top:23px;
+    width:100%
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right img {
+    top:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right .text p div, .step-container-style1 section .pc-image-container-image .step-box.step-box-right .text .step-box-text div {
+    float:left
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right .step-box-text>div {
+    width:275px
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right .text p {
+    padding-right:0
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right .step-mobile-button {
+    margin-left:72px
+}
+.step-container-style1 section .pc-image-container-image .step-box.step-box-right .play-now-only {
+    margin-top:18px
+}
+#carousel {
+    float:left;
+    height:291px;
+    overflow:hidden;
+    position:relative;
+    width:705px
+}
+#carousel #text-background {
+    background-color:#000;
+    height:73px;
+    -moz-opacity:.9;
+    opacity:.9;
+    position:absolute;
+    top:218px;
+    width:705px;
+    z-index:2
+}
+#carousel #header-text {
+    color:#fc0;
+    font-size:15px;
+    padding-left:10px;
+    position:absolute;
+    top:225px;
+    z-index:3
+}
+#carousel #slideshow {
+    left:0;
+    height:291px;
+    position:absolute;
+    top:0;
+    visibility:hidden;
+    width:705px;
+    z-index:1
+}
+#carousel #body-text {
+    color:#fff;
+    font-size:21px;
+    font-weight:bold;
+    padding-left:8px;
+    position:absolute;
+    top:245px;
+    z-index:3
+}
+#carousel #slideshow-progress {
+    color:#fff;
+    left:0;
+    padding-left:10px;
+    padding-left:5px;
+    position:absolute;
+    top:0;
+    z-index:4
+}
+#carousel #slideshow-progress a {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat 0 -108px;
+    color:transparent;
+    display:inline-block;
+    font-size:1px;
+    line-height:15px;
+    margin:0 1px;
+    padding:0;
+    width:14px
+}
+#carousel #carousel-link {
+    text-decoration:none
+}
+.poker-data-style1 dl {
+    margin-left:10px;
+    font-size:11px
+}
+.poker-data-style1 dl dt {
+    font-weight:bold
+}
+.poker-data-style1 dl dd {
+    margin-bottom:10px
+}
+.poker-data-style1 dd>dl {
+    margin-top:5px
+}
+#answer-list input {
+    float:left;
+    display:block;
+    margin-left:10px;
+    margin-top:10px
+}
+.download-now-style1 .text p {
+    font-size:14px;
+    font-weight:bold;
+    padding-bottom:10px;
+    padding-left:0
+}
+.poker-bottom-border {
+    border-bottom:1px solid #666
+}
+.poker-banner-text-style1 {
+    background-color:#000;
+    margin:0;
+    padding:10px
+}
+.poker-banner-text-style1 p {
+    border-bottom:1px solid #333;
+    padding-bottom:10px;
+    padding-left:0;
+    width:100%
+}
+.poker-banner-text-style1 h1 {
+    padding-left:0
+}
+.poker-teaser-box {
+    width:100%
+}
+.poker-teaser-box>section {
+    padding:0
+}
+.poker-teaser-box .pc-folder.pc-component section {
+    position:relative
+}
+.poker-teaser-box .pc-folder.pc-component section .pc-teaser {
+    border:1px solid #333;
+    float:left;
+    margin-left:10px
+}
+.poker-teaser-box2 .pc-folder.pc-component section .pc-teaser.pc-component {
+    width:240px
+}
+.poker-teaser-box2 .pc-folder.pc-component section .pc-teaser.pc-component h3 a {
+    color:#fc0;
+    font-size:11px;
+    text-decoration:none
+}
+.poker-teaser-box2 .pc-folder.pc-component section .pc-teaser.pc-component h4 {
+    font-size:11px
+}
+.poker-home-teaser-box {
+    float:left;
+    width:705px
+}
+.poker-home-teaser-box section .pc-teaser.pc-component {
+    border:solid 1px #333;
+    width:219px;
+    margin:0 0 0 10px;
+    float:left
+}
+.poker-home-teaser-box section .pc-teaser.pc-component h3, .poker-home-teaser-box section .pc-teaser.pc-component h4 {
+    line-height:14px
+}
+.poker-right-teasers .pc-teaser.pc-component {
+    border:solid 1px #333;
+    width:217px;
+    margin-left:10px;
+    margin-bottom:10px
+}
+.poker-right-teasers .pc-teaser.pc-component h3 a {
+    color:#fc0;
+    font-size:11px;
+    text-decoration:none
+}
+.poker-right-teasers .pc-teaser.pc-component h4 {
+    font-size:11px
+}
+.poker-teaser-pair {
+    margin-right:0
+}
+.poker-teaser-pair section {
+    width:100%
+}
+.poker-teaser-pair section .pc-folder.pc-component section {
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser {
+    background-color:#000;
+    float:left;
+    height:270px;
+    width:377px
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser header {
+    position:absolute;
+    top:140px
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser header h3 {
+    color:#fc0;
+    font-size:14px;
+    line-height:21px;
+    margin-left:10px
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser section .image img {
+    left:0;
+    position:absolute;
+    top:0
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser section .text {
+    top:165px
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser section .text h3 {
+    font-size:11px;
+    color:#fff
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text.link-teaser section .text p {
+    color:#ccc;
+    line-height:11px
+}
+.poker-teaser-pair section .pc-folder.pc-component section .pc-image-text+.pc-image-text {
+    margin-left:10px
+}
+.poker-teaser-list {
+    margin-right:0
+}
+.poker-teaser-list section {
+    width:100%
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser {
+    background-color:#000;
+    float:left;
+    height:137px;
+    margin-bottom:10px;
+    width:100%
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser header {
+    margin-left:277px;
+    margin-top:10px
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser header h3 {
+    color:#fc0;
+    font-size:14px;
+    margin-left:10px
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser section .image img {
+    left:0;
+    position:absolute;
+    top:0
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser section .text {
+    left:277px;
+    position:absolute;
+    top:30px
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser section .text h3 {
+    font-size:11px;
+    color:#fff
+}
+.poker-teaser-list section .pc-folder.pc-component section .pc-image-text.link-teaser section .text p {
+    color:#ccc;
+    line-height:11px
+}
+.poker-teaser {
+    float:left
+}
+.poker-teaser .poker-teaser-text {
+    color:#ccc;
+    font-size:11px;
+    line-height:14px;
+    margin-bottom:0;
+    padding:10px
+}
+.poker-teaser .poker-teaser-text h5 {
+    color:#fc0;
+    font-size:14px;
+    margin-bottom:0
+}
+.poker-teaser .poker-teaser-text h6 {
+    background-color:transparent;
+    color:#fff;
+    margin:0;
+    padding:0
+}
+.poker-teaser .poker-teaser-text ol {
+    margin-bottom:10px
+}
+.poker-teaser .poker-teaser-text ol li {
+    margin-left:20px
+}
+.poker-teaser .poker-teaser-tagimage {
+    position:absolute;
+    right:0;
+    top:15px
+}
+.poker-teaser.shadow-text-teaser {
+    border:1px solid #333;
+    margin-left:10px;
+    margin-bottom:10px;
+    position:relative;
+    width:219px
+}
+.poker-teaser.shadow-text-teaser:last-child {
+    margin-bottom:0
+}
+.poker-teaser.shadow-text-teaser .poker-teaser-text {
+    background:url('../../images/teaser-black.Y_NNS~.png') repeat scroll 0 0 transparent;
+    bottom:0;
+    left:0;
+    position:absolute;
+    width:199px
+}
+.poker-teaser.shadow-text-teaser .poker-teaser-text h5 {
+    font-size:11px
+}
+.poker-teaser.shadow-text-teaser .poker-teaser-image {
+    margin-right:-9px
+}
+.poker-teaser2 {
+    background-color:#000;
+    border-top:1px solid #333;
+    position:relative
+}
+.poker-teaser1 {
+    height:270px;
+    margin:0 10px 10px 0;
+    overflow:hidden;
+    width:377px
+}
+.poker-teaser1.teaser-right {
+    margin-right:0
+}
+.poker-teaser2 {
+    margin-bottom:10px
+}
+.poker-teaser2.left-image {
+    width:100%
+}
+.poker-teaser2.left-image .poker-teaser-image, .poker-teaser2.left-image .poker-teaser-text {
+    float:left
+}
+.poker-teaser2.left-image .poker-teaser-text {
+    width:468px
+}
+.poker-teaser3 {
+    margin-bottom:10px;
+    padding:10px;
+    width:100%
+}
+.poker-teaser3 img {
+    border:1px solid #333
+}
+.poker-teaser3.image-right img {
+    float:right;
+    margin-right:20px
+}
+.poker-teaser3.image-left img {
+    float:left
+}
+.poker-teaser3 h6 {
+    background-color:transparent;
+    color:#fc0;
+    font-size:16px;
+    margin:0;
+    padding:0
+}
+.poker-teaser3 div.poker-teaser-text {
+    width:400px
+}
+.poker-teaser3 div.poker-teaser-text h5 {
+    color:#fff;
+    margin-bottom:4px
+}
+.poker-teaser4 {
+    margin-bottom:10px;
+    width:100%
+}
+.poker-teaser4 img {
+    border:1px solid #333
+}
+.poker-teaser4.image-right img {
+    float:right;
+    margin-right:10px
+}
+.poker-teaser4.image-left img {
+    float:left
+}
+.poker-teaser4 div.poker-teaser-text {
+    width:400px
+}
+.poker-teaser4 div.poker-teaser-text h5 {
+    color:#999;
+    margin-bottom:4px
+}
+.poker-teaser4 div.poker-teaser-text h6 {
+    background-color:transparent;
+    color:#fc0;
+    font-size:16px;
+    margin:0;
+    padding:0
+}
+#no-cookie .pm-area-main {
+    margin-right:0
+}
+#no-cookie.pm-simple-layout .pm-area-3col {
+    margin-right:-10px
+}
+#no-cookie .seo-boxes, #no-cookie .no-cookie-read-more-bar {
+    margin-right:0
+}
+#no-cookie .pm-area-3col .pm-area-contentleft .poker-teaser3, #no-cookie .pm-area-3col .pm-area-contentcenter .poker-teaser3, #no-cookie .pm-area-3col .pm-area-contentright .poker-teaser3 {
+    background-color:#000;
+    border-top:1px solid #333;
+    height:100px;
+    overflow:hidden;
+    width:290px
+}
+#no-cookie .pm-area-3col .pm-area-contentleft .poker-teaser3.image-left img, #no-cookie .pm-area-3col .pm-area-contentcenter .poker-teaser3.image-left img, #no-cookie .pm-area-3col .pm-area-contentright .poker-teaser3.image-left img {
+    margin-right:10px
+}
+#no-cookie .pm-area-3col .pm-area-contentleft .poker-teaser3 .poker-teaser-text, #no-cookie .pm-area-3col .pm-area-contentcenter .poker-teaser3 .poker-teaser-text, #no-cookie .pm-area-3col .pm-area-contentright .poker-teaser3 .poker-teaser-text {
+    padding-top:0;
+    width:280px
+}
+.whats-new.whats-new-faq section, .whats-new.whats-new-client section, .whats-new.whats-new-offers section {
+    padding:0
+}
+.whats-new.whats-new-faq section div, .whats-new.whats-new-client section div, .whats-new.whats-new-offers section div {
+    border:none
+}
+.whats-new.whats-new-faq .pc-image.pc-component, .whats-new.whats-new-client .pc-image.pc-component, .whats-new.whats-new-offers .pc-image.pc-component {
+    border:1px solid #333;
+    float:left;
+    margin-bottom:10px;
+    margin-left:10px;
+    margin-top:10px;
+    padding:0
+}
+.whats-new.whats-new-faq .poker-top-border, .whats-new.whats-new-client .poker-top-border, .whats-new.whats-new-offers .poker-top-border {
+    border-top:1px solid #333;
+    padding:10px
+}
+.whats-new.whats-new-faq .pc-text.pc-component, .whats-new.whats-new-client .pc-text.pc-component, .whats-new.whats-new-offers .pc-text.pc-component {
+    float:left;
+    margin-bottom:10px;
+    margin-top:10px;
+    padding:0;
+    width:315px
+}
+.whats-new.whats-new-faq .pc-text.pc-component.bottom-link, .whats-new.whats-new-client .pc-text.pc-component.bottom-link, .whats-new.whats-new-offers .pc-text.pc-component.bottom-link {
+    margin-left:0;
+    width:100%
+}
+.overlay-text-style1 {
+    float:left
+}
+.overlay-text-style1 section {
+    padding:0;
+    height:166px
+}
+.overlay-text-style1 section .pc-text {
+    float:right;
+    top:43px;
+    position:relative;
+    width:130px
+}
+.overlay-text-style1 section .pc-text .text h2 {
+    padding:10px 0 0 0
+}
+.overlay-text-style1 section .pc-text .text a {
+    padding:0 10px 0 0
+}
+.teaser-no-margin.pc-regional.pc-component {
+    margin:0
+}
+.pc-component.blog-spot {
+    margin-bottom:0
+}
+.pc-component.blog-spot section {
+    padding-left:10px;
+    padding-bottom:19px
+}
+.pc-component.blog-spot h2 {
+    margin-bottom:0;
+    padding-bottom:0
+}
+.pc-component.blog-spot h2 a {
+    line-height:1.4em;
+    text-decoration:none
+}
+.pc-component.blog-spot .blog-spot-time {
+    color:#999;
+    margin:0;
+    padding-bottom:5px
+}
+.pc-component.blog-spot .blog-spot-text {
+    padding-bottom:5px;
+    margin-bottom:0
+}
+.pc-component.blog-spot img {
+    float:right;
+    height:50px;
+    width:50px;
+    padding:0 10px 10px 10px
+}
+.players-online-box section {
+    height:74px
+}
+.freeroll-widget-style1 {
+    position:relative
+}
+.freeroll-widget-style1 .freeroll {
+    border-top:1px solid #1b1b1b;
+    bottom:11px;
+    height:30px;
+    left:0;
+    margin:0;
+    position:absolute;
+    width:100%
+}
+.freeroll-widget-style1 .freeroll section {
+    padding:0 10px
+}
+.freeroll-widget-style1 .freeroll section a {
+    padding:0 10px 0 0
+}
+.freeroll-widget-style1 .overlay {
+    bottom:38px;
+    left:10px;
+    margin-bottom:4px;
+    position:absolute
+}
+.freeroll-widget-style1 .overlay p {
+    margin-top:3px
+}
+.freeroll-widget-style1 .overlay p a.link {
+    color:#fc0;
+    text-decoration:none;
+    font-weight:bold
+}
+.freeroll-widget-style1 section {
+    padding:0
+}
+.poker-promotion-table-style1 th {
+    color:#ccc;
+    font-size:12px;
+    padding:2px 0 2px 0;
+    width:50%
+}
+.poker-promotion-table-style1 td {
+    color:#fff;
+    font-size:12px;
+    padding:2px 0 2px 0;
+    text-align:right
+}
+.poker-promotion-table-style1 tr:last-child td, .poker-promotion-table-style1 tr:last-child th {
+    border-bottom:0
+}
+#poker-promotion-table-style2 {
+    margin-left:10px
+}
+.poker-promotion-list-style1 ol {
+    margin:0
+}
+.poker-promotion-style1 {
+    background-color:#444
+}
+.poker-promotion-style2 {
+    background-color:#3b3b3b
+}
+.poker-promotion-style1, .poker-promotion-style2 {
+    border-bottom:1px solid #333
+}
+.poker-promotion-style1 .image, .poker-promotion-style2 .image {
+    border:1px solid #000;
+    margin:0 10px 10px 10px;
+    padding:0
+}
+.poker-image-style1 section {
+    padding:0
+}
+.poker-image-style2 section {
+    padding:0
+}
+.poker-image-style2 div {
+    border:none
+}
+.poker-top-border {
+    border-top:1px solid #333
+}
+.poker-background-style1 {
+    padding:10px;
+    background-color:#222
+}
+.poker-text-style1 {
+    color:#999
+}
+.poker-accordion {
+    width:100%
+}
+.poker-accordion li {
+    width:100%
+}
+.poker-accordion li .pc-component {
+    margin-right:0
+}
+.poker-accordion li>*>section {
+    background-color:#555;
+    padding:0 10px 10px 20px
+}
+.poker-accordion li>div.hover {
+    background-color:#555
+}
+.poker-accordion li>*>header.expanded {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -205px -1152px;
+    background-color:#555;
+    padding-left:20px
+}
+.poker-accordion li>*>header.expanded * {
+    color:#fc0
+}
+.poker-accordion li>*>header {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -205px -960px;
+    padding-left:20px;
+    cursor:pointer;
+    display:block
+}
+.poker-accordion li>*>header h3 {
+    margin-bottom:0
+}
+.poker-accordion li>*>header *>* {
+    font-size:11px;
+    color:#fff;
+    padding:4px 0 5px 0
+}
+#tournament-calendar {
+    padding:0
+}
+#tournament-calendar .calendar-header {
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+    background-position:left center;
+    float:left;
+    margin:0;
+    padding:0;
+    width:100%
+}
+#tournament-calendar .calendar-header h3 {
+    color:#fc0;
+    float:left;
+    font-size:11px;
+    font-weight:bold;
+    line-height:21px;
+    margin:0 9px;
+    padding:2px 0 4px
+}
+#tournament-calendar .calendar-content-body {
+    float:left;
+    margin-bottom:10px;
+    padding:12px 0 0 0;
+    width:100%
+}
+#tournament-calendar .calendar-content-body .filter-calendar {
+    float:left
+}
+#tournament-calendar .calendar-content-body #sort-out-section {
+    border-right:1px solid #555;
+    padding:0 10px;
+    width:450px
+}
+#tournament-calendar .calendar-content-body #sort-out-section div.selector {
+    margin-bottom:10px
+}
+#tournament-calendar .calendar-content-body #sort-out-section .checker {
+    margin-right:0
+}
+#tournament-calendar .calendar-content-body #sort-out-section label {
+    font-size:11px
+}
+#tournament-calendar .calendar-content-body #filter-section {
+    padding-left:10px
+}
+#tournament-calendar .calendar-content-body .filter-functions {
+    margin-bottom:10px
+}
+.calendar-overlay {
+    background:#000;
+    background-attachment:inherit;
+    filter:alpha(opacity=45);
+    height:auto;
+    -moz-opacity:.45;
+    opacity:.45;
+    z-index:2000
+}
+.tournament-calendar-load {
+    display:none;
+    left:315px;
+    position:relative;
+    top:5px
+}
+#calendar-table {
+    margin:10px 0 0
+}
+#calendar-table tbody tr.tournament-info:hover td {
+    cursor:pointer
+}
+#calendar-table td, #calendar-table th {
+    border-bottom:1px solid #555;
+    font-size:11px;
+    padding:8px;
+    text-align:left
+}
+#calendar-table th, #calendar-table a {
+    font-weight:bold;
+    text-decoration:none
+}
+#calendar-table td:first-child {
+    border-left:none
+}
+#calendar-table tr.selected a {
+    color:#fc0;
+    font-weight:bold
+}
+#calendar-table ul {
+    margin:0
+}
+#calendar-table li {
+    float:left;
+    list-style:none
+}
+#calendar-table li.tour-info {
+    padding-left:8px;
+    width:192px
+}
+#calendar-table li.tour-info .add-to-calendar {
+    position:relative;
+    cursor:pointer
+}
+#calendar-table li.tour-info .add-to-calendar>p {
+    background-color:#272727;
+    border:1px solid #555;
+    bottom:12px;
+    display:none;
+    padding:16px 12px 12px;
+    position:absolute
+}
+#calendar-table li.tour-info .add-to-calendar>p a {
+    display:block;
+    padding:3px 0
+}
+#calendar-table li.tour-info .add-to-calendar>p a.close-add-cal {
+    color:#fc0;
+    cursor:pointer;
+    right:8px;
+    position:absolute;
+    top:0
+}
+#calendar-table li.tour-info .add-to-calendar>p a:hover {
+    text-decoration:underline
+}
+#calendar-table li.prize-pool {
+    width:188px
+}
+#calendar-table .start {
+    width:80px
+}
+#calendar-table .name {
+    width:195px
+}
+#calendar-table .game {
+    width:105px
+}
+#calendar-table .limit {
+    width:75px
+}
+#calendar-table .buyin {
+    width:75px;
+    white-space:nowrap
+}
+#calendar-table .status {
+    width:73px
+}
+#calendar-table .players, #calendar-table .player {
+    text-align:right
+}
+#calendar-table select {
+    width:142px
+}
+#calendar-table .selector {
+    width:142px
+}
+#calendar-table .sorted-by-asc {
+    content:" ";
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat right -1005px;
+    padding-left:12px
+}
+#calendar-table .sorted-by-desc {
+    content:" ";
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat right -1026px;
+    padding-left:12px
+}
+#tournament-details-area #tournament-details {
+    float:left;
+    height:520px;
+    width:375px;
+    padding:0;
+    margin:0 0 10px 0;
+    color:#ccc
+}
+#tournament-details-area #tournament-details .ui-widget-content-body hr {
+    background-color:#555;
+    height:1px;
+    margin:10px auto;
+    padding:0;
+    width:360px
+}
+#tournament-details-area #tournament-details .ui-widget-content-body div {
+    display:inline-block;
+    margin-left:10px;
+    margin-top:10px;
+    padding:0;
+    width:170px
+}
+#tournament-details-area #tournament-details em {
+    color:#bbb;
+    font-style:normal;
+    font-size:11px;
+    padding-bottom:0
+}
+#tournament-details-area #tournament-details h5 {
+    color:#fff;
+    font-size:13px;
+    font-weight:bold;
+    padding-left:0
+}
+#tournament-details-area #tournament-details ul, #tournament-details-area #tournament-details li {
+    list-style:none;
+    margin:0
+}
+#tournament-details-area #tournament-details ul {
+    display:inline-block;
+    margin:10px;
+    padding:0;
+    width:170px
+}
+#tournament-details-area #tournament-details ul.first-list {
+    margin-right:0
+}
+#tournament-details-area #tournament-details ul li {
+    border-bottom:1px solid #555;
+    overflow:hidden;
+    padding:4px 0;
+    width:170px
+}
+#tournament-details-area #tournament-details ul li span {
+    color:#fff;
+    float:right
+}
+#tournament-details-area #tournament-details ul li:last-child {
+    border-bottom:none
+}
+#tournament-details-area #prize-pool, #tournament-details-area #blinds {
+    float:left;
+    height:255px;
+    width:185px
+}
+#tournament-details-area #prize-pool table th, #tournament-details-area #blinds table th, #tournament-details-area #prize-pool table td, #tournament-details-area #blinds table td {
+    padding:3px
+}
+#tournament-details-area #participants {
+    float:right;
+    height:520px;
+    width:185px
+}
+#tournament-details-area #prize-pool, #tournament-details-area #blinds, #tournament-details-area #participants {
+    color:#ccc;
+    padding:0;
+    margin:0 0 10px 10px;
+    font-size:10px
+}
+#tournament-details-area #prize-pool h3, #tournament-details-area #blinds h3, #tournament-details-area #participants h3 {
+    margin:0 9px
+}
+#tournament-details-area #prize-pool .ui-widget-content-body, #tournament-details-area #blinds .ui-widget-content-body, #tournament-details-area #participants .ui-widget-content-body, #tournament-details-area #prize-pool .ui-widget-content-body, #tournament-details-area #blinds .ui-widget-content-body, #tournament-details-area #participants .ui-widget-content-body, #tournament-details-area #prize-pool .ui-widget-content-body, #tournament-details-area #blinds .ui-widget-content-body, #tournament-details-area #participants .ui-widget-content-body {
+    padding-top:0
+}
+#calender-pagination {
+    background-color:#000;
+    font-size:11px;
+    padding:5px 0
+}
+#calender-pagination p {
+    text-align:center
+}
+#calender-pagination ul {
+    margin-bottom:0;
+    margin-left:0;
+    padding-left:0;
+    text-align:center
+}
+#calender-pagination .calendar-page-link {
+    display:inline-block
+}
+#calender-pagination .calendar-page-link a {
+    display:block;
+    border:1px solid #333;
+    float:left;
+    height:17px;
+    min-width:16px;
+    padding:1px 2px 0;
+    text-align:center;
+    text-decoration:none
+}
+#calender-pagination .calendar-page-link a.active-page-link {
+    color:#fc0
+}
+#calender-pagination .calendar-page-link span.disabled-page-arrow {
+    display:block;
+    height:22px;
+    padding:2px 6px;
+    text-decoration:none;
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-327px -218px
+}
+#calender-pagination .calendar-page-link a {
+    margin:0 0 0 2px
+}
+#calender-pagination .calendar-page-link a:hover {
+    background-color:#333
+}
+#calender-pagination .calendar-page-link a.active-page-arrow {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-306px -218px
+}
+#calender-pagination .calendar-page-link a.active-page-arrow:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-348px -218px
+}
+#calender-pagination .calendar-page-link a.active-page-arrow, #calender-pagination .calendar-page-link span.disabled-page-arrow {
+    border:0;
+    height:20px;
+    padding:0;
+    width:19px
+}
+#calender-pagination .calendar-page-link+.calendar-page-link a.active-page-arrow {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-369px -218px
+}
+#calender-pagination .calendar-page-link+.calendar-page-link a.active-page-arrow:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-411px -218px
+}
+#calender-pagination .calendar-page-link+.calendar-page-link span.disabled-page-arrow {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:-389px -218px;
+    width:20px
+}
+.slimScrollDiv {
+    padding:0 7px 0 0
+}
+#main div.menu.ui-widget-content-body ul li ul li ul {
+    margin-left:10px
+}
+#main div.menu.ui-widget-content-body ul li ul li span {
+    margin-left:13px;
+    padding-left:18px;
+    font-weight:normal;
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -205px -1025px;
+    color:#fff;
+    cursor:pointer
+}
+#main div.menu.ui-widget-content-body ul li ul li a:hover {
+    text-decoration:underline
+}
+#main div.menu.ui-widget-content-body ul li ul li a.expanded {
+    margin-left:13px;
+    padding-left:18px;
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -205px -1025px
+}
+#main div.menu.ui-widget-content-body ul li ul li span:hover {
+    text-decoration:underline
+}
+#main div.menu.ui-widget-content-body ul li ul li span.contracted {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -205px -962px
+}
+#main div.menu.ui-widget-content-body ul li ul li a.contracted {
+    margin-left:17px;
+    padding-left:17px;
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -208px -962px
+}
+#main div.menu.ui-widget-content-body ul {
+    padding-top:5px
+}
+.poker-top-banner {
+    margin-bottom:10px;
+    position:relative
+}
+.poker-top-banner .poker-top-banner-text {
+    left:395px;
+    position:absolute;
+    top:20px
+}
+.poker-top-banner .poker-top-banner-text h2 {
+    color:#fc0;
+    font:normal 28px Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+.poker-top-banner .poker-top-banner-text p {
+    font:normal 28px Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+.poker-top-banner2 {
+    position:relative
+}
+.poker-top-banner2 section {
+    padding:0
+}
+.poker-top-banner2 .banner-text {
+    left:25px;
+    position:absolute;
+    top:50px
+}
+.poker-top-banner2 .banner-text h1, .poker-top-banner2 .banner-text h2 {
+    font:normal 28px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    margin-bottom:4px
+}
+.poker-top-banner2 .pc-image {
+    position:absolute;
+    right:60px;
+    top:0
+}
+.poker-banner-style2.poker-top-banner {
+    position:relative
+}
+.poker-banner-style2.poker-top-banner .poker-top-banner-text {
+    left:550px;
+    top:40px;
+    line-height:30px
+}
+.poker-banner-style2.poker-top-banner .poker-top-banner-text h2 {
+    font-size:24px
+}
+.poker-banner-style2.poker-top-banner .poker-top-banner-text p {
+    font-size:24px
+}
+.poker-banner-style2.poker-top-banner .poker-top-banner-text .extra-top-space {
+    margin-top:40px
+}
+.poker-banner-style2.poker-top-banner .banner-inner-container {
+    margin-left:-357px;
+    position:absolute;
+    top:177px
+}
+.poker-banner-style2.poker-top-banner .banner-inner-container div {
+    float:left
+}
+.poker-banner-style2.poker-top-banner .banner-inner-container .extra-left-space {
+    margin-left:20px
+}
+.poker-banner-style2.poker-top-banner .banner-inner-container img {
+    top:0;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px
+}
+.extra-five-space {
+    padding:5px
+}
+.poker-top-banner3 .poker-top-banner-text {
+    left:25px;
+    top:35px;
+    width:350px
+}
+.poker-top-banner3 .poker-top-banner-text .title-text {
+    font:bold 14px Verdana, Arial, Helvetica, sans-serif;
+    color:#fff;
+    margin:10px 0
+}
+.poker-top-banner3 .poker-top-banner-text h1, .poker-top-banner3 .poker-top-banner-text h2 {
+    font:normal 28px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    margin-bottom:4px
+}
+.poker-top-banner3 .poker-top-banner-text>.poker-text-style1 {
+    top:40px;
+    position:relative;
+    float:left
+}
+.poker-top-banner3 .pc-image {
+    position:absolute;
+    right:60px;
+    top:0
+}
+#tournament-types .tournament-teaser-right {
+}
+#tournament-types .tournament-teaser-right section {
+    height:auto
+}
+#tournament-types .tournament-teaser-right #tournament-highlights .upcoming-highlights .ordinary-highlight .ordinary-highlight-name {
+    width:100px;
+    line-height:19px;
+    height:auto;
+    clear:both;
+    overflow:hidden
+}
+#tournament-types .tournament-teaser-right #tournament-highlights .main-highlight .main-highlight-name {
+    width:100px
+}
+#tournament-types .tournament-teaser-right #poker-widget-bottom-link {
+    display:none
+}
+#tournament-types .pm-area-contentleft .image-left .image {
+    padding-left:10px
+}
+#tournament-main .pm-widget-box {
+    float:left
+}
+#tournament-main .pm-widget-box p {
+    padding-bottom:10px
+}
+#tournament-main .pm-widget-box.tournament-teaser-left, #tournament-main .pm-widget-box.tournament-teaser-right {
+    background-color:#000;
+    height:192px;
+    overflow:hidden;
+    width:377px
+}
+#tournament-main .pm-widget-box.tournament-teaser-left section, #tournament-main .pm-widget-box.tournament-teaser-right section {
+    padding:0
+}
+#tournament-main .pm-widget-box.tournament-teaser-right {
+    margin-right:0
+}
+#tournament-main .pm-widget-box .pc-image-container-image .pc-text h3, #tournament-main .pm-widget-box .pc-text section h3 {
+    color:#fff;
+    font-size:14px;
+    margin-top:10px
+}
+#tournament-main .pm-widget-box.popular-spots {
+    width:765px
+}
+#tournament-main .pm-widget-box .pc-teaser {
+    width:239px;
+    margin:10px 0 10px 10px
+}
+#tournament-main .tournament-type-icon {
+    display:inline-block;
+    padding:0 0 0 10px
+}
+#tournament-main .tournament-type-icon.first-icon {
+    margin-left:10px
+}
+#tournament-main .tournament-type-icon a {
+    border:1px solid #333;
+    display:inline-block
+}
+#tournament-main .tournament-type-icon a:hover {
+    border:1px solid #666
+}
+#tournament-main .tournament-highlights {
+    position:relative
+}
+#tournament-main .tournament-highlights section {
+}
+#tournament-main .tournament-highlights section #poker-widget-bottom-link {
+    bottom:0;
+    left:0;
+    padding-bottom:12px;
+    position:absolute;
+    right:0
+}
+.no-cookie-offer-container-es {
+    margin-right:0;
+    margin-top:-10px
+}
+.no-cookie-offer-container-es section {
+    background-color:transparent;
+    overflow:visible;
+    padding:0;
+    position:relative
+}
+.no-cookie-offer-container-es .no-cookie-offer-items {
+    float:left;
+    margin:28px 0 0 0
+}
+.no-cookie-offer-container-es .no-cookie-offer-items .no-cookie-offer-plus {
+    background-image:url('../../images/plus.C6zSuo.png');
+    width:16px;
+    height:16px;
+    margin:0 22px
+}
+.no-cookie-offer-container-es .no-cookie-offer-items.no-cookie-offer-first-item {
+    margin-left:15px;
+    min-width:245px
+}
+.no-cookie-offer-container-es .no-cookie-offer-items.no-cookie-offer-first-item p {
+    color:#fc0
+}
+.no-cookie-offer-container-es .no-cookie-offer-items.no-cookie-offer-first-item h3 {
+    color:#fff
+}
+.no-cookie-offer-container-es .show-hide {
+    top:66px;
+    position:absolute;
+    right:10px
+}
+.no-cookie-offer-container-es .show-hide a {
+    color:#666
+}
+.no-cookie-offer-container-es h3 {
+    background-color:transparent;
+    border:none;
+    color:#999;
+    font-size:11px;
+    font-weight:bold;
+    margin:0 0 5px 0;
+    padding:0
+}
+.no-cookie-offer-container-es p {
+    color:#fff;
+    float:left;
+    font-size:20px;
+    font-weight:bold;
+    margin:0;
+    padding:0
+}
+.no-cookie-offer-container {
+    position:relative;
+    margin:10px 0;
+    background-position:left top;
+    background-repeat:repeat-x;
+    width:100%;
+    height:92px
+}
+.no-cookie-offer-container .no-cookie-offer-item.pc-text.pc-component {
+    float:left;
+    margin-bottom:10px;
+    padding-top:0;
+    height:92px
+}
+.no-cookie-offer-container .no-cookie-offer-item.pc-text.pc-component section {
+    margin-left:40px;
+    font-weight:bold
+}
+.no-cookie-offer-container .pc-component.plain-step-background {
+    background-position:left top;
+    padding-left:0;
+    padding-right:20px
+}
+.no-cookie-offer-container .pc-component.plain-step-background header {
+    margin-left:20px
+}
+.no-cookie-offer-container .pc-component.plain-step-background header h3 {
+    color:#fff;
+    font-size:11px
+}
+.no-cookie-offer-container .pc-component.plain-step-background section.text {
+    color:#fc0;
+    font-size:20px;
+    line-height:20px;
+    margin-left:20px;
+    font-weight:bold
+}
+.no-cookie-offer-container .pc-component.arrow-step-background {
+    background-position:left 184px;
+    padding-left:20px;
+    padding-right:20px
+}
+.no-cookie-offer-container .pc-component.arrow-step-background header {
+    margin-left:40px
+}
+.no-cookie-offer-container .pc-component.arrow-step-background header h3 {
+    color:#999;
+    font-size:11px
+}
+.no-cookie-offer-container .pc-component.arrow-step-background section {
+    color:#fff;
+    font-size:20px;
+    line-height:20px;
+    font-weight:bold
+}
+.no-cookie-offer-container .pc-component.plus-step-background {
+    background-position:left 92px;
+    padding-left:20px;
+    padding-right:20px
+}
+.no-cookie-offer-container .pc-component.plus-step-background header {
+    margin-left:40px
+}
+.no-cookie-offer-container .pc-component.plus-step-background header h3 {
+    color:#999;
+    font-size:11px
+}
+.no-cookie-offer-container .pc-component.plus-step-background section {
+    color:#fff;
+    font-size:20px;
+    line-height:20px
+}
+.no-cookie-offer-container .no-cookie-offer-items.no-cookie-offer-first-item {
+    margin-left:15px;
+    min-width:245px
+}
+.no-cookie-offer-container .no-cookie-offer-items.no-cookie-offer-first-item p {
+    color:#fc0
+}
+.no-cookie-offer-container .no-cookie-offer-items.no-cookie-offer-first-item h3 {
+    color:#fff
+}
+.no-cookie-offer-container .show-hide {
+    bottom:10px;
+    right:10px;
+    position:absolute
+}
+.no-cookie-offer-container .show-hide a {
+    color:#666
+}
+.no-cookie-offer-container .show-hide .exposed-link-style1.show-info, .no-cookie-read-more-bar .show-hide .exposed-link-style1.show-info, .no-cookie-offer-container .show-hide .exposed-link-style1.hide-info, .no-cookie-read-more-bar .show-hide .exposed-link-style1.hide-info {
+    cursor:pointer;
+    padding-right:10px
+}
+.no-cookie-offer-container .show-hide .exposed-link-style1.show-info, .no-cookie-read-more-bar .show-hide .exposed-link-style1.show-info {
+    background-position:right -239px
+}
+.no-cookie-offer-container .show-hide .exposed-link-style1.hide-info, .no-cookie-read-more-bar .show-hide .exposed-link-style1.hide-info {
+    background-position:right -222px
+}
+.no-cookie-read-more-bar {
+    background-color:#000;
+    border-top:1px solid #333;
+    height:36px;
+    position:relative
+}
+.no-cookie-read-more-bar>section {
+    bottom:10px;
+    right:10px;
+    position:absolute
+}
+.no-cookie-read-more-bar .no-cookie-read-more-bar-links a {
+    margin-right:10px
+}
+.seo-boxes {
+    background-color:#000;
+    margin-bottom:0
+}
+.seo-boxes .poker-teaser2 {
+    border-top:none;
+    padding-left:10px;
+    padding-top:10px;
+    width:305px
+}
+.seo-boxes .poker-teaser2 img {
+    border:1px solid #333
+}
+#tournament-highlights {
+    padding:0 12px
+}
+#tournament-highlights .main-highlight {
+    font-family:Tahoma;
+    font-size:16px;
+    min-height:48px;
+    max-height:50px;
+    overflow:hidden
+}
+#tournament-highlights .main-highlight .main-highlight-name {
+    display:inline-block;
+    font-weight:bold;
+    float:left;
+    width:150px
+}
+#tournament-highlights .main-highlight .main-highlight-time {
+    display:block;
+    float:right;
+    height:40px;
+    overflow:hidden;
+    text-align:right;
+    width:120px
+}
+#tournament-highlights .main-highlight .counter-wrapper {
+    float:right
+}
+#tournament-highlights .upcoming-highlights {
+    min-height:66px;
+    max-height:66px;
+    padding-top:8px
+}
+#tournament-highlights .upcoming-highlights .ordinary-highlight {
+    font-size:11px
+}
+#tournament-highlights .upcoming-highlights .ordinary-highlight .ordinary-highlight-light {
+    background:url('../../images/light-bulb.st2Eds.gif') no-repeat scroll 0 0 transparent;
+    display:block;
+    float:right;
+    width:18px;
+    margin-top:5px
+}
+#tournament-highlights .upcoming-highlights .ordinary-highlight .ordinary-highlight-name {
+    display:block;
+    width:175px;
+    float:left;
+    height:19px
+}
+#tournament-highlights .upcoming-highlights .ordinary-highlight .ordinary-highlight-time {
+    display:block;
+    float:right;
+    text-align:right;
+    width:90px;
+    height:19px
+}
+#poker-widget-bottom-link {
+    border-top:1px solid #1b1b1b;
+    font-weight:bold;
+    padding-top:6px;
+    padding-left:10px
+}
+.players-online-box {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat center -860px;
+    background-repeat:repeat-x;
+    color:#999;
+    font-weight:bold;
+    height:60px;
+    min-height:60px;
+    overflow:hidden;
+    width:240px
+}
+.pm-page p.players-online-desc {
+    margin-bottom:0;
+    padding-top:6px;
+    padding-left:10px
+}
+.counter-wrapper {
+    height:23px;
+    margin:4px 0;
+    overflow:hidden;
+    padding:0;
+    position:relative;
+    text-align:right;
+    width:110px
+}
+.counter-sprite {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat -32px -108px;
+    float:right;
+    height:720px;
+    margin:0;
+    padding:0;
+    position:relative
+}
+.counter-digit {
+    width:18px
+}
+.counter-comma {
+    margin:0 0 0 -8px;
+    width:20px
+}
+.counter-colon {
+    margin:0 3px 0 1px;
+    width:4px
+}
+.counter-dot {
+    margin:0 0 0 -8px;
+    width:20px
+}
+.winners-widget.pc-component {
+    min-height:221px;
+    max-height:221px;
+    overflow:hidden
+}
+.winners-widget.pc-component>section {
+    height:192px;
+    padding:0
+}
+.winners-widget.pc-component .table-style1 td {
+    vertical-align:bottom;
+    white-space:nowrap;
+    padding:8px 10px;
+    font-weight:bold
+}
+.winners-widget.pc-component .table-style1 td>div>span:first-child {
+    float:left
+}
+.winners-widget.pc-component .table-style1 td>div>span:last-child {
+    float:right;
+    margin-right:3px
+}
+.winners-widget.pc-component h4 {
+    margin:0;
+    white-space:nowrap;
+    font-weight:normal
+}
+#answer-list {
+    margin-top:6px;
+    color:#fff
+}
+#answer-list p.poll-answer-info {
+    margin-left:10px
+}
+#answer-list form {
+    display:inline-block;
+    width:50%
+}
+#answer-list form input {
+    background:#000 url('../../images/bt-qotd.NWGZT4.png') no-repeat;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    margin-bottom:4px;
+    padding:5px;
+    text-align:left;
+    width:100%
+}
+#answer-list form input:hover {
+    background-image:url('../../images/bt-qotd-over.O8EDZs.png')
+}
+#answer-list div.poll-answer-summary {
+    margin-left:10px;
+    display:inline-block;
+    width:45%
+}
+#answer-list span.poll-answer {
+    font-weight:bold
+}
+#answer-list div.poll-answer-progress-bar {
+    position:relative;
+    width:80%;
+    background-color:#999;
+    height:4px
+}
+#answer-list div.poll-answer-progress-bar-progress {
+    position:relative;
+    background-color:#fc0;
+    height:4px
+}
+p.poll-answer-info {
+    font-weight:bold;
+    color:#fff
+}
+p.poll-answer-info span {
+    color:#999
+}
+p.poll-text {
+    padding-left:10px;
+    font-weight:bold;
+    color:#fff
+}
+.poker-linkbutton-style3 {
+    z-index:2000;
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -650px;
+    float:left;
+    padding:0 0 0 12px;
+    height:19px;
+    font-size:12px;
+    cursor:pointer
+}
+.poker-linkbutton-style3>span {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -626px;
+    padding:1px 12px 0 0;
+    border:0 none;
+    color:#000;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:bold;
+    float:left;
+    height:19px;
+    cursor:pointer
+}
+.poker-linkbutton-style3 span:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:right -722px
+}
+.poker-linkbutton-style3:hover {
+    background-image:url('../../images/shared/mainsprite_v1.y26J5J.png');
+    background-repeat:no-repeat;
+    background-position:left -746px
+}
+/*-=- Contents of poker/styles/pokertabs.min.css -=-*/
+ .button-s2 .uni-button {
+    background-position:0 -602px;
+    height:19px;
+    float:left;
+    margin-top:1px
+}
+.button-s2 .uni-button span {
+    background-position:right -578px;
+    color:#000;
+    font-size:11px;
+    height:16px;
+    padding-top:4px;
+    text-transform:none;
+    min-width:25px
+}
+.button-s2 .uni-button.hover, .button-s2 .uni-button:hover {
+    background-position:0 -698px
+}
+.button-s2 .uni-button.hover span, .button-s2 .uni-button:hover span {
+    background-position:right -674px
+}
+.button-l3 .uni-button {
+    background-position:0 -1308px;
+    height:29px;
+    float:left;
+    margin-top:1px
+}
+.button-l3 .uni-button span {
+    background-position:right -1274px;
+    color:#000;
+    font-size:12px;
+    font-weight:bold;
+    height:24px;
+    padding-top:8px;
+    text-transform:none;
+    min-width:55px
+}
+.button-l3 .uni-button.hover, .button-l3 .uni-button:hover {
+    background-position:0 -1444px
+}
+.button-l3 .uni-button.hover span, .button-l3 .uni-button:hover span {
+    background-position:right -1410px
+}
+.button-t3 .uni-button {
+    background-position:0 -1998px;
+    height:35px;
+    float:left;
+    margin-top:1px
+}
+.button-t3 .uni-button span {
+    background-position:right -1958px;
+    color:#000;
+    font-size:15px;
+    font-weight:bold;
+    height:27px;
+    padding-top:8px;
+    text-transform:none;
+    min-width:69px
+}
+.button-t3 .uni-button.hover, .button-t3 .uni-button:hover {
+    background-position:0 -2158px
+}
+.button-t3 .uni-button.hover span, .button-t3 .uni-button:hover span {
+    background-position:right -2118px
+}
+.span-19 {
+    width:185px;
+    margin-right:5px
+}
+.span-77 {
+    width:765px
+}
+.span-25 {
+    width:240px
+}
+.span-71 {
+    width:705px;
+    margin-right:5px
+}
+#poker-tabs {
+    margin:10px 10px 10px 0;
+    padding:0
+}
+#poker-tabs .poker-tab {
+    background:transparent url('../../images/poker-sprite.WjgYAo.png') no-repeat right -33px
+}
+#poker-tabs ul, #poker-tabs li {
+    list-style:none;
+    margin:0;
+    padding:0
+}
+#poker-tabs ul.ui-tabs-nav {
+    background:transparent url('../../images/poker-1px-bg.I0XJw0.png') repeat-x 0 0;
+    border:medium none;
+    float:left;
+    height:32px;
+    margin:0;
+    padding:0;
+    width:100%
+}
+#poker-tabs ul.ui-tabs-nav li {
+    cursor:pointer;
+    float:left;
+    height:32px;
+    padding-right:10px;
+    top:0
+}
+#poker-tabs ul.ui-tabs-nav li.ui-tabs-before-selected {
+    background-position:right 0
+}
+#poker-tabs ul.ui-tabs-nav li.ui-tabs-selected {
+    background-position:right -66px
+}
+#poker-tabs ul.ui-tabs-nav li.ui-tabs-selected a {
+    background:transparent url('../../images/poker-1px-bg.I0XJw0.png') repeat-x 0 -64px;
+    background-repeat:repeat-x;
+    color:#fff
+}
+#poker-tabs ul.ui-tabs-nav li.ui-tabs-selected.ui-tabs-last {
+    background-position:right -132px
+}
+#poker-tabs ul.ui-tabs-nav li.ui-tabs-last {
+    background-position:right -99px
+}
+#poker-tabs ul.ui-tabs-nav li a {
+    background:transparent url('../../images/poker-1px-bg.I0XJw0.png') repeat-x 0 -32px;
+    background-repeat:repeat-x;
+    cursor:pointer;
+    color:#777;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    height:32px;
+    line-height:16px;
+    padding:0;
+    text-decoration:none
+}
+#poker-tabs ul.ui-tabs-nav li span {
+    display:block;
+    float:none;
+    line-height:13px;
+    margin:6px 0 0 10px;
+    padding:0 10px 0 0;
+    overflow:hidden
+}
+#poker-tabs div.ui-widget-content {
+    float:left;
+    padding:12px 0;
+    overflow:hidden
+}
+#poker-tabs div.ui-tabs-panel {
+    width:100%
+}

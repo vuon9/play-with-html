@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/inner.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/search.js"></script>
+     <script type="text/javascript" src="http://p.ar2oor.pl/cprogress/js/jquery-ui-1.8.16.custom.min.js"></script>
+	 <script src="js/jCProgress-1.0.3.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+             if( navigator.userAgent.match(/iPad/i) != null ){
+                  viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+              }
+
+              if (!$.browser.opera) {
+
+			// select element styling
+			$('select.select4').each(function(){
+				var title = $(this).attr('title');
+				var classn = $(this).attr('class');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="'+classn+'">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+			});
+
+		};
+
+
+        //Progress circle
+
+        //Init options
+        options = {
+				   img1: 'img/C1.png',
+				   img2: 'img/C2.png',
+				   speed: 50,
+                   limit : 30,
+                   PIStep : 0.05,
+				   onInit: function(){console.log('init');},
+				   onProgress: function(p){/*console.log('progress',p);*/},
+				   onComplete: function(p){console.log('complete',p);}
+			      };
+            //Initiate Circle progress
+		    var CircleBar = $('#p1').cprogress(options);
+            //Get current plugin value
+            var CurrentValue=CircleBar.getpercent();
+            //Set the Circle progress value
+            CircleBar.change(73);
+
+
+
+            $('.signs .icon').bind('mouseover',function(){
+
+                $(this).parent().find('.snippet').show();
+            })
+            $('.signs .icon').bind('mouseout',function(){
+              $(this).next().hide();
+            })
+
+      });
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">VIDEOS</a></li>
+            <li><a href="#">MP3s</a></li>
+            <li><a href="#">RADIO</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">INTERVIEWS</a></li>
+            <li><a href="#">CHALLENGE</a></li>
+            <li><a href="#">PHOTOS</a></li>
+            <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner upload">
+<div class="container-fluid">
+    <div class="page-title">UPLOAD | SUBMISSION</div>
+    <div class="space40"></div>
+
+
+
+    <div class="right-sidebar">
+    <div class="section">
+        <div class="head border">
+            <span class="title">STORAGE</span>
+        </div>
+        <div class="body">
+            <div class="storage">
+                <div class="usage">2.5 GB / 5 GB</div>
+                <div class="bar">
+                    <div class="used" style="width: 50%;" >50%</div>
+                </div>
+                <p>
+                  Your weekly limit will reset on Fri 12:01AM EST
+                  Want to jump to the front of the upload line? And upload as many HD videos as you want?
+                  Get all this and more when you <a href="#" class="bold">upgrade to a DaftStar premium account.</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section box">
+        <div class="head ">
+            <span class="title">IMPORTANT RULES</span>
+            <span class="more"><a href="#">More</a></span>
+
+        </div>
+        <div class="body">
+            <ol>
+                <li>I will upload only videos I created myself. <a href="#">Read more</a></li>
+                <li>I will not upload videos intended for commercial use. See commercial options. <a href="#">Read more</a></li>
+                <li>I understand that centain types of content are not permitted on DaftStar. <a href="#">Read more</a></li>
+
+            </ol>
+            <div class="note">Still have questions? Read the full uploading guidelines.</div>
+        </div>
+    </div>
+
+    <div class="section box">
+        <div class="head ">
+            <span class="title">TIPS & HELP</span>
+            <span class="more"><a href="#">More</a></span>
+
+        </div>
+        <div class="body">
+            <p>
+                Want to jump to the front of the upload line? And upload as many HD videos as you want?
+            </p>
+            <p>
+                All this and more when you upgrade to a <a href="#" class="bold">DaftStar premium account.</a>
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="img/adspace.jpg" width="262" height="200" alt="" />
+    </div>
+
+    </div>
+    <div class="left-content">
+    <!-- Albums Section -->
+      <div class="section">
+        <div class="head">
+            <span class="title">UPLOAD INFORMATION</span>
+        </div>
+        <div class="body">
+
+            <div class="row upload-progress">
+                <div class="canavas">
+                    <div id="p1" class="circle">
+
+                    </div>
+                    <div class="completed">40.35MB of 55.25MB completed</div>
+                </div>
+
+                <div class="signs">
+                    <ul>
+                        <li>
+                        <span class="icon"><img src="img/failed.png" width="21" height="21" alt="" /></span>Upload Failed
+                        <div class="snippet">
+                            There was an error when trying to upload the file or locating it. Please try to upload it again.
+                            <div class="arrow"></div>
+                        </div>
+                        </li>
+                        <li>
+                        <span class="icon"><img src="img/protected.png" width="21" height="21" alt="" /></span>Media Copy Protected
+                        <div class="snippet">
+                            Ous system indicates that this is a commercial track, which cannot be uploaded. Please choose another.
+                            <div class="arrow"></div>
+                        </div>
+                        </li>
+                        <li>
+                        <span class="icon"><img src="img/uploaded.jpg" width="21" height="20" alt="" /></span>Upload Approved
+                        <div class="snippet">
+                            Track has been approved by our system & uploaded without any problem. It is ready to be shared.
+                            <div class="arrow"></div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row upload-list">
+                <ul>
+                    <li class="first">
+                        <div class="row">
+                            <div class="span1 order">1</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class="uploaded"></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 58%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">2</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <!--<a href="#" class="uploaded"></a>-->
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">3</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <!--<a href="#" class="uploaded"></a>-->
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">4</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class=""></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">5</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class=""></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">6</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class=""></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">7</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class=""></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                    <li >
+                        <div class="row">
+                            <div class="span1 order">8</div>
+                            <div class="span3 name">Feel Me Going Overboard (DJ Mat Mix).mp3</div>
+                            <div class="span1 size">4.23MB</div>
+                            <div class="span3 actions">
+                                <a href="#" class="y-btn">EDIT</a>
+                                <a href="#" class="remove"></a>
+                                <a href="#" class=""></a>
+
+                            </div>
+                        </div>
+                        <div class="upload-bar" style="width: 0%;"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="row up-new">
+                <div class="add-btn"><a href="#" class="y-btn">ADD ANOTHER FILE TO UPLOAD</a></div>
+                <div class="right">
+                    <div class="total"><span class="black">42.34MB / 250MB</span> (207.66MB Available) </div>
+                    <div class="info">
+                        Maximum upload space should not exceed 250MB
+                        Tracks must be in .mp3 format. You may also upload a .zip or .rar file containing .mp3 files.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="review">
+                    Once the upload is complete you can preview your music/album by pressing the button below.
+                </p>
+                <input type="submit"  class="black-btn review"  value="PREVIEW YOUR MUSIC/ALBUM">
+                <!--<input disabled type="submit"  class="black-btn review"  value="PREVIEW YOUR MUSIC/ALBUM">-->
+            </div>
+
+            <div class="row info-tabs">
+            <ul class="nav nav-tabs" id="myTab">
+              <li><a href="#BASIC">BASIC INFORMATION</a></li>
+              <li class="active"><a href="#ARTWORK">ARTWORK</a></li>
+              <li><a href="#AVAILABLE">AVAILABLE ON</a></li>
+            </ul>
+
+
+            <div class="tab-content">
+
+              <!-- Social Sync Tab Conent -->
+              <div class="tab-pane" id="BASIC">
+
+              </div>
+              <!-- Social Sync Tab Conent end -->
+              <!-- MEDIA Tab Conent -->
+              <div class="tab-pane active" id="ARTWORK">
+
+                <div class="row">
+                    <div class="span6 cover">
+                        <label>FRONT COVER</label>
+                        <div class="image">
+                            <img src="img/temp_r7.jpg" width="280" height="280" alt="" />
+                            <div class="up-bar" style="width: 30%;"></div>
+                        </div>
+                        <div class="browse">
+                            <a href="#" class="y-btn">BROWSE</a>
+                            FILE SHOULD NOT EXCEED 500 X 500 PX
+                        </div>
+                    </div>
+                    <div class="span6 cover">
+                        <label>BACK COVER COVER</label>
+                        <div class="image">
+                            <img src="" />
+                            <div class="up-bar" style="width: 0%;"></div>
+                        </div>
+                        <div class="browse">
+                            <a href="#" class="y-btn">BROWSE</a>
+                            FILE SHOULD NOT EXCEED 500 X 500 PX
+                        </div>
+                    </div>
+
+                </div>
+                <p class="note">
+                    Maximum upload size for each cover should not exceed 500KB. Files must be in JPEG or PNG format and on RGB color spectrum. Files will be scanned for innappropriate material or themes; please check our <a href="#">image guide</a> for the complete set of guidelines to follow when uploading image content.
+                </p>
+
+              <input type="submit"  class="black-btn review"  value="SAVE & CONTINUE">
+              </div>
+              <!-- MEDIA Tab Conent end -->
+              <!-- SECURITY Sync Tab Conent -->
+              <div class="tab-pane" id="AVAILABLE">...</div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="space40"></div>
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+      <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+      <div  class="footer-menu-cols">
+        <ul>
+            <!-- WHO WE ARE Menu -->
+            <li class="first">
+                <ul class="foot-menu">
+                    <li class="title">WHO WE ARE</li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </li>
+
+            <!-- CATEGORIES Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CATEGORIES</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">MP3s</a></li>
+                    <li><a href="#">RADIO</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">INTERVIEWS</a></li>
+                    <li><a href="#">CHALLENGE</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">STORE</a></li>
+
+                </ul>
+            </li>
+
+            <!-- MOBILE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">MOBILE</li>
+                    <li><a href="#">IPHONE</a></li>
+                    <li><a href="#">IPAD</a></li>
+                    <li><a href="#">ANDROID</a></li>
+                </ul>
+            </li>
+
+            <!-- LEGAL Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">LEGAL</li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COPYRIGHT</a></li>
+                </ul>
+            </li>
+
+            <!-- CONNECT Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CONNECT</li>
+                    <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                    <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                    <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                    <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                </ul>
+            </li>
+
+            <!-- WEBSITE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">WEBSITE</li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </li>
+
+            <!-- LANGUAGE Menu -->
+            <li class="last">
+                <ul class="foot-menu">
+                    <li class="title">LANGUAGE</li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SPANISH</a></li>
+                    <li><a href="#">FRENCH</a></li>
+                    <li><a href="#">GERMAN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

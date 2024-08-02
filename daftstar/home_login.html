@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/assets/bootstrap-transition.js"></script>
+    <script src="js/assets/bootstrap-tab.js"></script>
+    <script src="js/assets/bootstrap-modal.js"></script>
+    <script src="js/assets/bootstrap-dropdown.js"></script>
+    <script src="js/assets/bootstrap-datepicker.js"></script>
+    <script src="js/assets/bootstrap-collapse.js"></script>
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+         if( navigator.userAgent.match(/iPad/i) != null ){
+              viewport = document.querySelector("meta[name=viewport]");
+              viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+          }
+         $("#LoginModal").modal('show');
+
+      });
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal hide fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="img/close.png" width="15" height="14" alt="" /></button>
+      <div class="title">SECURE LOGIN TO DAFTSTAR</div>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="span6">
+                        <input class="w450" type="text" placeholder="Username or Email" />
+                    </div>
+                    <div class="span4"></div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <input class="w450" type="text" placeholder="Password" />
+                    </div>
+                    <div class="span2 link"><a  href="#">Forgot Password</a></div>
+                </div>
+                <div class="row btns">
+                    <div class="span2">
+                        <input type="submit" value="LOGIN"  class="black-btn"/>
+                    </div>
+                    <div class="span4 remember">
+                        <input type="checkbox" id="remember" name="remember" class="checkbox" checked="checked" />
+                        <label for="remember"  class="step-ForCheck"></label>
+                        <input type="checkbox"  />Keep me logged in
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+    <a href="#"><img src="img/fb_login.png" alt="" /></a>
+    </div>
+</div>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-links">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li class="divider">|</li>
+            <li><a href="#">Signup</a></li>
+        </ul>
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content">
+<div class="container-fluid">
+
+    <div class="player-wrp">
+        <div class="videoPlayer"><img src="img/video_player.jpg" width="735" height="414" alt="" /></div>
+        <div class="spotlight">
+            <div class="head">SPOTLIGHT ON</div>
+            <div class="body">
+                <div class="title">Sam Sparro</div>
+                <div class="img-social">
+                    <div class="image"><img src="img/temp5.png" width="90" height="90" alt="" /></div>
+                    <div class="social">
+                        <ul>
+                            <li><a class="fb" href="#"></a></li>
+                            <li><a class="tw" href="#"></a></li>
+                            <li><a class="gplus" href="#"></a></li>
+                            <li><a class="email" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    Cupcake candy canes lollipop ginger bread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake cookie croissant sweet.
+                </p>
+                <div class="info">
+                    <div class="line">
+                        <span class="title">Date Added:</span>
+                        <span class="value">December 17, 2013</span>
+                    </div>
+                    <div class="line">
+                        <span class="title">Year Released:</span>
+                        <span class="value">2013</span>
+                    </div>
+                    <div class="line">
+                        <span class="title">Director:</span>
+                        <span class="value">Willhelm Nakamura</span>
+                    </div>
+                </div>
+                <div class="copyright">Copyright 2013 © Sam Sparro Productions. All rights reserved</div>
+                <div class="button">
+                    <a href="#">GO BACKSTAGE</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- What's new section -->
+    <div class="row">
+        <div class="section">
+            <div class="head">
+                <span class="title">WHAT'S NEW</span>
+                <span class="more"><a href="#">more</a></span>
+            </div>
+            <div class="body">
+              <!-- section content -->
+                <div class="row">
+                    <div class="span3 blockA first">
+                        <div class="image">
+                            <div class="media-type">VIDEO</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA ">
+                        <div class="image">
+                            <div class="media-type">VIDEO</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA ">
+                        <div class="image">
+                            <div class="media-type">MP3</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+                    <div class="span3 blockA last">
+                        <div class="image">
+                            <div class="media-type">MP3</div>
+                            <a href="#">
+                                <img src="img/temp1.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="title-views">
+                            <div class="title"><a href="#">Harum quidem rerum</a></div>
+                            <div class="views">
+                                <div class="icon"></div>
+                                1258
+                            </div>
+                        </div>
+                        <div class="text">
+                            An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                        </div>
+                    </div>
+
+                </div>
+
+              <!-- section content End -->
+            </div>
+        </div>
+    </div>
+    <!-- What's new section end -->
+
+    <div class="row">
+        <div class="span6 homeSection leftSction">
+            <!-- Video sction -->
+            <div class="section video">
+                <div class="head">
+                    <span class="title">VIDEO</span>
+                    <span class="more"><a href="#">more</a></span>
+                </div>
+                <div class="body">
+                  <!-- section content -->
+                    <!-- Video row -->
+                    <div class="row">
+                        <div class="span3 blockA first">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                        <div class="span3 blockA last">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video row end -->
+                    <!-- Video row -->
+                    <div class="row">
+                        <div class="span3 blockA first">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                        <div class="span3 blockA last">
+                            <div class="image">
+                                <a href="#">
+                                    <div class="play"></div>
+                                </a>
+                                <img src="img/temp1.png" alt="" />
+                            </div>
+                            <div class="title-views">
+                                <div class="title"><a href="#">Harum quidem rerum</a></div>
+                                <div class="views">
+                                    <div class="icon"></div>
+                                    1258
+                                </div>
+                            </div>
+                            <div class="text">
+                                An imprisoned vampire, Barnabas Collins, is set free and returns to his ancestral home
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video row end -->
+                  <!-- section content End -->
+                </div>
+            </div>
+            <!-- Video sction end -->
+        </div>
+        <div class="span6">
+            <!-- Music sction -->
+            <div class="section Music">
+                <div class="head">
+                    <span class="title">Music</span>
+                    <span class="more"><a href="#">more</a></span>
+                </div>
+                <div class="body">
+                  <!-- section content -->
+                    <div class="row">
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+                        <div class="span3 blockB">
+                            <div class="image">
+                                <a href="#"><img src="img/temp3.png" width="67" height="68" alt="" /></a>
+                            </div>
+                            <div class="info">
+                                <div class="title"><a href="#">Sam Sparro</a></div>
+                                <div class="subtitle">Quos dolores et quas</div>
+                                <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                  <!-- section content End -->
+                </div>
+            </div>
+            <!-- Music sction end -->
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="row">
+        <div class="section">
+            <div class="head">
+                <span class="title">ABOUT</span>
+                <span class="more"><a href="#">more</a></span>
+            </div>
+            <div class="body">
+              <!-- section content -->
+                <div class="row">
+                    <div class="span3 blockC first">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="span3 blockC">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                    <div class="span3 blockC last">
+                        <div class="image">
+                            <div class="title">Kaley Christine Cuoco</div>
+                            <div class="subtitle">an American film and television actress.</div>
+                            <a href="#" title="temp_r3">
+                              <img src="img/temp_r3.jpg" alt="temp_r3">
+                            </a>
+                        </div>
+                        <div class="info">
+                         <div class="icon"></div>
+                         <div class="text">
+                          It’s great. It’s so comforting to be on a show and know the character so well. It’s everyone’s dream job. But, there is something about doing something that’s a little bit different. It wasn’t that crazy of a role, but it was fun to be working with different people and shaking it up a little bit. It definitely gave me the film bug.
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+              <!-- section content End -->
+            </div>
+        </div>
+    </div>
+    <!-- What's new section end -->
+
+</div>
+</div>
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+      <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+      <div  class="footer-menu-cols">
+        <ul>
+            <!-- WHO WE ARE Menu -->
+            <li class="first">
+                <ul class="foot-menu">
+                    <li class="title">WHO WE ARE</li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </li>
+
+            <!-- CATEGORIES Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CATEGORIES</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">MP3s</a></li>
+                    <li><a href="#">RADIO</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">INTERVIEWS</a></li>
+                    <li><a href="#">CHALLENGE</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">STORE</a></li>
+
+                </ul>
+            </li>
+
+            <!-- MOBILE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">MOBILE</li>
+                    <li><a href="#">IPHONE</a></li>
+                    <li><a href="#">IPAD</a></li>
+                    <li><a href="#">ANDROID</a></li>
+                </ul>
+            </li>
+
+            <!-- LEGAL Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">LEGAL</li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COPYRIGHT</a></li>
+                </ul>
+            </li>
+
+            <!-- CONNECT Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CONNECT</li>
+                    <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                    <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                    <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                    <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                </ul>
+            </li>
+
+            <!-- WEBSITE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">WEBSITE</li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </li>
+
+            <!-- LANGUAGE Menu -->
+            <li class="last">
+                <ul class="foot-menu">
+                    <li class="title">LANGUAGE</li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SPANISH</a></li>
+                    <li><a href="#">FRENCH</a></li>
+                    <li><a href="#">GERMAN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>

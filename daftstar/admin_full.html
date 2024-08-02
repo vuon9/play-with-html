@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+
+
+    <!-- Scripts -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/assets/bootstrap-transition.js"></script>
+    <script src="js/assets/bootstrap-tab.js"></script>
+    <script src="js/assets/bootstrap-collapse.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  if( navigator.userAgent.match(/iPad/i) != null ){
+          viewport = document.querySelector("meta[name=viewport]");
+          viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+      }
+
+      if (!$.browser.opera) {
+
+			// select element styling
+			$('select.select3').each(function(){
+				var title = $(this).attr('title');
+				var classn = $(this).attr('class');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="'+classn+'">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+			});
+
+		};
+
+        // Tabs initialize
+        $('#myTab a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+
+        $('.top-link').click(function(){
+         var body=$(this).parent().parent().next();
+         $(body).slideToggle(300);
+
+         var title=$(this).parent();
+         $(title).toggleClass("closed");
+
+        })
+
+         // Add new member
+        var maxMembers=15;
+        var MemberCounter=2;
+        $('#mcount').text(MemberCounter);
+        $("#addMember").bind('click',function(){
+        if(MemberCounter<maxMembers){
+          MemberCounter++;
+          $('#mcount').text(MemberCounter);
+          var wrapper=$('.memberName-wrp');
+
+
+          var newDiv='<div class="input-line memberName">\
+                    <div class="span3 title"></div>\
+                    <div class="span3 title2"></div>\
+                    <div class="span6 fields member-name">\
+                        <input type="text" name="member'+MemberCounter+'" placeholder="Member '+MemberCounter+'" />\
+                        <a class="remove-member"></a>\
+                    </div>\
+                </div>';
+
+          wrapper.append(newDiv);
+           $(".remove-member").bind('click',function(){
+
+              if(MemberCounter>1){
+                if($(this).parent().attr('id')!='member_1'){
+                  $(this).parent().parent().remove();
+                  MemberCounter=$('.memberName').length;
+
+                }
+              }
+            });
+        }
+        });
+
+        $(".remove-member").bind('click',function(){
+
+          if(MemberCounter>1){
+            if($(this).parent().attr('id')!='member_1'){
+              $(this).parent().parent().remove();
+              MemberCounter=$('.memberName').length;
+
+            }
+          }
+        });
+
+
+
+	});
+</script>
+
+
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-links">
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li class="divider">|</li>
+            <li><a href="#">Signup</a></li>
+        </ul>
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">VIDEOS</a></li>
+            <li><a href="#">MP3s</a></li>
+            <li><a href="#">RADIO</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="#">INTERVIEWS</a></li>
+            <li><a href="#">CHALLENGE</a></li>
+            <li><a href="#">PHOTOS</a></li>
+            <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner admin">
+<div class="container-fluid">
+    <div class="page-title">SETTINGS | BACKSTAGE</div>
+    <div class="space40"></div>
+
+    <div class="row-fluid section">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#INFO">BASIC INFO</a></li>
+          <li><a href="#SOCIAL">SOCIAL SYNC</a></li>
+          <li><a href="#MEDIA">MEDIA</a></li>
+          <li><a href="#SECURITY">SECURITY</a></li>
+          <li><a href="#FEATURES">FEATURES</a></li>
+          <li><a href="#DISPLAY">DISPLAY</a></li>
+          <li><a href="#ACCOUNT">ACCOUNT</a></li>
+          <li class="right"><span class="more-right"><a href="#">back to Backstage page</a></span></li>
+        </ul>
+
+
+        <div class="tab-content">
+          <!-- Basic info Tab Conent  -->
+          <div class="tab-pane active" id="INFO">
+          <form>
+            <!-- Row -->
+            <div class="row ">
+              <div class="input-line">
+                  <div class="span3 title">Artist or Username</div>
+                  <div class="span3 title2">Artist Name:</div>
+                  <div class="span6 fields">
+                      <input type="text" value="Cabaret Voltaire" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">First:</div>
+                  <div class="span4 fields3">
+                      <input class="first" type="text" value="Cabaret Voltaire" />
+                      Middle:<input type="text" placeholder="Optional" />
+                      Last:<input type="text" value="Smith" />
+                  </div>
+              </div>
+
+
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">My URL</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields url">
+                        http://www.daftstar.com/
+                      <input type="text" value="cabaretvoltaire" />
+                  </div>
+                  <!--<div class="span2 result red">
+                      <div class="icon"></div>
+                      <div class="result">
+                      <span class="bold">URL Already Taken.</span>
+                      </div>
+                  </div>-->
+                  <div class="span2 result green">
+                      <div class="icon"></div>
+                      <div class="result">
+                      <span class="bold">URL Available.</span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Primary Genre</div>
+                  <div class="span3 title2">Choose:</div>
+                  <div class="span6 fields">
+                      <select class="select3 " title="Electronica">
+                            <option value="1">Electronica</option>
+                            <option value="2">Electronica</option>
+                        </select>
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title">More Genres</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Extra genre" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Extra genre" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+
+            <div class="memberName-wrp">
+            <!-- First member name input -->
+              <div class="input-line memberName">
+                  <div class="span3 title">Band Members</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields member-name " id="member_1">
+                      <input type="text" name="member1" placeholder="Member 1" />
+                      <a  class="remove-member"></a>
+                  </div>
+              </div>
+                <!-- Second member name input -->
+              <div class="input-line memberName">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields member-name">
+                      <input type="text" name="member2" placeholder="Member 2" />
+                      <a  class="remove-member"></a>
+                  </div>
+              </div>
+            </div>
+               <!-- Add another member name input -->
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields add-member-name">
+                    <button type="button" class="yellow-btn" id="addMember">ADD ANOTHER MEMBER</button>
+                  </div>
+              </div>
+            </div>
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Label</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type the record label or imprint" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Manager</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Manager’s name" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Contact Info</div>
+                  <div class="span3 title2">Address:</div>
+                  <div class="span6 fields">
+                      <input class="fullWidth" type="text" placeholder="Type your address here" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">City:</div>
+                  <div class="span4 fields3">
+                      <input class="first" type="text" placeholder="City name" />
+                      State:<input type="text" placeholder="State name" />
+                      Zip:<input type="text" placeholder="Zip code" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">Country:</div>
+                  <div class="span6 fields">
+                      <select class="select3 country " title="country">
+                            <option value="1">Canada</option>
+                            <option value="2">Canada</option>
+                        </select>
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">Email:</div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type your email here" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">Booking Info / Email:</div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type the email for booking information" />
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2">Management:</div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Management contact" />
+                  </div>
+              </div>
+
+
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Bio</div>
+                  <div class="span3 title2"></div>
+                  <div class="s>pan6 fields">
+                      <textarea  placeholder="Type your bio here" ></textarea>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Website</div>
+                  <div class="span3 title2">Website Address:</div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type your website address" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Buttons Row -->
+            <div class="row buttons-row">
+
+
+                <div class="span2">
+                <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                <input type="submit" value="CANCEL"  class="gray-btn"/>
+                </div>
+
+            </div>
+            <!-- Row End -->
+
+
+            </form>
+          </div>
+          <!-- Basic info Tab Conent end -->
+          <!-- Social Sync Tab Conent -->
+          <div class="tab-pane" id="SOCIAL">
+            <div class="note">
+                In here you’ll find all the tools needed to link to your social fans. This way your followers will stay connected to your news, rants, instant information and more. It’s a great way to stay connected and letting your fans know all about your happenings.
+            </div>
+            <form>
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Sync with Facebook</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields social-sync">
+                      <button type="button" class="fb sync-btn">CLICK HERE TO SYNC TO FACEBOOK</button>
+                      <button type="button" class="unsync-btn">UN-SYNC</button>
+                  </div>
+              </div>
+              <div class="input-line">
+                  <div class="span3 title"></div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields social-sync">
+                      <button type="button" class="fb sync-btn">CLICK HERE TO SYNC TO FACEBOOK PAGE</button>
+                      <button type="button" class="unsync-btn">UN-SYNC</button>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Sync with Twitter</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields social-sync">
+                      <button type="button" class="tw sync-btn">CLICK HERE TO SYNC TO TWITTER</button>
+                      <button type="button" class="unsync-btn-tw unsync-btn">UN-SYNC</button>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Soundcloud URL</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type the URL here" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Google+ URL</div>
+                  <div class="span3 title2"></div>
+                  <div class="span6 fields">
+                      <input type="text" placeholder="Type the URL here" />
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Buttons Row -->
+            <div class="row buttons-row">
+
+
+                <div class="span2">
+                <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                <input type="submit" value="CANCEL"  class="gray-btn"/>
+                </div>
+
+            </div>
+            <!-- Row End -->
+            </form>
+          </div>
+          <!-- Social Sync Tab Conent end -->
+          <!-- MEDIA Tab Conent -->
+          <div class="tab-pane" id="MEDIA">
+            <form>
+            <!-- Videos Row -->
+            <div class="row media-row">
+                <div class="head">
+                    <span class="title">VIDEOS <a class="top-link" ></a></span>
+                    <span class="more-right"></span>
+                </div>
+                <div class="body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span3 left">
+                                <div class="title">Videos</div>
+                                <div class="description">
+                                Here you can change the order of appearance of the videos. To do so just grab the box on the plus icon (+) and drag and drop to the desired location.
+                                <br /><br />
+                                Press the edit button to do additional updates to the video information.
+                                </div>
+                                <div class="button">
+                                <button type="button" class="yellow-btn">UPLOAD NEW VIDEO</button>
+                                    <!-- <input type="button" class="yellow-btn" value="UPLOAD NEW VIDEO" />-->
+                                </div>
+                            </div>
+                            <div class="span9 right">
+                                <div class="container-fluid">
+                                    <!-- media row -->
+                                    <div class="row first">
+                                        <div class="span2 id">1</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">2</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">3</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">4</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">5</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">6</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">7</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">8</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">9</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- Buttons Row -->
+                                    <div class="row buttons-row">
+                                        <div class="span2">
+                                        <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                                        <input type="submit" value="CANCEL"  class="gray-btn"/>
+                                        </div>
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Videos Row End -->
+            <!-- Photos Row -->
+            <div class="row media-row">
+                <div class="head">
+                    <span class="title closed">PHOTOS <a class="top-link" ></a></span>
+                    <span class="more-right"></span>
+                </div>
+                <div class="body hide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span3 left">
+                                <div class="title">Photos</div>
+                                <div class="description">
+                                Here you can change the order of appearance of the photos. To do so just grab the box on the plus icon (+) and drag and drop to the desired location.
+                                <br /><br />
+                                Press the edit button to do additional updates to the photo information.
+                                </div>
+                                <div class="button">
+                                <button type="button" class="yellow-btn">UPLOAD NEW PHOTO</button>
+                                    <!-- <input type="button" class="yellow-btn" value="UPLOAD NEW PHOTO" />-->
+                                </div>
+                            </div>
+                            <div class="span9 right">
+                                <div class="container-fluid">
+                                    <!-- media row -->
+                                    <div class="row first">
+                                        <div class="span2 id">1</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">2</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">3</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">4</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">5</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">6</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">7</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">8</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">9</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- Buttons Row -->
+                                    <div class="row buttons-row">
+                                        <div class="span2">
+                                        <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                                        <input type="submit" value="CANCEL"  class="gray-btn"/>
+                                        </div>
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Photos Row End -->
+            <!-- MP3s / ALBUMS Row -->
+            <div class="row media-row">
+                <div class="head">
+                    <span class="title">MP3s / ALBUMS <a class="top-link" ></a></span>
+                    <span class="more-right"></span>
+                </div>
+                <div class="body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span3 left">
+                                <div class="title">MP3s / Albums</div>
+                                <div class="description">
+                                Here you can change the order of appearance of the MP3s / Albums. To do so just grab the box on the plus icon (+) and drag and drop to the desired location.
+                                <br /><br />
+                                Press the edit button to do additional updates to the MP3s / Albums information.
+                                </div>
+                                <div class="button">
+                                <button type="button" class="yellow-btn">UPLOAD NEW MP3/ALBUM</button>
+                                    <!-- <input type="button" class="yellow-btn" value="UPLOAD NEW MP3/ALBUM" />-->
+                                </div>
+                            </div>
+                            <div class="span9 right">
+                                <div class="container-fluid">
+                                    <!-- media row -->
+                                    <div class="row first">
+                                        <div class="span2 id">1</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">2</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">3</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">4</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">5</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">6</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">7</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">8</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">9</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire - One after the other is the bomb</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- Buttons Row -->
+                                    <div class="row buttons-row">
+                                        <div class="span2">
+                                        <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                                        <input type="submit" value="CANCEL"  class="gray-btn"/>
+                                        </div>
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- MP3s / ALBUMS Row End -->
+            <!-- MP3s / ALBUMS Row -->
+            <div class="row media-row last">
+                <div class="head">
+                    <span class="title">I AM FAN <a class="top-link" ></a></span>
+                    <span class="more-right"></span>
+                </div>
+                <div class="body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span3 left">
+                                <div class="title">I Am Fan</div>
+                                <div class="description">
+                                Here you can change the order of appearance of the artists you follow. To do so just grab the box on the plus icon (+) and drag and drop to the desired location.
+                                </div>
+                                <div class="button">
+                                <button type="button" class="yellow-btn">FOLLOW NEW ARTIST</button>
+                                    <!-- <input type="button" class="yellow-btn" value="FOLLOW NEW ARTIST" />-->
+                                </div>
+                            </div>
+                            <div class="span9 right">
+                                <div class="container-fluid">
+                                    <!-- media row -->
+                                    <div class="row first">
+                                        <div class="span2 id">1</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire </div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">2</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire </div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">3</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire </div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">4</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+                                    <!-- media row -->
+                                    <div class="row ">
+                                        <div class="span2 id">5</div>
+                                        <div class="span2 icon"><img src="img/media_icon.png" width="30" height="30" alt="" /></div>
+                                        <div class="span6 name">Cabaret Voltaire</div>
+                                        <div class="span2 btns">
+                                            <button class="edit-btn">EDIT</button>
+                                            <button class="plus-btn">+</button>
+                                        </div>
+                                    </div>
+                                    <!-- media row end -->
+
+                                    <!-- Buttons Row -->
+                                    <div class="row buttons-row">
+                                        <div class="span2">
+                                        <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                                        <input type="submit" value="CANCEL"  class="gray-btn"/>
+                                        </div>
+                                    </div>
+                                    <!-- Row End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- MP3s / ALBUMS Row End -->
+            </form>
+          </div>
+          <!-- MEDIA Tab Conent end -->
+          <!-- SECURITY Sync Tab Conent -->
+          <div class="tab-pane" id="SECURITY">
+            <form>
+            <!-- Row -->
+            <div class="row noLeftPAdding">
+              <div class="input-line2">
+                  <div class="span3 left">
+                    <div class="title">Change Email</div>
+                    <div class="description">
+                        Once you click on the “Save Changes” button. You’ll receive a confirmation by Email.
+                    </div>
+                  </div>
+                  <div class="span3 right">
+                    <div class="row">
+                        <div class="span3 title2">Current Email:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="john.smith@mysite.com" />
+                        </div>
+                        <div class="span4 red">
+                          <div class="icon"></div>
+                          <div class="result">
+                          <span class="bold">This email has already been registered.</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 title2">New Email:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="john.smith@mysite.com" />
+                        </div>
+                        <div class="span4 red">
+                          <div class="icon"></div>
+                          <div class="result">
+                          <span class="bold">This email has already been registered.</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 title2">Retype New Email:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="john.smith@mysite.com" />
+                        </div>
+                        <div class="span4 green">
+                            <div class="icon"></div>
+                            <div class="result">
+                            <span class="bold">Confirmed Password is ok.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 title2">Type your Password:</div>
+                        <div class="span6 fields validate">
+                            <input type="text"  />
+                        </div>
+                        <div class="span4 green">
+                            <div class="icon"></div>
+                            <div class="result">
+                            <span class="bold">Confirmed Password is ok.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span6 button">
+                            <button type="button" class="yellow-btn">CONFIRM</button>
+                           <!-- <input type="button" class="yellow-btn" value="CONFIRM" />-->
+                        </div>
+                    </div>
+
+
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Row -->
+            <div class="row noLeftPAdding">
+              <div class="input-line2">
+                  <div class="span3 left">
+                    <div class="title">Change Password</div>
+                    <div class="description">
+                        Enter your current and new password, and click the "Save Changes" button. A confirmation will be sent to your Email.
+                    </div>
+                  </div>
+                  <div class="span3 right">
+                    <div class="row">
+                        <div class="span3 title2">Current Password:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="Type your current password" />
+                        </div>
+                        <div class="span4 red">
+                            <div class="icon"></div>
+                            <div class="result">
+                            <span class="bold">Wrong Password.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 title2">New Password:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="Type your new password" />
+                        </div>
+                        <div class="span4 green">
+                            <div class="icon"></div>
+                            <div class="result">
+                            <span class="bold">Confirmed Password is ok.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span3 title2">Retype New Password:</div>
+                        <div class="span6 fields validate">
+                            <input type="text" placeholder="Retype your new password" />
+                        </div>
+                        <div class="span4 green">
+                            <div class="icon"></div>
+                            <div class="result">
+                            <span class="bold">Confirmed Password is ok.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span6 button">
+                            <button type="button" class="yellow-btn">CONFIRM</button>
+                            <!--<input type="button" class="yellow-btn" value="CONFIRM" />-->
+                        </div>
+                    </div>
+
+
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+
+            </form>
+          </div>
+          <!-- SECURITY Tab Conent end -->
+          <!-- FEATURES Tab Conent -->
+          <div class="tab-pane" id="FEATURES">
+            <form>
+            <!-- Row -->
+            <div class="row noLeftPAdding">
+              <div class="input-line2">
+                  <div class="span3 left">
+                    <div class="title">Fan Message</div>
+                    <div class="description2">
+                        Here you can write a message to people who become your fan. Once they do, the message will be delivered automatically.
+                    </div>
+                  </div>
+                  <div class="span3 right">
+                    <div class="row">
+                        <div class="span3 title2">Message:</div>
+                        <div class="span6 fields">
+                            <textarea  placeholder="Write your message here" ></textarea>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Buttons Row -->
+            <div class="row buttons-row">
+                <div class="span2">
+                <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                <input type="submit" value="CANCEL"  class="gray-btn"/>
+                </div>
+            </div>
+            <!-- Row End -->
+
+            </form>
+          </div>
+          <!-- FEATURES Sync Tab Conent end -->
+          <!-- DISPLAY Sync Tab Conent -->
+          <div class="tab-pane" id="DISPLAY">
+            <form>
+            <!-- Row -->
+            <div class="row noLeftPAdding orderRow">
+              <div class="input-line2">
+                  <div class="span3 left">
+                    <div class="title">Order of appearance</div>
+                    <div class="description3">
+                        Choose the order of appearance of the Videos, Photos, MP3s / Albums & I Am Fan tabs (the order they will be seen on the Backstage page). Just grab, drag and drop the box to the desired location. Note: The boxes can only be moved up or down. Once the boxes are in the desired location press ‘Save Changes’ or ‘Cancel’.
+                    </div>
+                  </div>
+                  <div class="span3 right">
+                    <div class="row">
+                        <div class="span6 fields">
+                            <ul class="order">
+                                <li><span class="number">1</span><a href="#">VIDEOS</a></li>
+                                <li><span class="number">2</span><a href="#">PHOTOS</a></li>
+                                <li><span class="number">3</span><a href="#">MP3s / ALBUMS</a></li>
+                                <li><span class="number">4</span><a href="#">I AM FAN</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="span2 order-btns">
+                        <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                        <input type="submit" value="CANCEL"  class="gray-btn"/>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <div class="note">
+                Please select from the drop-down menu the album to be featured in the Backstage page. You can choose from all the MP3s / Albums that you have uploaded. This album will be positioned in the middle of the Backstage page, just below the profile pictures. You can change this featured album anytime you like, so take advantadge of this great promotion tool.
+            </div>
+            <!-- Row -->
+            <div class="row">
+              <div class="input-line">
+                  <div class="span3 title">Featured Album</div>
+                  <div class="span3 title2">Choose:</div>
+                  <div class="span6 fields">
+                      <select class="select3 " title="Dance+ Mix - Summer 2013">
+                            <option value="1">Dance+ Mix - Summer 2013</option>
+                            <option value="2">Dance+ Mix - Summer 2013</option>
+                        </select>
+                  </div>
+              </div>
+            </div>
+            <!-- Row End -->
+            <!-- Buttons Row -->
+            <div class="row buttons-row">
+
+                <div class="span2">
+                <input type="submit" value="SAVE CHANGES"  class="yellow-btn"/>
+                <input type="submit" value="CANCEL"  class="gray-btn"/>
+                </div>
+
+            </div>
+            <!-- Row End -->
+
+            </form>
+          </div>
+          <!-- DISPLAY Sync Tab Conent end -->
+          <!-- DISPLAY Sync Tab Conent -->
+          <div class="tab-pane" id="ACCOUNT">
+            ACCOUNT Tab Content goes here...
+          </div>
+          <!-- DISPLAY Sync Tab Conent end -->
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<div class="space80"></div>
+<div class="space40"></div>
+<div class="space20"></div>
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+      <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+      <div  class="footer-menu-cols">
+        <ul>
+            <!-- WHO WE ARE Menu -->
+            <li class="first">
+                <ul class="foot-menu">
+                    <li class="title">WHO WE ARE</li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">PRESS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </li>
+
+            <!-- CATEGORIES Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CATEGORIES</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">VIDEOS</a></li>
+                    <li><a href="#">MP3s</a></li>
+                    <li><a href="#">RADIO</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">INTERVIEWS</a></li>
+                    <li><a href="#">CHALLENGE</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">STORE</a></li>
+
+                </ul>
+            </li>
+
+            <!-- MOBILE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">MOBILE</li>
+                    <li><a href="#">IPHONE</a></li>
+                    <li><a href="#">IPAD</a></li>
+                    <li><a href="#">ANDROID</a></li>
+                </ul>
+            </li>
+
+            <!-- LEGAL Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">LEGAL</li>
+                    <li><a href="#">TERMS OF USE</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">COPYRIGHT</a></li>
+                </ul>
+            </li>
+
+            <!-- CONNECT Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">CONNECT</li>
+                    <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                    <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                    <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                    <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                </ul>
+            </li>
+
+            <!-- WEBSITE Menu -->
+            <li>
+                <ul class="foot-menu">
+                    <li class="title">WEBSITE</li>
+                    <li><a href="#">SITEMAP</a></li>
+                </ul>
+            </li>
+
+            <!-- LANGUAGE Menu -->
+            <li class="last">
+                <ul class="foot-menu">
+                    <li class="title">LANGUAGE</li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">SPANISH</a></li>
+                    <li><a href="#">FRENCH</a></li>
+                    <li><a href="#">GERMAN</a></li>
+                </ul>
+            </li>
+
+        </ul>
+      </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

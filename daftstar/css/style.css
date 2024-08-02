@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body{
+  margin: 0;
+  font: 12px/18px 'Fjalla One';
+  color: #0F0F0F;
+  background:url(../img/GradientPattern.jpg) repeat-x 0px 20px;
+
+  overflow-x: hidden;
+
+}
+
+.wrapper{
+  width: 1400px;
+  margin: 50px auto 0;
+  height: 1055px;
+  text-align: center;
+  background:url(../img/GradientPattern-HeadPh.jpg) center top no-repeat;
+
+}
+.slogan{
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+  font-size: 25px;
+  color: #151515;
+
+}
+.logo{
+  margin-bottom: 35px;
+}
+.text{
+  width: 462px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 24.6px;
+  letter-spacing: 2px;
+
+  color: #101010;
+  font-family: 'Oswald', sans-serif;
+}
+.bold{
+  font-weight: bold;
+}
+.newsletter{
+  width: 513px;
+  margin: 37px auto 0px
+}
+
+
+.newsletter input[type="text"]{
+  color: #8F8F8F;
+  font-size: 14px;
+  width: 365px;
+  height: 37px;
+  padding-left: 10px;
+  border: 1px solid #939393;
+  -webkit-box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+     -moz-box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+          box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+}
+.newsletter .button{
+  width: 120px;
+  height: 40px;
+  float: right;
+  border: 1px solid #939393;
+  background: #FFF100;
+  color: #010913;
+  font-weight: bold;
+
+}
+.newsletter .yellow-btn{
+  cursor: pointer;
+  background: #FFF100;
+
+  font-family:  'Fjalla One', sans-serif;
+  font-size: 20px;
+  float: right;
+  color: #000;
+  border: none;
+  width: 120px;
+  height: 41px;
+  border: 1px solid #000;
+  -webkit-box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+     -moz-box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+          box-shadow:  -3px 4px 6px rgba(0, 0, 0, 0.175);
+}
+.social{
+  width: 440px;
+  height: 100px;
+  text-align: center;
+  margin: 23px auto 20px;
+}
+
+
+.social .block.b1 {
+  width: 160px;
+  float: left;
+}
+.social .block.b2 {
+  width: 240px;
+  float: left;
+  margin-left: 27px;
+}
+.social .block {
+  border: 1px solid #959595;
+}
+.social .block .title{
+  background: #010913;
+  color: #FFF100;
+  padding: 7px 3px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #959595;
+
+}
+.social .menu{
+  height: 66px;
+  text-align: left;
+}
+
+
+.social .menu {
+  list-style: none;
+  margin:  0;
+}
+.social .menu div{
+  float: left;
+}
+
+
+.social .menu div a{
+  display: block;
+  float: left;
+  width: 80px;
+  height: 34px;
+  text-align: center;
+  background: #010913;
+  padding: 16px 0;
+
+}
+
+.social .menu div.fb:hover a{background: #3D5C94;}
+.social .menu div.tw:hover a{background: #48B7E6;}
+.social .menu div.email:hover a{background: #FFF100;}
+
+
+.copyright{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+}
+.symbol{
+  font-size: 18px;
+}
+

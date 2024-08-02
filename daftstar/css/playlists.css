@@ -1,0 +1,69 @@
+/**
+*  CSS PLAYLIST
+*/
+.playlists.inner {     color:#0D0D0D;     padding:50px 0 0px;  }
+.playlist .left-sidebar {     margin-right:20px;     width:240px;     float:left;  }
+.backstage .playlist .left-sidebar {     width:279px;     float:none;     margin-bottom:30px;  }
+.playlist .right-content {     margin-left:260px;  }
+.playlist .section {     margin:0;  }
+.playlist .right-content .section .head {     border-bottom:none;     height:28px;     margin:0 0 0px;     padding:2px 0;  }
+.playlist .right-content .section .head .title {     background:none repeat scroll 0 0 transparent;     color:#343434;     float:left;     font-size:25px;     margin-right:10px;     padding:4px 0;     width:auto;  }
+.playlist .right-content .section .head .right {     display:block;     font:14px Tahoma,sans-serif;     margin:7px 0 0;     text-align:right;     color:#343434;  }
+.playlist .right-content .section .head .right .y-btn {     background:none repeat scroll 0 0 #FFF100;     border:1px solid #0F0F0F;     color:#1B1B1B;     display:block;     float:right;     font:16px/19px 'Fjalla One';     height:18px;     margin-left:10px;     text-align:center;     width:48px;     padding-left:2px;  }
+.playlist .right-content .section .head .right .y-btn a {     color:#1B1B1B;  }
+.playlist .left-sidebar .section .head {     border-bottom:1px solid #E0E0E0;     margin:0 0 0px;     padding:1px 0;     height:34px;  }
+.playlist .left-sidebar .section .head .title {     background:#959595;     color:#343434;     float:left;     font-size:18px;     margin-right:0px;     padding:8px 12px;     width:56px;  }
+.backstage .playlist .left-sidebar .section .head .list-type {     float:right;  }
+.backstage .playlist .left-sidebar .section .head div.title {     float:left;     background:none repeat scroll 0 0 #FDF100;     color:#0C0C0C;     float:left;     font-size:18px;     margin-right:10px;     padding:8px 12px;     width:auto;  }
+.playlist .left-sidebar .section .head .title a {     color:#343434;  }
+.playlist .right-content .section .body {     border-left:1px solid #939393;     padding-bottom:80px;     min-height:500px;  }
+.playlist .section .head .title.active {     background:#FFF100;     color:#343434;  }
+.playlist .section .head .title.active a {     color:#343434;  }
+.playlist .lists .body {     min-height:280px;  }
+.backstage .playlist .lists .body {     min-height:0;  }
+.playlist .lists .body ul {     list-style:none;     margin:5px 0;  }
+.playlist .lists .body ul.mp3 li {     padding:2px 0;  }
+.playlist .lists .body ul li a {     font:13px Tahoma;     font-weight:bold;     color:#0F0F0F;     padding-left:27px;     display:block;     height:19px;  }
+.playlist .lists .body ul.mp3 li a {     background:url(../img/sprite3.png) 0 -295px no-repeat;  }
+.playlist .lists .body ul.video li a {     background:url(../img/sprite3.png) 1px -347px no-repeat;  }
+.playlist .lists .body ul.video li a:hover,.playlist .lists .body ul.mp3 li a:hover {     text-decoration:none;  }
+.playlist .lists .body ul li:hover {     background:#0F0F0F;  }
+.playlist .lists .body ul li:hover a {     font:13px Tahoma;     font-weight:bold;     color:#FFF100;     padding-left:27px;  }
+.playlist .lists .body ul.mp3 li:hover a {     background:url(../img/sprite3.png) 0 -320px no-repeat;  }
+.playlist .lists .body ul.video li:hover a {     background:url(../img/sprite3.png) 1px -368px no-repeat;  }
+.playlist .lists .foot {     color:#636363;     font:12px Tahoma;  }
+.playlist .lists .foot a {     display:block;     color:#636363;     padding-left:40px;     margin:3px 0;  }
+.playlist .lists .foot .add {     border-bottom:1px solid #AEAEAE;     height:22px;     padding-bottom:2px;  }
+.playlist .lists .foot .add a {     height:20px;     padding-top:2px;     background:url(../img/list_add.png) 10px 0 no-repeat;  }
+.playlist .lists .foot .del {     height:27px;  }
+.playlist .lists .foot .del a {     height:27px;     padding-top:4px;     background:url(../img/list_del.png) 8px 0 no-repeat;  }
+.mp3-table,.video-table {     width:100%;     font:12px Tahoma;     margin:0;     border-bottom:1px solid #939393;  }
+.mp3-table thead,.video-table thead {     background:#0F0F0F;     color:#fff;  }
+.mp3-table.table th,.mp3-table.table td {     border-top:1px solid #939393;     line-height:23px;     padding:1px 5px;     text-align:left;     vertical-align:top;  }
+.video-table.table th,.video-table.table td {     border-top:1px solid #939393;     line-height:23px;     padding:2px 5px;     text-align:left;     vertical-align:top;  }
+.video-table.table td {     line-height:48px;  }
+.table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {     background-color:#E1E1E1;  }
+.mp3-table tbody > tr:hover td,.video-table tbody > tr:hover td {     background:#FFF100;  }
+.mp3-table th.centered,.mp3-table td.centered,.video-table th.centered,.video-table td.centered {     text-align:center;  }
+.mp3-table.table th,.video-table.table th {     padding:2px 5px;  }
+.mp3-table th.left-border div,.video-table th.left-border div {     border-left:1px solid #959595;     margin:1px 0 1px -6px;     padding-left:5px;  }
+.mp3-table .action {     float:right;     width:48px;  }
+.mp3-table .action .play {     display:block;     float:left;     height:16px;     width:11px;  }
+.mp3-table .action .play:hover {     background:none repeat scroll 0 0 #FFF100;     display:block;     text-align:center;  }
+.mp3-table .action .play a {     background:url("../img/sprite3.png") no-repeat scroll 8px -266px transparent;     display:block;     float:left;     height:23px;     width:24px;  }
+.mp3-table .action .play:hover a {     background:url("../img/sprite3.png") no-repeat scroll -12px -266px #FFF100;     float:left;  }
+.mp3-table tbody > tr:hover td .action .play:hover a {     background:url("../img/sprite3.png") no-repeat scroll -12px -266px #000000;  }
+.mp3-table .action .download {     display:block;     float:left;     height:16px;     padding:0 6px;     width:14px;  }
+.mp3-table .action .download:hover {     background:none repeat scroll 0 0 #FFF100;     display:block;     text-align:center;  }
+.mp3-table .action .download a {     background:url("../img/sprite3.png") no-repeat scroll -36px -265px transparent;     display:block;     float:left;     height:23px;     width:24px;  }
+.mp3-table .action .download:hover a {     background:url("../img/sprite3.png") no-repeat scroll -58px -265px #FFF100;     float:left;  }
+.mp3-table tbody > tr:hover td .action .download:hover a {     background:url("../img/sprite3.png") no-repeat scroll -58px -265px #000000;  }
+.mp3-table .action .download {     float:right;  }
+.video-table td .video {     width:80px;     height:55px;     background:#343434;     position:relative;     float:left;     margin-right:10px;  }
+.video-table td .video img {     width:80px;     height:55px;  }
+.video-table td .video .play {     background:url("../img/list_vplay.png") no-repeat scroll 0 0 transparent;     display:block;     height:41px;     left:19px;     position:absolute;     top:7px;     width:41px;  }
+.playlist .videoPlayer {     float:none;     width:260px;  }
+.mp3-table .centered input[type=checkbox].check-delete1 {     float:left;     display:none;  }
+.mp3-table .centered .checkbox {     padding-left:10px;     padding-top:5px;  }
+.mp3-table .centered input[type=checkbox].check-delete1 + label.label-delete1 {     background:url(../img/check-un-delete1.jpg) no-repeat;     width:15px;     height:15px;     padding:0;     margin:0;  }
+.mp3-table .centered input[type=checkbox].check-delete1:checked + label.label-delete1 {     background:url(../img/check-delete1.jpg) no-repeat;  }

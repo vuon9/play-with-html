@@ -1,0 +1,152 @@
+body{background:#272727 url(../images/spacer.gif) repeat-x !important;color:#bbb!important;font-family:Arial, sans-serif!important;}
+#account-wrapper, .account-wrapper {font-size:10px !important;background:transparent url(../images/background_wrapper_bwin.gif) 0 0 repeat-y !important;padding:0px !important;}
+#myCashier, .myCashier {background:#000 url(../images/box-header-border_bwin.png) 0 0 repeat-x !important;}
+#account-wrapper .message-box  a:link, #account-wrapper .message-box a:visited, #account-wrapper .message-box a:hover{color:#000 !important;}
+.pcardLoading {background:#000 url(/generic/images/bwinloading.gif) no-repeat left top !important;width:100px;height:60px;}
+#account-wrapper .message-box  a:link, #account-wrapper .message-box  a:active, #account-wrapper .message-box  a:hover {color:#000 !important;}
+#myCashier a, #account-wrapper a:link, #account-wrapper a:visited, #account-wrapper a:hover{color:#bbb !important;}
+#myCashier .mainDeposit .mainDepositFeatures P.hint-divider a:link{color:#000!important;text-decoration:underline !important}
+#account-wrapper .payment-card-edit-link, #myCashier .payment-card-edit a {color:#000 !important;}
+#myCashier h1 {font-size:12px !important;line-height:11px;font-weight:bold;margin:0 0 20px 0!important;color:#FFCC00 !important;font-family:inherit !important;}
+#myCashier h4 {color:#fff !important;}
+#myCashier .small-text-dark {color:#ccc !important;}
+#myCashier .small-text-dark a {color:#ccc !important;}
+#myCashier h2{font-size:12px !important;line-height:12px !important !important;margin:0 0 20px 0 !important;color:#ffcc00 !important;padding-top:20px !important;border-top:solid 1px #3c3c3c !important;font-family:Arial, sans-serif!important;}
+#myCashier h2.amtCur{font-size:15px;line-height:12px !important;margin:0 0 20px 0 !important;color:#ffcc00 !important;border-top:0px!important;padding:4px 0 0 10px !important;}
+#myCashier .step {font-size:20px !important;font-style:italic !important;color:#c9c9c9 !important;background:transparent url(../images/spacer.gif) top left no-repeat !important;padding:15px 5px 0 0 !important;margin:2px 0 0 0 !important;}
+.myCashier-side-content{float:left !important;margin:0 0 0 10px !important;}
+.myCashier-side-content .block{padding:9px 5px 15px 5px !important;background:#000 url(../images/box-header-border_bwin.png) 0 0 repeat-x !important;margin:0 0 10px 0 !important;}
+.myCashier-side-content h2 {font-size:11px!important;line-height:11px !important;margin:0 0 20px 0 !important;color:#FFCC00 !important;border-bottom: !important;padding:0 0 0 0 !important;font-family:Arial, sans-serif!important;}
+.quickdeposit{background:url(/generic/images/icon_$$_bwin.png) no-repeat left top !important;}
+.bonusIcon{background:url(/generic/images/icon_b_bwin.png) no-repeat left top !important;}
+.myCashier-side-content .quickdeposit-txt, .myCashier-side-content .contentlinks{color:#fff !important;text-decoration:none !important;}
+.myCashier-side-content .quickdeposit-txt:hover, .myCashier-side-content .contentlinks:hover{color:#fff !important;text-decoration:underline !important;}
+.contentlinks{color:#fff !important;}
+.myCashier-side-content-links li {list-style: none;list-style-image: url(../images/spacer.gif)!important;margin:0 0 0 -40px !important;}
+#myCashier-side-content select, #myCashier #epsPaymentID {width:150px !important;padding:0 !important;border:solid 1px #000 !important;-moz-border-radius: 0px !important;background:spacer.gif !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#layoutTable, .homenormal{background:#272727 url(../images/spacer.gif) 566px 0px repeat-y !important;}
+#myCashier .mainDeposit {margin:0 12px 5px 0 !important;background-color:#202020 !important;border:solid 1px #202020 !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#myCashier .mainDeposit:hover {background-color:#272727 !important;border:solid 1px #272727 !important;}
+#myCashier .mainDeposit a, #myCashier .subDeposit a{color:#fff !important;font-weight:normal !important;}
+.info, .wiz-info{background:url(/generic/images/icon_i_bwin.png) no-repeat left top !important;}
+#myCashier .hint-info, #myCashier .wiz-hint-info, .block .hint-quickdeposit {background: #fff;border: 2px solid #ccc !important;padding: 6px 6px !important;color:#000 !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#myCashier .overlay{background-color: #fff !important;border: 2px solid #ccc !important;padding: 6px 6px !important;color:#000 !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#myCashier .overlay p {padding: 6px 6px !important;color:#000 !important;}
+#myCashier .hint-info, #myCashier .hint-info-top, #myCashier .hint-info-carousel-top, #myCashier .hint-info-right, #myCashier .hint-info-bottom, #myCashier .hint-info-left, #myCashier .hint-info-bottom-right, #myCashier .hint-bonusTxt, #myCashier .hint-quickdeposit {background: #fff;border: 2px solid #ccc!important;padding: 6px 6px!important;color:#000!important;-moz-border-radius: 0px!important;-webkit-border-radius: 0px!important;border-radius: 0px!important;}
+#myCashier .hint-info .hint-info-pointer,#myCashier .hint-bonusTxt .hint-bonus-pointer, #myCashier .wiz-hint-info .wiz-hint-info-pointer, #myCashier .hint-quickdeposit .hint-quickdeposit-pointer {    background: url(/generic/images/pointer-bottom_bwin.gif) left top no-repeat !important;}#myCashier .subDeposit {background-color:#202020 !important;border:solid 1px #202020 !important;    -moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#myCashier .subDeposit:hover {background-color:#272727 !important;border:solid 1px #272727 !important;}#myCashier .show-more-methods a{color:#fff !important;}
+#myCashier span a .plus {background:transparent url(/generic/images/plus_bwin.png) top left no-repeat !important;display:inline;margin:2px 0 0 0 !important;}
+.footer-note {border-top:solid 1px #333 !important;background-color:#000 !important;}
+#myCashier p {color:#bbb !important;}
+#myCashier p.hint-divider{border-bottom:1px solid #bbb}
+#myCashier label{color:#ccc !important;font-weight:normal !important;}
+#myCashier .payment-amount-container, #myCashier .sensitiveFields { background-color:#272727 !important;border:solid 1px #272727 !important;    -moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important; padding-left:20px !important;}
+#myCashier .amount-active {background: transparent url(/generic/images/button_amount_rx_bwin.png) no-repeat scroll top right !important;color:#fff !important;font-weight:normal !important;font-size:11px !important;font-family:Arial, sans-serif !important;}
+#myCashier .amount-active span {background: transparent url(/generic/images/button_amount_lx_bwin.png) no-repeat scroll top left !important;}
+#myCashier .amount {background: transparent url(/generic/images/button_amount_inactive_rx_bwin.png) no-repeat scroll top right !important;color:#fff !important;font-weight:normal !important;font-size:11px !important;font-family:Arial, sans-serif !important;}
+#myCashier .amount span {background: transparent url(/generic/images/button_amount_inactive_lx_bwin.png) no-repeat scroll top left !important;}
+#myCashier .payment-amount-container input[type='text'] {background:#f7f7f7 url(/generic/images/form_background_bwin.png) repeat-x !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;   padding:0px 4px 0px 4px !important;margin:7px -4px 0 0px !important;border:solid 1px #333 !important;}
+#myCashier .payment-amount-container select {background:#f7f7f7 url(/generic/images/form_background_bwin.png) repeat-x !important;height=25px !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;border:solid 1px #333 !important;padding:2px 3px 3px 2px !important;}
+.myCashier-side-content p {color:#fff !important;}
+#myCashier .error{min-height:20px !important;padding: 0 0 0 3px !important;margin:2px 0 0 10px !important;}
+#myCashier .ValidationErrorsAmountMsg {background:url(/generic/images/icon-error_bwin.png) 0px 1px no-repeat !important;min-height:20px !important;padding: 0 0 0 3px !important;margin:2px 0 0 -3px !important;}
+#myCashier .ValidationErrorsAmountMsg {padding: 2px 0 0 24px !important;color:#000 !important;}
+#myCashier  input[type='text'], input[type='password'], #myCashier textarea{padding:1px 1px 1px 3px !important;border:solid 1px #333;background:spacer.gif repeat-x !important; -moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;}
+#myCashier input[type='text']:focus, input[type='password']:focus, #myCashier select:focus {border:solid 2px #ffcc00 !important;background:#f7f7f7 url(/generic/images/form_background_focus_bwin.png) repeat-x !important;}
+#myCashier .payment-amount-container input[type='text']:focus{border:solid 1px #333 !important;}
+#myCashier select, #myCashier #epsPaymentID {border:solid 1px #333;padding:0 !important;background:spacer.gif repeat-x !important;  -moz-border-radius: 0px !important; -webkit-border-radius: 0px !important; border-radius: 0px !important;}
+#myCashier .required {  background:url(/generic/images/icon-mandatory_bwin.png) 5px 9px no-repeat !important;}
+#myCashier .hint, #myCashier .hintXl, .myCashier-side-content .hint { background: #fff url(/generic/images/pointer-lx_bwin.gif) no-repeat -10px 5px !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important;border-radius: 0px !important;color:#000;border: 2px solid #ccc !important;position:absolute !important;}
+#header {background: url('../images/pa_post_login_images--0.jpg') left -328px repeat-x;}
+.pp_account_title, .logout_seperator, .pa_logo_small, .faq-logo{background:url('../images/pa_post_login_images--0.jpg') no-repeat;}
+.faq-logo{background:url('../images/pa_post_login_images--0.jpg') no-repeat;}
+ .faq-header{border-bottom:solid 5px #272727!important;}
+.logout_icon, .inbox_icon, .vip_elite, .vip{background:url('../images/pa_bg_icon_images--0.gif');}
+.logout_leftcurve {background: url('../images/pa_post_login_images--0.jpg') no-repeat 0px -163px;}
+.logout_bg{background: url('../images/pa_post_login_images--0.jpg') left -219px repeat-x;}
+#bubbleOne{background: url('../images/bubble1_top--0.gif');}
+#bubbleTwo{background: url('../images/bubble2_top--0.gif') 0 0 no-repeat;}
+.button a{background: url('../images/ee_button_left_poker--0.gif') no-repeat left top;}
+.button a span{background: url('../images/ee_button_right_poker--0.gif') no-repeat right top;color: #fff;}
+.button-new a{background: url('../images/ee_button_left_poker--0.gif') no-repeat left top;}
+.button-new a span{background: url('../images/ee_button_right_poker--0.gif') no-repeat right top;color: #fff;}
+.button_store a{background: url('../images/button_store_left--0.gif') no-repeat left top;}
+.button-store-faded a{background: url('../images/button_store_left_faded--0.gif') no-repeat scroll left top;}
+.button-store-faded a span{background: url('../images/button_store_right_faded--0.gif') no-repeat scroll right top !important;}
+#leftimage {background: url('../images/palaimage--0.jpg');}
+#leftimage2 {background: url('../images/palaimage_elite--0.jpg') no-repeat;}
+.welcome_msg{color:#838383;}
+.inbox_count{color:#c7c7c7;}
+#logout_section a{color:#c7c7c7;}
+.tafBg{background-color: #ea680b;}
+.tafBorder, .tafTable{border:1px solid #ea680b;}
+#login_container #header{background:url('../images/pa_post_login_images--0.jpg') left -328px repeat-x;}
+.level-container h2{color:#ea680b!important;}
+.level-container a{color:#ea680b!important;}
+.store-item a{color:#ea680b!important;}
+.gridTable1 td.brandColor, .gridTable1 th.brandColor{background-color:#ea680b!important;}
+.button-continue a { background: url('../images/button-continue.gif') no-repeat left 0px;}
+.button-continue a span { background: url('../images/button-continue.gif') no-repeat right 0px;}
+.button-continue-grey a { background: url('../images/button-continue-grey.gif') no-repeat left 0px;}
+.button-continue-grey a span { background: url('../images/button-continue-grey.gif') no-repeat right 0px;}
+.promoBtn {background:url('../images/pyp_btn_bg.gif'); background-repeat: repeat-x; background-position: top left; margin:0px 15px 0px 3px; cursor:pointer;}
+.vip-palladium-banner {border-bottom:2px solid #ea680b; }
+.ui-datepicker { border: 1px solid #636363; background-color: #fcfdfd; color: #222222;}
+.ui-datepicker a { color: #222222; }
+.ui-datepicker-header { border: 1px solid #212121; background: url('../images/ui-bg_gloss-wave_75_2191c0_500x100--0.gif') 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
+.ui-datepicker .ui-state-default { border: 1px solid #212121; background: url('../images/ui-bg_glass_45_0078ae_1x400--0.gif') 50% 50% repeat-x; font-weight: normal; color: #ffffff; outline: none; }
+.ui-datepicker .ui-state-default a, .ui-datepicker .ui-state-default a:link, .ui-state-default a:visited { color: #ffffff; text-decoration: none; outline: none;}
+.ui-datepicker .ui-state-hover,.ui-datepicker .ui-state-focus{ border: 1px solid #212121; background: url('../images/ui-bg_glass_75_79c9ec_1x400--0.gif') 50% 50% repeat-x; font-weight: normal; color: #000000; outline: none; }
+.ui-datepicker .ui-state-hover a,.ui-datepicker .ui-state-hover a:hover { color: #000000; text-decoration: none; outline: none; }
+.ui-datepicker .ui-state-active{ border: 1px solid #212121; background: url('../images/ui-bg_gloss-wave_50_6eac2c_500x100--0.gif') 50% 50% repeat-x; font-weight: normal; color: #000000; outline: none; }
+.ui-datepicker .ui-state-active a, .ui-datepicker .ui-state-active a:link, .ui-datepicker .ui-state-active a:visited { color: #ffffff; outline: none; text-decoration: none; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #212121; background: url('../images/ui-bg_glass_55_f8da4e_1x400--0.gif') 50% 50% repeat-x; color: #000000; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #636363; background: url('../images/ui-bg_gloss-wave_45_e14f1c_500x100--0.gif') 50% top repeat-x; color: #ffffff; }
+.ui-state-error a, .ui-widget-content .ui-state-error a { color: #ffffff; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text { color: #ffffff; }
+.ui-icon { width: 16px; height: 16px; background-image: url('../images/ui-icons_0078ae_256x240--0.gif'); }
+.ui-widget-content .ui-icon {background-image: url('../images/ui-icons_0078ae_256x240--0.gif'); }
+.ui-widget-header .ui-icon {background-image: url('../images/ui-icons_d8e7f3_256x240--0.gif'); }
+.ui-state-default .ui-icon { background-image: url('../images/ui-icons_e0fdff_256x240--0.gif'); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url('../images/ui-icons_056b93_256x240--0.gif'); }
+.ui-state-active .ui-icon {background-image: url('../images/ui-icons_f5e175_256x240--0.gif'); }
+.ui-state-highlight .ui-icon {background-image: url('../images/ui-icons_f7a50d_256x240--0.gif'); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url('../images/ui-icons_fcd113_256x240--0.gif'); }
+.ui-dialog {border: 2px solid #fe913e !important;}
+.ui-dialog-titlebar {background: #e6e6e6 url(../images/head_bg--0.gif) 0 50% repeat-x;}
+.ui-dialog-buttonpane button {background: #e6e6e6 url(../images/head_bg--0.gif) 0 50% repeat-x;}
+.ui-tabs-nav a, .ui-tabs-nav a span {background: url(../images/tab--0.png) no-repeat;}
+.pg-tooltip {border: 1px solid #fe913e !important;}
+.pg_table th, .gridTable1 th, #termsTable th, .termsTable th, #container table th {background:#eeefe9 url('../images/th_back--0.gif') left top repeat-x;}
+  #login_container #header{height:76px;}
+.left_curve{background:transparent url(../images/pa_post_login_images--0.jpg) no-repeat scroll left -654px;}
+#right_box{ width:472px;}
+#logo_small img{padding:0px 38px 0px 0px}
+#login_container{border:1px solid #89897f;background:#fff;width:746px;}
+ .button input, .button a span, .button-new a span, .button-new a span input, .button a, .button-continue a span input{color:#000000!important; font-weight:bold!important; text-decoration:none!important;}
+.button_grey input, .button_grey a span, .button_grey a, .button_grey a span input{color:#e3b410!important; font-weight:bold!important; text-decoration:none!important;}
+.button_grey a{background-image:url('../images/button_grey_left--0.gif') !important;}
+.button_grey a span{background-image: url('../images/button_grey_right--0.gif') !important;}
+.promoTdhover{background-color:#121212!important;}
+.current-promotions table.selectedTable{background-color:#000000!important;}
+.pTable{background-color:#000000!important;}
+.bonuses-container, .bonusbox-content{background-color:#000000!important; border:1px solid #2f2f2f!important;}
+#PromoContent{position:relative; left:0px; top:0px; width:334px; border:1px solid #666; height:249px; border-bottom-width:0; margin:0; padding:0;}
+h1.brand-gb{color:#ffcc00;}
+#PromoBackground{position:absolute; left:0px; top:0px; width:334px; opacity:0.9;}
+#PromotionLayer{position:relative; background:#000 url('../images/bg-gradient-bwes.gif') top left repeat-x; width:336px; padding:0;}
+.layerPromotionContent{padding:5px 9px 0 10px;}
+.layerPromotionContent p{padding:0; margin:10px 0 8px;}
+#minimizeLayer{text-align:right; height:15px; padding:0; font-size:10px;}
+#minimizeLayer p{margin:0; padding:0; line-height:0;}
+#minimizeLayer .mini-context{float:right;}
+#minimizeLayer .mini-text{float:left; width:auto; padding:2px 0 0 0;}
+#minimizeLayer .mini-icon{width:auto; float:left; padding:0 0 0 5px;}
+#minimizeLayer .mini-icon a{width:15px; height:15px; background:url('../images/minimizebutton-bwes.png') no-repeat; display:block;}
+.layerPromotionContent p{padding:0; margin:10px 0 8px;}
+#layerTacBackground{position:absolute; height:auto; opacity:0.9; top:304px; width:162px; display:inline-block;}
+#layerTac{position:relative; display:inline-block; white-space:nowrap; clear:both; background:#000 url('../images/bg-terms-bwes.png') top left repeat-x; }
+
+
+
+

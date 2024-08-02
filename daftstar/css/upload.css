@@ -1,0 +1,84 @@
+/**
+*  CSS UPLOAD
+*/
+.upload .section .head {     height:33px;     font-size:19px;  }
+.upload .section .body {     font-family:Tahoma;  }
+.upload .section .body > .row {     margin-bottom:10px;  }
+.upload .section .body .row.note {     border:2px solid #959595;     width:560px;  }
+.upload .section .body .row.note p {     margin:10px;     font-size:12px;     line-height:15px;  }
+.upload .section .body h4 {     font-weight:normal;     font-size:18px;     line-height:24px;     margin:10px 0 20px;  }
+.upload .storage {     margin:10px 0 0;     font:12px Tahoma;     color:#242424;  }
+.upload .storage p {     margin:10px 0 0;     font:12px Tahoma;     color:#242424;  }
+.upload .storage p a {     color:#242424;  }
+.upload .storage .usage {     text-align:right;     font:12px Tahoma;     font-weight:bold;     color:#343434;  }
+.upload .storage .bar {     position:relative;     height:20px;     border:1px solid #959595;     margin:3px 0;     text-align:center;     font:12px Tahoma;     font-weight:bold;     line-height:20px;     color:#343434;  }
+.upload .storage .bar .used {     position:absolute;     background:#00CBFF;     height:20px;     z-index:100;     text-align:right;     padding-right:3px;  }
+.upload .box .body {     padding:10px 10px 5px 15px;     font:12px Tahoma;     color:#343434;  }
+.upload .box .body p {     font-size:12px;  }
+.upload .box .body p a {     color:#242424;  }
+.upload .box ol {     margin:0 0 0 20px;  }
+.upload .box ol li {     margin-bottom:5px;     line-height:17px;  }
+.upload .box ol li a {     font-size:11px;  }
+.upload .box .note {     font:12px Tahoma;     color:#343434;     margin:5px 0;  }
+.upload .body .row label {     font-size:14px;     font-weight:bold;  }
+.upload .body .row .select {     position:relative;  }
+.upload .black-btn.upload,.upload .black-btn.review {     width:250px;     height:35px;     padding:0;     text-align:center;     line-height:36px;     margin:15px 0 0px;  }
+.upload .agree {     font:11px Tahoma;     font-weight:bold;     color:#838383;  }
+.upload .black-btn:disabled {     background:#C2C2C2;     color:#929292;  }
+.upload .black-btn.review {     margin:0;  }
+p.review {     width:290px;     font:11px Tahoma;     font-weight:bold;     color:#838383;  }
+/* ===== Upload list ===== */
+.upload-list ul {     list-style:none;     margin:10px 0 0;  }
+.upload-list ul li {     position:relative;     border-bottom:1px solid #C2C2C2;     font-size:13px;  }
+.upload-list ul li.first {     border-top:1px solid #C2C2C2;  }
+.upload-list ul li .row {     margin:5px 0;  }
+.upload-list ul li .upload-bar {     position:absolute;     height:3px;     bottom:0;     background:#F1038F;  }
+.upload-list [class*='span'] {     margin-left:0;  }
+.upload-list .order {     width:30px;     color:#626262;     text-align:center;     font-weight:bold;  }
+.upload-list .name {     width:470px;     color:#333333;     font-weight:bold;  }
+.upload-list .size {     width:60px;     font-size:13px;  }
+.upload-list .actions {     width:115px;     float:right;  }
+.upload-list .actions .y-btn {     background:none repeat scroll 0 0 #FFF100;     color:#1B1B1B;     display:block;     float:left;     font:16px/24px 'Fjalla One';     height:23px;     margin-left:4px;     text-align:center;     width:50px;  }
+.upload-list .actions a.y-btn:hover {background: #000;  color: #FFF100; text-decoration: none; }
+.upload-list .actions .remove {     display:block;     float:left;     height:23px;     width:23px;     background:url(../img/remove.png) no-repeat;     margin:0 7px;  }
+.upload-list .actions a.remove:hover {  filter: alpha(opacity=70);  opacity: 0.7;   }
+.upload-list .actions .uploaded {     display:block;     float:left;     height:23px;     width:23px;     background:url(../img/uploaded.png) no-repeat;     margin:0;  }
+.up-new .add-btn {     float:left;  }
+.upload .up-new .add-btn .y-btn ,.upload .browse .y-btn {     background:none repeat scroll 0 0 #FFF100;     color:#1B1B1B;     display:block;     float:left;     font:16px/28px 'Fjalla One';     height:27px;     margin-left:4px;     text-align:center;     width:auto;     padding:0 20px;  }
+.up-new .right {     text-align:right;     float:right;     width:315px;     font:11px Tahoma;     font-weight:bold;     color:#838383;  }
+.up-new .right .total {     font-size:12px;     margin-bottom:7px;  }
+.up-new .right .black {     color:#0F0F0F;  }
+.upload .section .body > .row.upload-progress {     margin-bottom:0px;  }
+.upload-progress .canavas {     text-align:center;     margin-bottom:20px;  }
+.upload-progress .canavas .circle {     height:215px;  }
+.upload-progress .canavas .completed {     font:13px;     font-weight:bold;     color:#7C7C7C;  }
+.upload-progress .canavas .jCProgress {     position:relative;     z-index:200;     width:194px;     margin:0 auto;  }
+.upload-progress .canavas .jCProgress > div.percent {     color:#333333;     font:bold 40px/27px Tahoma;     margin-left:4px;     margin-top:80px;     position:absolute;     text-align:center;     width:190px;  }
+.upload-progress .signs ul {     float:right;     list-style:none;     margin:0;  }
+.upload-progress .signs ul li {     float:left;     margin-left:10px;     position:relative;  }
+.upload-progress .signs ul li .icon {     cursor:pointer;  }
+.upload-progress .signs li .snippet {     background:none repeat scroll 0 0 #454545;     color:#FFF100;     display:none;     font:13px Tahoma;     padding:10px;     position:absolute;     top:-98px;     left:-145px;     width:153px;     z-index:300;  }
+.upload-progress .signs li .snippet .arrow {     background:url("../img/snippet_arrow.png") no-repeat scroll 0 0 transparent;     bottom:-11px;     right:10px;     height:11px;     position:absolute;     width:16px;  }
+.upload .info-tabs {     font-family:'Fjalla One';     margin:25px 0 0;  }
+.upload .tab-content {     font-family:Tahoma;     font-size:14px;     font-weight:bold;     letter-spacing:1px;     padding-bottom:10px;  }
+.upload .section ul.nav li > a {     width:180px;     text-align:left;     color:#343434;  }
+.upload .section ul.nav li > a:hover { background: #bbb;  }
+
+.upload .tab-content .field {     margin-bottom:14px;  }
+.upload .tab-content input[type="text"] {     color:#0F0F0F;     font-size:13px;     height:20px;     width:486px;     border:1px solid #C1C1C1;  }
+.upload .tab-content textarea {     resize:none;     height:50px;     width:486px;     border:1px solid #C1C1C1;  }
+.upload .tab-content .span6.cover {     width:282px;     margin-left:0;     margin-right:40px;  }
+.upload .tab-content .span6.cover label {     font:14px Tahoma;     font-weight:bold;     color:#1B1B1B;  }
+.upload .tab-content .span6.cover .image {     width:280px;     height:280px;     border:1px solid #C3C3C3;     background:#464646;     position:relative;  }
+.upload .tab-content .span6.cover .image img {     max-width:280px;     max-height:280px;  }
+.upload .tab-content .span6.cover .image .up-bar {     height:10px;     background:#EC008B;     border-top:1px solid #121212;     border-right:1px solid #121212;     position:absolute;     bottom:0;     z-index:100;  }
+.upload .tab-content .span6.cover .browse {     margin:5px 0;     font:13px 'Fjalla One';     color:#454545;     letter-spacing:0;     line-height:15px;  }
+.upload .tab-content .span6.cover .browse .y-btn {     width:110px;     height:30px;     font-size:19px;     margin-left:0;     margin-right:5px;  }
+.upload .tab-content .span6.cover .browse a.y-btn:hover { background: #000; color:#FFF100; text-decoration: none;}
+.upload .tab-content p.note {     clear:both;     font:11px Tahoma;     color:#838383;     font-weight:bold;     letter-spacing:0;     width:593px;     margin:24px 0;  }
+.upload .tab-content p.note a {     color:#0F0F0F;  }
+.upload .tab-content p.note2 {     clear:both;     font:11px Tahoma;     color:#838383;     font-weight:bold;     letter-spacing:0;     margin:6px 0;  }
+.upload .tab-content .store {     margin:20px 0 18px;  }
+.upload .tab-content .store .logo {     width:128px;     margin-left:0;  }
+.upload .tab-content .store .field {     width:505px;     margin-left:0;  }
+.upload .tab-content .store .icon {     width:30px;     padding-top:3px;     margin-left:0;  }

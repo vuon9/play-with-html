@@ -1,0 +1,653 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010-2012 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 4.2 (jPlayer 2.2.0)
+ * Date: 22nd October 2012
+ */
+
+.html5player .player div.jp-audio,
+.html5player .player div.jp-audio-stream,
+.html5player .player div.jp-video {
+
+	/* Edit the font-size to counteract inherited font sizing.
+	 * Eg. 1.25em = 1 / 0.8em
+	 */
+
+	font-size:1.25em; /* 1.25em for testing in site pages */ /* No parent CSS that can effect the size in the demos ZIP */
+
+	font-family:Verdana, Arial, sans-serif;
+	line-height:1.6;
+	color: #fff;
+	background-color:#0f0f0f;
+}
+.html5player .player div.jp-audio {
+	height: 65px;
+    width: 681px;
+    margin:2px 0;
+}
+.html5player .player div.jp-audio-stream {
+	width:182px;
+}
+
+
+
+
+.html5player .player div.jp-interface {
+	position: relative;
+	background-color:#0f0f0f;
+	width:100%;
+}
+
+.html5player .player div.jp-audio div.jp-type-single div.jp-interface {
+	height:62px;
+}
+.html5player .player div.jp-audio div.jp-type-playlist div.jp-interface {
+	height:62px;
+}
+
+.html5player .player div.jp-audio-stream div.jp-type-single div.jp-interface {
+	height:80px;
+}
+
+/* @group CONTROLS */
+
+.html5player .player div.jp-controls-holder {
+	clear: both;
+	width:440px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	top:-8px; /* This negative value depends on the size of the text in jp-currentTime and jp-duration */
+}
+
+.html5player .player div.jp-interface ul.jp-controls {
+	list-style-type:none;
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+}
+
+.html5player .player div.jp-audio ul.jp-controls {
+	width: 325px;
+	padding:15px 46px;
+}
+.html5player .player div.jp-audio ul.jp-controls.vol-controls{
+    float: right;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 190px;
+}
+
+
+.html5player .player div.jp-audio-stream ul.jp-controls {
+	width: 142px;
+	padding:20px 20px 0 20px;
+}
+
+.html5player .player div.jp-interface ul.jp-controls li {
+	display:inline;
+	float: left;
+}
+
+.html5player .player div.jp-interface ul.jp-controls a {
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.html5player .player a.jp-play,
+.html5player .player a.jp-pause {
+	width:35px;
+	height:35px;
+    margin: 0 10px;
+}
+
+.html5player .player a.jp-play {
+	background: url("skin3.png") -132px -63px no-repeat;
+}
+.html5player .player a.jp-play:hover {
+	background: url("skin3.png") -132px -102px no-repeat;
+}
+.html5player .player a.jp-pause {
+   	background: url("skin3.png") -212px -102px no-repeat;
+	display: none;
+}
+.html5player .player a.jp-pause:hover {
+    background: url("skin3.png") -212px -102px no-repeat;
+}
+
+.html5player .player a.jp-stop, .html5player .player a.jp-previous, .html5player .player a.jp-next {
+	width:21px;
+	height:16px;
+	margin-top:8px;
+}
+
+.html5player .player a.jp-stop {
+	background: url("jplayer.daftstar.jpg") 0 -83px no-repeat;
+	margin-left:10px;
+}
+
+.html5player .player a.jp-stop:hover {
+	background: url("jplayer.daftstar.jpg") -29px -83px no-repeat;
+}
+
+.html5player .player a.jp-previous {
+	background: url("skin3.png") -100px -72px no-repeat;
+}
+.html5player .player a.jp-previous:hover {
+	background: url("skin3.png") -100px -111px no-repeat;
+}
+
+.html5player .player a.jp-next {
+   background: url("skin3.png") -177px -72px no-repeat;
+}
+.html5player .player a.jp-next:hover {
+    background: url("skin3.png") -177px -111px no-repeat;
+}
+
+/* @end */
+
+/* @group progress bar */
+
+.html5player .player div.jp-progress {
+
+	background-color: #ddd;
+}
+.html5player .player div.jp-audio div.jp-progress {
+	position: absolute;
+	top:29px;
+	height:5px;
+}
+.html5player .player div.jp-audio div.jp-type-single div.jp-progress {
+	left:243px;
+	width:227px;
+    z-index: 200;
+}
+.html5player .player div.jp-audio div.jp-type-playlist div.jp-progress {
+	left:166px;
+	width:130px;
+}
+
+.html5player .player div.jp-seek-bar {
+	background: url("audio.png") 0 -126px repeat-x;
+	width:100% !important;
+	height:100%;
+	cursor: pointer;
+}
+.html5player .player div.jp-play-bar {
+	background: url("audio.png") 0 -112px repeat-x;
+	width:0px;
+	height:100%;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+.html5player .player div.jp-seeking-bg {
+	background: background: url("skin3.png") 0 -1px repeat-x;
+}
+
+/* @end */
+
+/* @group volume controls */
+
+
+.html5player .player a.jp-mute,
+.html5player .player a.jp-unmute,
+.html5player .player a.jp-volume-max {
+	width:8px;
+	height:11px;
+	margin-top:11px;
+}
+
+.html5player .player div.jp-audio div.jp-type-single a.jp-mute,
+.html5player .player div.jp-audio div.jp-type-single a.jp-unmute {
+	margin-left: 43px;
+}
+.html5player .player div.jp-audio div.jp-type-playlist a.jp-mute,
+.html5player .player div.jp-audio div.jp-type-playlist a.jp-unmute {
+	margin-left: 154px;
+}
+
+.html5player .player div.jp-audio-stream div.jp-type-single a.jp-mute,
+.html5player .player div.jp-audio-stream div.jp-type-single a.jp-unmute {
+	margin-left:10px;
+}
+
+.html5player .player div.jp-audio a.jp-volume-max,
+.html5player .player div.jp-audio-stream a.jp-volume-max {
+	margin-left: 111px;
+}
+
+
+.html5player .player a.jp-mute {
+    background: url("audio.png") 0 -32px no-repeat;
+}
+.html5player .player a.jp-mute:hover {
+   background: url("audio.png") -20px -32px no-repeat;
+}
+.html5player .player a.jp-unmute {
+  width:16px;
+   background: url("audio.png") -20px -32px no-repeat;
+	display: none;
+}
+.html5player .player a.jp-unmute:hover {
+  width:16px;
+  background: url("audio.png") -20px -32px no-repeat;
+}
+.html5player .player a.jp-volume-max {
+  width:16px;
+	height:24px;
+	margin-top:5px;
+  background: url("audio.png") 0px -52px no-repeat;
+}
+.html5player .player a.jp-volume-max:hover {
+  width:16px;
+	height:24px;
+	margin-top:5px;
+   background: url("audio.png") -20px -52px no-repeat;
+}
+
+.html5player .player div.jp-volume-bar {
+	position: absolute;
+	overflow:hidden;
+	background: url("audio.png") 0 -119px repeat-x;
+	width:102px;
+	height:5px;
+	cursor: pointer;
+}
+.html5player .player div.jp-audio div.jp-volume-bar {
+	top:29px;
+	right: 35px;
+}
+.html5player .player div.jp-audio-stream div.jp-volume-bar {
+	top:37px;
+	left:92px;
+}
+
+.html5player .player div.jp-volume-bar-value {
+	background: url("audio.png") 0 -112px repeat-x;
+	width:0px;
+	height:5px;
+}
+
+/* @end */
+
+/* @group current time and duration */
+
+.html5player .player div.jp-audio div.jp-time-holder {
+	position:absolute;
+	top:22px;
+}
+.html5player .player div.jp-audio div.jp-type-single div.jp-time-holder {
+	left:202px;
+	width:309px;
+}
+.html5player .player div.jp-audio div.jp-type-playlist div.jp-time-holder {
+	left:166px;
+	width:130px;
+}
+
+.html5player .player div.jp-current-time,
+.html5player .player div.jp-duration {
+	width:35px;
+	font: 14px/18px 'Fjalla One';
+    font-weight: 400;
+
+}
+.html5player .player div.jp-current-time {
+	float: left;
+	display:inline;
+}
+.html5player .player div.jp-duration {
+	float: right;
+	display:inline;
+	text-align: right;
+}
+
+
+/* @end */
+
+/* @group playlist */
+
+.html5player .player div.jp-title {
+  width: auto;
+  font: 12px Tahoma;
+    position: absolute;
+    left:94px;
+    top: 6px;
+}
+.html5player .player div.jp-title .bold{
+  font-weight: bold;
+}
+.html5player .player div.jp-title,
+.html5player .player div.jp-playlist {
+	width:100%;
+}
+.html5player .player div.jp-type-single div.jp-title,
+.html5player .player div.jp-type-playlist div.jp-title,
+.html5player .player div.jp-type-single div.jp-playlist {
+	border-top:none;
+}
+.html5player .player div.jp-title ul,
+.html5player .player div.jp-playlist ul {
+	list-style-type:none;
+	margin:0;
+	padding:0 20px;
+	font-size:12px;
+}
+
+.html5player .player div.jp-title li {
+	padding:3px 0;
+
+}
+.html5player .player div.jp-playlist li {
+	padding:5px 0 4px 20px;
+	border-bottom:1px solid #eee;
+}
+
+.html5player .player div.jp-playlist li div {
+	display:inline;
+}
+
+/* Note that the first-child (IE6) and last-child (IE6/7/8) selectors do not work on IE */
+
+.html5player .player div.jp-type-playlist div.jp-playlist li:last-child {
+	padding:5px 0 5px 20px;
+	border-bottom:none;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+	list-style-type:square;
+	list-style-position:inside;
+	padding-left:7px;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist a {
+	color: #333;
+	text-decoration: none;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist a:hover {
+	color:#0d88c1;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color:#0d88c1;
+}
+
+.html5player .player div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove {
+	float:right;
+	display:inline;
+	text-align:right;
+	margin-right:10px;
+	font-weight:bold;
+	color:#666;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist a.jp-playlist-item-remove:hover {
+	color:#0d88c1;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist span.jp-free-media {
+	float:right;
+	display:inline;
+	text-align:right;
+	margin-right:10px;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist span.jp-free-media a{
+	color:#666;
+}
+.html5player .player div.jp-type-playlist div.jp-playlist span.jp-free-media a:hover{
+	color:#0d88c1;
+}
+span.jp-artist {
+	font-size:.8em;
+	color:#666;
+}
+
+/* @end */
+
+.html5player .player div.jp-video-play {
+	width:100%;
+	overflow:hidden; /* Important for nested negative margins to work in modern browsers */
+	cursor:pointer;
+	background-color:rgba(0,0,0,0); /* Makes IE9 work with the active area over the whole video area. IE6/7/8 only have the button as active area. */
+}
+.html5player .player div.jp-video-270p div.jp-video-play {
+	margin-top:-270px;
+	height:270px;
+}
+.html5player .player div.jp-video-360p div.jp-video-play {
+	margin-top:-360px;
+	height:360px;
+}
+.html5player .player div.jp-video-full div.jp-video-play {
+	height:100%;
+}
+.html5player .player a.jp-video-play-icon {
+	position:relative;
+	display:block;
+	width: 112px;
+	height: 100px;
+
+	margin-left:-56px;
+	margin-top:-50px;
+	left:50%;
+	top:50%;
+
+	background: url("jplayer.daftstar.video.play.png") 0 0 no-repeat;
+	text-indent:-9999px;
+}
+.html5player .player div.jp-video-play:hover a.jp-video-play-icon {
+	background: url("jplayer.daftstar.video.play.png") 0 -100px no-repeat;
+}
+
+
+
+
+
+.html5player .player div.jp-jplayer audio,
+.html5player .player div.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
+.html5player .player div.jp-jplayer {
+	background-color: #000000;
+}
+
+
+
+
+
+/* @group TOGGLES */
+
+/* The audio toggles are nested inside jp-time-holder */
+
+.html5player .player ul.jp-toggles {
+	list-style-type:none;
+	padding:0;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.html5player .player div.jp-audio .jp-type-single ul.jp-toggles {
+	left: 0px;
+    position: absolute;
+    top: 22px;
+    width: 38px;
+}
+.html5player .player div.jp-audio .jp-type-playlist ul.jp-toggles {
+	width:55px;
+	margin: 0;
+	position: absolute;
+	left: 325px;
+	top: 50px;
+}
+
+.html5player .player div.jp-audio .jp-type-single ul.jp-toggles.toggle2{
+    left: 152px;
+    top: 22px;
+}
+
+
+.html5player .player ul.jp-toggles li {
+	display:block;
+	float:right;
+}
+
+.html5player .player ul.jp-toggles li a {
+	display:block;
+	width:36px;
+	height:18px;
+	text-indent:-9999px;
+	line-height:100%; /* need this for IE6 */
+
+}
+
+.html5player .player a.jp-full-screen {
+	background: url("jplayer.daftstar.jpg") 0 -310px no-repeat;
+	margin-left: 20px;
+}
+
+.html5player .player a.jp-full-screen:hover {
+	background: url("jplayer.daftstar.jpg") -30px -310px no-repeat;
+}
+
+.html5player .player a.jp-restore-screen {
+	background: url("jplayer.daftstar.jpg") -60px -310px no-repeat;
+	margin-left: 20px;
+}
+
+.html5player .player a.jp-restore-screen:hover {
+	background: url("jplayer.daftstar.jpg") -90px -310px no-repeat;
+}
+
+.html5player .player a.jp-repeat {
+	background: url("skin3.png") 0 -75px no-repeat;
+
+}
+
+.html5player .player a.jp-repeat:hover {
+    background: url("skin3.png") -37px -74px no-repeat;
+}
+
+.html5player .player a.jp-repeat-off {
+	background: url("skin3.png") -37px -74px no-repeat;
+
+}
+
+.html5player .player a.jp-repeat-off:hover {
+	background: url("skin3.png") -37px -74px no-repeat;
+}
+
+.html5player .player a.jp-shuffle {
+	background: url("skin3.png") 0 -99px no-repeat;
+	margin-left: 5px;
+}
+
+.html5player .player a.jp-shuffle:hover {
+	background: url("skin3.png") -36px -99px no-repeat;
+}
+
+.html5player .player a.jp-shuffle-off {
+   background: url("skin3.png") -36px -99px no-repeat;
+	margin-left: 5px;
+}
+
+.html5player .player a.jp-shuffle-off:hover {
+   background: url("skin3.png") -36px -99px no-repeat;
+}
+
+
+/* @end */
+
+/* @group NO SOLUTION error feedback */
+
+.html5player .player .jp-no-solution {
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+
+.html5player .player .jp-no-solution a {
+	color:#000;
+}
+
+.html5player .player .jp-no-solution span {
+	font-size:1em;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+/* @end */
+.html5player .player .ui-widget-header {
+  background: transparent;
+  cursor: pointer;
+}
+.html5player .player .jp-progress{
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+
+}
+.html5player .player .jp-progress .ui-state-default {
+    cursor: pointer;
+}
+
+.html5player .player .jp-volume-slider {
+	position:absolute;
+	top:29px;
+	right: 43px;
+	width:92px;
+	height:.4em;
+    background: transparent;
+    border: none;
+}
+
+.html5player .player .jp-volume-slider .ui-slider-handle {
+	height:.8em;
+	width:50px;
+	cursor:pointer;
+}
+.html5player .player .jp-volume-slider .ui-widget-header {
+    background: transparent;
+    border: none 0;
+}
+.html5player .player .jp-gui.jp-no-volume .jp-volume-slider {
+	display:none;
+}
+
+.html5player .player .ui-state-default,.html5player .player  .ui-widget-content .ui-state-default,.html5player .player  .ui-widget-header .ui-state-default {
+     background: url("audio.png") -0px -84px repeat-x;
+    border: none;
+    color: #555555;
+    font-weight: normal;
+    width: 20px;
+    height: 20px;
+    margin-left: -7px;
+    top:-0.5em;
+}
+.html5player .player .jp-volume-slider .ui-state-default{
+     background: url("audio.png") -0px -84px repeat-x;
+    border: none;
+    color: #555555;
+    font-weight: normal;
+    width: 20px;
+    height: 20px;
+    margin-left: -7px;
+    top:-0.5em;
+}
+.html5player .player div.jp-playlist {
+	width:100%;
+    display: none;
+}

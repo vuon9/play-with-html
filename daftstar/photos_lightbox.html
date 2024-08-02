@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/inner.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/extend.css">
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/start.js"></script>
+    <script src="js/assets/bootstrap-modal.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function() {
+            if( navigator.userAgent.match(/iPad/i) != null ){
+              viewport = document.querySelector("meta[name=viewport]");
+              viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+            }
+
+            $('#PhotoModal').modal('show');
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal hide fade span12 photo-lightbox" id="PhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="title">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="img/close.png" width="15" height="14" alt="" /></button>
+      <div class="title">PHOTO BROWSER</div>
+    </div>
+    <div class="photo-container">
+        <div class="img">
+            <img src="img/modal-photo.jpg" alt="">
+        </div>
+        <a href="#" class="btn-arrow arrow-left"></a>
+        <a href="#" class="btn-arrow arrow-right"></a>
+    </div>
+    <div class="footer">
+        <div class="col-1">
+            <div class="row">
+                <p><strong>Posted by: Fernando Garza /</strong><span class="gb">November 20th, 2013 at 9:28 PM</span></p>
+            </div>
+            <div class="row">
+                <p class="gc">Live at the hammersmith on february 20th 2013. End of the first set.</p>
+            </div>
+            <div class="row tags">
+                <strong>Tags:</strong>
+                <a href="#">Fernando Garza,</a>
+                <a href="#">Mike Smith,</a>
+                <a href="#">Bob Odenkirk</a>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="group-btn">
+                <ul class="group-btn-photo">
+                    <li>
+                        <a href="#"><i class="likes"></i></a>
+                        <span>2537</span>
+                    </li>
+                    <li>
+                        <a href="#"><i class="unlikes"></i></a>
+                        <span>573</span>
+                    </li>
+                    <li>
+                        <div class="social-link pull-right">
+                            <a href="#" class="btn-social facebook"><img src="img/bs_fb.jpg" alt=""></a>
+                            <a href="#" class="btn-social twitter"><img src="img/bs_tw.jpg" alt=""></a>
+                            <a href="#" class="btn-social googleplus"><img src="img/bs_google.jpg" alt=""></a>
+                            <a href="#" class="btn-social statisticemail"><img src="img/email_spot.png" alt=""></a>
+                        </div>
+                        <p class="title">Share</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner">
+<div class="container-fluid">
+    <div class="page-title">PHOTOS</div>
+    <div class="space40"></div>
+
+
+
+    <div class="section ">
+
+        <div class="head">
+            <span class="title">LATEST PHOTOS</span>
+            <span class="more"><a href="#">more</a></span>
+            <span class="more-right2"><a href="#">back to index page</a></span>
+        </div>
+        <div class="body">
+        <!-- Photos Row -->
+            <div class=" row">
+                <div class="span3 blockE blockE-photos first">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos last">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Photos Row -->
+            <div class=" row">
+                <div class="span3 blockE blockE-photos first">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos last">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Photos Row -->
+            <div class=" row">
+                <div class="span3 blockE blockE-photos first">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos last">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Photos Row -->
+            <div class=" row">
+                <div class="span3 blockE blockE-photos first">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos ">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+                <div class="span3 blockE blockE-photos last">
+                    <div class="image-photos">
+                        <a class="photo-box" href="#"><img alt="" src=""></a>
+                    </div>
+                    <div class="title-views">
+                        <div class="title"><a href="#">Farzad Farzin Live in Paris</a></div>
+                        <div class="date">December 11, 2013</div>
+                        <div class="views">
+                            <div class="icon"></div>
+                            1258
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="more-holder pull-right">
+                <button type="submit" class="yellow-btn">SHOW MORE</button>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+        <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+          <div  class="footer-menu-cols">
+            <ul>
+                <!-- WHO WE ARE Menu -->
+                <li class="first">
+                    <ul class="foot-menu">
+                        <li class="title">WHO WE ARE</li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="advertisement.html">ADVERTISING</a></li>
+                        <li><a href="press_100.html">PRESS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+
+                <!-- CATEGORIES Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CATEGORIES</li>
+                        <li><a href="home_login.html">HOME</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="mp3_albums.html">MP3s</a></li>
+                        <li><a href="radio.html">RADIO</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="interviews.html">INTERVIEWS</a></li>
+                        <li><a href="challenge_73.html">CHALLENGE</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+
+                <!-- MOBILE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">MOBILE</li>
+                        <li><a href="#">IPHONE</a></li>
+                        <li><a href="#">IPAD</a></li>
+                        <li><a href="#">ANDROID</a></li>
+                    </ul>
+                </li>
+
+                <!-- LEGAL Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">LEGAL</li>
+                        <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="copyright.html">COPYRIGHT</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONNECT Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CONNECT</li>
+                        <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                        <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                        <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                        <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                    </ul>
+                </li>
+
+                <!-- WEBSITE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">WEBSITE</li>
+                        <li><a href="sitemap.html">SITEMAP</a></li>
+                    </ul>
+                </li>
+
+                <!-- LANGUAGE Menu -->
+                <li class="last">
+                    <ul class="foot-menu">
+                        <li class="title">LANGUAGE</li>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SPANISH</a></li>
+                        <li><a href="#">FRENCH</a></li>
+                        <li><a href="#">GERMAN</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

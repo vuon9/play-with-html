@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet" >
+    <link href="css/inner.css" rel="stylesheet">
+    <link href="css/press.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+		// select element styling
+			$('select.select3').each(function(){
+				var title = $(this).attr('title');
+				var classn = $(this).attr('class');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="'+classn+'">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+			});
+
+		};
+	</script>
+</head>
+<body>
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner press">
+<div class="container-fluid press-detail">
+	<div class="section">
+		<h2 class="page-title">PRESS INFORMATION / <a href="#">GET BACK</a></h2>
+		<div class="space40"></div>
+        <h1 class="head clearfix">
+            <span class="title">DAFTSTAR has turn the time for launch of the main website for 4th January 2014. Starting now videos will be available on the pre-launch site</span>
+			<span class="author">Published on: NOVEMBER 18, 2013 By: The DAFTSTAR staff</span>
+		</h1>
+		<div class="body">
+			<section class="row">
+				<div class="right-sidebar">
+					<section class="section share">
+						<h3>SHARE THIS BIT</h3>
+						<ul class="share-social clearfix">
+							<li><a href="#" class="fb"></a></li>
+							<li><a href="#" class="tw"></a></li>
+							<li><a href="#" class="gg"></a></li>
+							<li><a href="#" class="ma"></a></li>
+						</ul>
+					</section>
+					<div class="section press-media">
+						<h2 class="head clearfix"><span class="title">MEDIA RELATED TO THIS ARTICLE</span></h2>
+						<div class="body clearfix">
+							<p>If there is media related to this article it will appear here. Photos, videos and sound can be downloaded immediately.</p>
+							<ul>
+								<li><img src="upload/media1.png" alt=""/></li>
+								<li class="last"><img src="upload/media1.png" alt=""/></li>
+								<li><img src="upload/media1.png" alt=""/></li>
+								<li class="last"><img src="upload/media2.png" alt=""/></li>
+							</ul>
+						</div>
+					</div>
+					<img src="upload/press-banner.png" width="261" height="250" alt="" />
+				</div>
+				<div class="left-content">
+					<div class="block-content clearfix">
+						<div class="blockB2 clearfix">
+							<figure class="image">
+								<a href="#"><img src="upload/press-img.png" alt="" /></a>
+							</figure >
+							<div class="info">
+								<p>Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. 
+								Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop 
+								marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert 
+								halvah gummies. Sugar plum powder powder sesame snaps marzipan applicake tiramisu faworki. 
+								Muffin topping carrot cake sesame snaps. Applicake chocolate cotton candy apple pie. Muffin 
+								cookie pastry muffin.</p>
+								<p>Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. 
+								Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop 
+								marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert 
+								halvah gummies. Sugar plum powder powder sesame snaps marzipan applicake tiramisu faworki. 
+								Muffin topping carrot cake sesame snaps. Applicake chocolate cotton candy apple pie. Muffin 
+								cookie pastry muffin.</p>
+								<p>Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. 
+								Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop 
+								marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert 
+								halvah gummies. Sugar plum powder powder sesame snaps marzipan applicake tiramisu faworki. 
+								Muffin topping carrot cake sesame snaps. Applicake chocolate cotton candy apple pie. Muffin 
+								cookie pastry muffin.</p>
+								<p>Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. 
+								Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop 
+								marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert 
+								halvah gummies. Sugar plum powder powder sesame snaps marzipan applicake tiramisu faworki. 
+								Muffin topping carrot cake sesame snaps. Applicake chocolate cotton candy apple pie. Muffin 
+								cookie pastry muffin.</p>
+								<img style="margin: 0 auto; display: block;" src="upload/press-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+        </div>
+     </div>
+</div>   
+     <!-- TO DIE FOR  Section -->
+</div>
+    <div class="clear"></div>
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+        <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+          <div  class="footer-menu-cols">
+            <ul>
+                <!-- WHO WE ARE Menu -->
+                <li class="first">
+                    <ul class="foot-menu">
+                        <li class="title">WHO WE ARE</li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="advertisement.html">ADVERTISING</a></li>
+                        <li><a href="press_100.html">PRESS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+
+                <!-- CATEGORIES Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CATEGORIES</li>
+                        <li><a href="home_login.html">HOME</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="mp3_albums.html">MP3s</a></li>
+                        <li><a href="radio.html">RADIO</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="interviews.html">INTERVIEWS</a></li>
+                        <li><a href="challenge_73.html">CHALLENGE</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+
+                <!-- MOBILE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">MOBILE</li>
+                        <li><a href="#">IPHONE</a></li>
+                        <li><a href="#">IPAD</a></li>
+                        <li><a href="#">ANDROID</a></li>
+                    </ul>
+                </li>
+
+                <!-- LEGAL Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">LEGAL</li>
+                        <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="copyright.html">COPYRIGHT</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONNECT Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CONNECT</li>
+                        <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                        <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                        <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                        <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                    </ul>
+                </li>
+
+                <!-- WEBSITE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">WEBSITE</li>
+                        <li><a href="sitemap.html">SITEMAP</a></li>
+                    </ul>
+                </li>
+
+                <!-- LANGUAGE Menu -->
+                <li class="last">
+                    <ul class="foot-menu">
+                        <li class="title">LANGUAGE</li>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SPANISH</a></li>
+                        <li><a href="#">FRENCH</a></li>
+                        <li><a href="#">GERMAN</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

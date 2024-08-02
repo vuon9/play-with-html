@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/inner.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/search.js"></script>
+
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+             if( navigator.userAgent.match(/iPad/i) != null ){
+                  viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+              }
+
+              if (!$.browser.opera) {
+
+			// select element styling
+			$('select.select4').each(function(){
+				var title = $(this).attr('title');
+				var classn = $(this).attr('class');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="'+classn+'">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+                $(this).bind('click',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).bind('change',function(){
+                  $(this).next().addClass('focus');
+                });
+                $(this).blur(function() {
+                    $(this).next().removeClass('focus');
+                });
+			});
+
+		};
+      });
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner upload">
+<div class="container-fluid">
+    <div class="page-title">UPLOAD | SUBMISSION</div>
+    <div class="space40"></div>
+
+
+
+    <div class="right-sidebar">
+    <div class="section">
+        <div class="head border">
+            <span class="title">STORAGE</span>
+        </div>
+        <div class="body">
+            <div class="storage">
+                <div class="usage">2.5 GB / 5 GB</div>
+                <div class="bar">
+                    <div class="used" style="width: 50%;" >50%</div>
+                </div>
+                <p>
+                  Your weekly limit will reset on Fri 12:01AM EST
+                  Want to jump to the front of the upload line? And upload as many HD videos as you want?
+                  Get all this and more when you <a href="#" class="bold">upgrade to a DaftStar premium account.</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="section box">
+        <div class="head ">
+            <span class="title">IMPORTANT RULES</span>
+            <span class="more"><a href="#">More</a></span>
+
+        </div>
+        <div class="body">
+            <ol>
+                <li>I will upload only videos I created myself. <a href="#">Read more</a></li>
+                <li>I will not upload videos intended for commercial use. See commercial options. <a href="#">Read more</a></li>
+                <li>I understand that centain types of content are not permitted on DaftStar. <a href="#">Read more</a></li>
+
+            </ol>
+            <div class="note">Still have questions? Read the full uploading guidelines.</div>
+        </div>
+    </div>
+
+    <div class="section box">
+        <div class="head ">
+            <span class="title">TIPS & HELP</span>
+            <span class="more"><a href="#">More</a></span>
+
+        </div>
+        <div class="body">
+            <p>
+                Want to jump to the front of the upload line? And upload as many HD videos as you want?
+            </p>
+            <p>
+                All this and more when you upgrade to a <a href="#" class="bold">DaftStar premium account.</a>
+            </p>
+
+
+        </div>
+    </div>
+
+    <div class="section">
+        <img src="img/adspace.jpg" width="262" height="200" alt="" />
+    </div>
+
+    </div>
+    <div class="left-content">
+    <!-- Albums Section -->
+      <div class="section">
+        <div class="head">
+            <span class="title">UPLOAD FILES</span>
+        </div>
+        <div class="body">
+            <h4>
+                Welcome to the upload station.<br />
+                Please choose a submission type and genre and press the button.
+            </h4>
+
+            <div class="row">
+                <label>SUBMISSION TYPE</label>
+                <div class="select select-style4">
+                    <select class="select4 " title="TYPE">
+                        <option value="2">Video</option>
+                        <option value="1">Music / Album</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <label>GENRE</label>
+                <div class="select select-style4">
+                    <select class="select4" title="TYPE">
+                        <option value="1">Choose</option>
+                        <option value="2">Choose 1</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" class="black-btn upload" value="CHOOSE FILE(S) TO UPLOAD">
+            </div>
+
+            <div class="row">
+                <div class="agree agree">
+                    <input type="checkbox" checked="checked" class="checkbox" name="agree" id="agree">
+                    <label class="step-ForCheck" for="agree"></label>
+                    <input type="checkbox">By submitting you agree to the Terms of Use & DMCA Policy.
+                </div>
+            </div>
+            <div class="row note">
+                <p>
+                     <span class="bold">Important information about commercial tracks:</span> We use software to scan all uploaded mp3 files.
+                     If your track is found to be a track that is commercially available, we can not, by law,
+                     allow it to be downloaded. These tracks can remain on your mixtape,
+                     but they will not be included in the zip file if you chose to allow downloads on your mixtape. However,
+                     if the track is marked as commercial when it IS NOT, then please set the mixtape online,
+                     then contact us with a link to your mixtape, and we will review it and take appropriate action.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="space40"></div>
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+        <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+          <div  class="footer-menu-cols">
+            <ul>
+                <!-- WHO WE ARE Menu -->
+                <li class="first">
+                    <ul class="foot-menu">
+                        <li class="title">WHO WE ARE</li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="advertisement.html">ADVERTISING</a></li>
+                        <li><a href="press_100.html">PRESS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+
+                <!-- CATEGORIES Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CATEGORIES</li>
+                        <li><a href="home_login.html">HOME</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="mp3_albums.html">MP3s</a></li>
+                        <li><a href="radio.html">RADIO</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="interviews.html">INTERVIEWS</a></li>
+                        <li><a href="challenge_73.html">CHALLENGE</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+
+                <!-- MOBILE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">MOBILE</li>
+                        <li><a href="#">IPHONE</a></li>
+                        <li><a href="#">IPAD</a></li>
+                        <li><a href="#">ANDROID</a></li>
+                    </ul>
+                </li>
+
+                <!-- LEGAL Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">LEGAL</li>
+                        <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="copyright.html">COPYRIGHT</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONNECT Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CONNECT</li>
+                        <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                        <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                        <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                        <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                    </ul>
+                </li>
+
+                <!-- WEBSITE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">WEBSITE</li>
+                        <li><a href="sitemap.html">SITEMAP</a></li>
+                    </ul>
+                </li>
+
+                <!-- LANGUAGE Menu -->
+                <li class="last">
+                    <ul class="foot-menu">
+                        <li class="title">LANGUAGE</li>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SPANISH</a></li>
+                        <li><a href="#">FRENCH</a></li>
+                        <li><a href="#">GERMAN</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

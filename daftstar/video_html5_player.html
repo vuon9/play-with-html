@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>DaftStar</title>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/daftstar.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/inner.css" rel="stylesheet">
+
+    <link href="css/skin/daftstar/jplayer.video.css" rel="stylesheet" type="text/css" />
+
+    <!-- Scripts -->
+    <script src="js/assets/jquery.js"></script>
+    <script src="js/search.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+    <script src="js/players.js"></script>
+    <script src="js/players_video3.js"></script>
+
+    <script type="text/javascript">
+       $(document).ready(function() {
+             if( navigator.userAgent.match(/iPad/i) != null ){
+                  viewport = document.querySelector("meta[name=viewport]");
+                  viewport.setAttribute('content', 'width=1000px, user-scalable=0');
+              }
+      });
+
+    </script>
+
+
+</head>
+<body>
+
+<!-- Nav bar -->
+<div class="nav-wrp">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+    <div class="player">
+        <img src="img/topplayer.jpg" width="613" height="50" alt="" />
+    </div>
+    <div class="player-arrow">
+        <a href="#"></a>
+    </div>
+    <div class="backstage-link active">
+        <a href="#">BACKSTAGE</a>
+    </div>
+    <div class="right-welcome">
+        What’s up
+        <div class="username">Fernando</div>
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" width="240" height="219" alt="" />
+      </div>
+      <div class="main-menu">
+        <ul>
+          <li><a href="home_login.html">HOME</a></li>
+          <li><a href="videos.html">VIDEOS</a></li>
+          <li><a href="mp3_albums.html">MP3s</a></li>
+          <li><a href="radio.html">RADIO</a></li>
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="interviews.html">INTERVIEWS</a></li>
+          <li><a href="challenge_73.html">CHALLENGE</a></li>
+          <li><a href="photos.html">PHOTOS</a></li>
+          <li><a href="#">STORE</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="fb"></a>
+            <a href="#" class="tw"></a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="content inner videoplayer">
+<div class="container-fluid">
+    <div class="page-title">VIDEO PLAYER</div>
+    <div class="space40"></div>
+
+    <div class="row-fluid player-wrp">
+              <div class="videoPlayer">
+        		<div id="jp_container_3" class="jpv-video jpv-video-960w">
+        			<div class="jpv-type-playlist">
+        				<div id="jquery_jplayer_3" class="jpv-jplayer"></div>
+                        <div class="jpv-gui">
+                          <div class="jpv-title">
+          					<div class="video-title"><span class="artist">Sam Sparro</span>  Hyperspace Sport (DJ McClaren Mix)</div>
+                                  <div class="likes">
+                                      <ul>
+                                          <li class="heart">
+                                            <div class="full">
+                                                <div class="icon"><a href="#"></a></div>
+                                                <div class="number">2537</div>
+                                            </div>
+                                          </li>
+                                          <li class="heart">
+                                            <div class="half">
+                                                <div class="icon"><a href="#"></a></div>
+                                                <div class="number">573</div>
+                                            </div>
+                                          </li>
+                                          <li>
+                                              <div class="embed"><a href="#">Embed</a></div>
+                                          </li>
+                                          <li>
+                                              <div class="share"><a href="#">Share</a></div>
+                                          </li>
+                                      </ul>
+                                      </div>
+          				        </div>
+
+          					<div class="jpv-interface">
+            					<ul class="jpv-controls">
+            						
+            						<li><a href="javascript:;" class="jpv-play" tabindex="1">play</a></li>
+            						<li><a href="javascript:;" class="jpv-pause" tabindex="1">pause</a></li>
+
+                                    <!--<li><a href="javascript:;" class="jpv-mute" tabindex="1" title="mute">mute</a></li>
+                  					<li><a href="javascript:;" class="jpv-unmute" tabindex="1" title="unmute">unmute</a></li>-->
+            					</ul>
+        					</div>
+
+
+                            <div class="control-wrp">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="logo"></div>
+                                            </td>
+                                            <td>
+                                            <div class="jpv-interface small">
+                                            <ul class="jpv-controls small">
+                  								<li><a href="javascript:;" class="jpv-play" tabindex="1">play</a></li>
+                  								<li><a href="javascript:;" class="jpv-pause" tabindex="1">pause</a></li>
+                  							</ul>
+                                            </div>
+                                            </td>
+                                            <td style="width: 100%;">
+                                                <div class="progress">
+                                                    <div class="jpv-progress">
+                              							<div class="jpv-seek-bar">
+                              								<div class="jpv-play-bar">
+                                                                <div class="jpv-play-bar-win"><div class="jpv-current-time"></div></div>
+                                                            </div>
+                              							</div>
+                              						</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="controls">
+                                                    <div class="jpv-duration"></div>
+
+                                                    <div class="jpv-volume-mute">
+                                                         <a href="javascript:;" class="jpv-mute" tabindex="1" title="mute"></a>
+                                                         <a href="javascript:;" class="jpv-unmute" tabindex="1" title="unmute"></a>
+                                                         <a href="javascript:;" class="jpv-volume-max" tabindex="1" title="max volume"></a>
+                                                    </div>
+                                                    <div class="jpv-volume-bar">
+                        								<div class="jpv-volume-bar-value"></div>
+                        							</div>
+                                                    <div class="jpv-quality">
+
+
+                                                    </div>
+                        							<ul class="jpv-toggles">
+                        								<li><a href="javascript:;" class="jpv-full-screen" tabindex="1" title="full screen">full screen</a></li>
+                        								<li><a href="javascript:;" class="jpv-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+                                                        <li><a href="javascript:;" class="jpv-hd-on" tabindex="1" title="HD on"></a></li>
+                                                        <li><a href="javascript:;" class="jpv-hd-off" tabindex="1" title="HD off"></a></li>
+                        							</ul>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+
+
+                            </div>
+
+
+                        </div>
+
+        				<div class="jpv-no-solution">
+        					<span>Update Required</span>
+        					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+        				</div>
+        			</div>
+        		</div>
+            </div>
+        <div class="info">
+            <div class="left">
+                <span class="title">Date Added: </span>December 17, 2013
+            </div>
+            <div class="left">
+                <span class="title">Director: </span>Willhelm Nakamura
+            </div>
+            <div class="right">
+                <span class="title">Credits: </span>sam, sparro, willhelm
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row-fluid section">
+        <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#STATS">VIDEO STATS</a></li>
+          <li><a href="#RELATED">RELATED CONTENT</a></li>
+          <li><a href="#RECOMMENDED">RECOMMENDED</a></li>
+          <li class="right">
+            <div class="videoplayer-like">
+              <span class="more-right">
+                <ul>
+                    <li class="viewsli">
+                       <div class="views">
+                          <div class="icon"><a href="#"></a></div>
+                          <div class="number">1258</div>
+                      </div>
+                    </li>
+                    <li>
+                       <div class="full">
+                          <div class="icon"><a href="#"></a></div>
+                          <div class="number">2537</div>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="half">
+                          <div class="icon"><a href="#"></a></div>
+                          <div class="number">573</div>
+                      </div>
+                    </li>
+                </ul>
+
+              </span>
+            </div>
+          </li>
+        </ul>
+
+
+        <div class="tab-content">
+
+          <!-- Social Sync Tab Conent -->
+          <div class="tab-pane active" id="STATS">
+            <div class="row ">
+                <div class="span2 image-btn">
+                    <img />
+                    <button class="yellow-btn" type="submit">GO BACKSTAGE</button>
+                    <!--<a class="yellow-btn" href="#">GO BACKSTAGE</a>-->
+                </div>
+                <div class="span4 left">
+                    <ul>
+                        <li><span class="title">Artist/Band: </span>Sam Sparro</li>
+                        <li><span class="title">Song: </span>Hyperspace Sport (DJ McClaren Mix)</li>
+                        <li><span class="title">Record Label: </span>Too Much Noize</li>
+                        <li><span class="title">Director: </span>Willhelm Nakamura</li>
+                        <li><span class="title">Inspired by: </span>Crash course in driving</li>
+                    </ul>
+                </div>
+                <div class="span4 right">
+                    <ul>
+                        <li><span class="title">Uploaded on: </span>December 17, 2013</li>
+                        <li class="no-margin"><span class="title">Available on: </span></li>
+                        <li>
+                            <a class="margin-t" href="#"><img src="img/amazon.jpg" width="118" height="37" alt="" /></a>
+                            <a class="margin-t" href="#"><img src="img/itunes.jpg" width="74" height="37" alt="" /></a>
+                            <a href="#"><img src="img/gplay.jpg" width="120" height="37" alt="" /></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+          </div>
+          <!-- Social Sync Tab Conent end -->
+          <!-- MEDIA Tab Conent -->
+          <div class="tab-pane" id="RELATED">...</div>
+          <!-- MEDIA Tab Conent end -->
+          <!-- SECURITY Sync Tab Conent -->
+          <div class="tab-pane" id="RECOMMENDED">...</div>
+
+        </div>
+
+    </div>
+
+    <div class="right-sidebar">
+    <div class="section">
+        <img src="img/adspace.jpg" width="262" height="200" alt="" />
+    </div>
+    <div class="section">
+        <div class="head">
+            <span class="title">MOST POPULAR</span>
+             <span class="more"><a href="#">More</a></span>
+        </div>
+        <div class="body">
+            <div class="blockH">
+                <div class="info">
+                    <div class="title">Super star</div>
+                    <div class="subtitle">Quos dolores et quas</div>
+                    <div class="downloads">2,123 downloads</div>
+                </div>
+                <img src="img/temp_r1.jpg" width="262" height="280" alt="" />
+            </div>
+
+        </div>
+    </div>
+    <div class="section">
+        <div class="head border">
+            <span class="title">MORE VIDEOS</span>
+             <span class="more"><a href="#">More</a></span>
+        </div>
+        <div class="body">
+            <ul class="top10-list videos">
+                <li>
+                    <div class="left">
+                        <div class="image">
+                            <a href="#"><img src="img/play_btn3.png" width="39" height="40" alt="" /></a>
+                            <img src="img/temp_r2.jpg" width="60" height="50" alt="" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title"><a href="#">Super star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="image">
+                            <a href="#"><img src="img/play_btn3.png" width="39" height="40" alt="" /></a>
+                            <img src="img/temp_r2.jpg" width="60" height="50" alt="" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title"><a href="#">Super star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="image">
+                            <a href="#"><img src="img/play_btn3.png" width="39" height="40" alt="" /></a>
+                            <img src="img/temp_r2.jpg" width="60" height="50" alt="" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title"><a href="#">Super star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="image">
+                            <a href="#"><img src="img/play_btn3.png" width="39" height="40" alt="" /></a>
+                            <img src="img/temp_r2.jpg" width="60" height="50" alt="" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title"><a href="#">Super star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <div class="image">
+                            <a href="#"><img src="img/play_btn3.png" width="39" height="40" alt="" /></a>
+                            <img src="img/temp_r2.jpg" width="60" height="50" alt="" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title"><a href="#">Super star</a></div>
+                        <div class="subtitle">Quos dolores et quas</div>
+                        <div class="downloads"><div class="icon"></div> 2123 downloads</div>
+                    </div>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="left-content">
+    <!-- Comments Section -->
+      <div class="section comments-wrp">
+       <div class="head">
+            <span class="title">COMMENTS</span>
+             <span class="more-right">
+                <span class="bold total">16 Comments</span>
+                <button type="submit" class="yellow-btn">ADD A COMMENT</button>
+                <!--<a href="#" class="yellow-btn">ADD A COMMENT</a>-->
+             </span>
+        </div>
+        <div class="body">
+            <div class="row comment">
+                <div class="span2 photo"></div>
+                <div class="span6 input">
+                    <div><textarea></textarea> </div>
+                    <div>
+                        Posting as: Fernando Garza
+                        <button type="submit" class="yellow-btn">POST COMMENT</button>
+                        <!--<a href="#" class="yellow-btn">POST COMMENT</a>-->
+                    </div>
+                </div>
+            </div>
+            <div class="comments">
+              <ul>
+                <li class="first">
+                  <div class="row-fluid">
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+                <!-- Comment Replay row -->
+                <li class="replay">
+                  <div class="row-fluid">
+                      <div class="span2 arow"><img src="img/replay_arrow.png" width="34" height="56" alt="" /></div>
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+                <!-- Comment Row -->
+                 <li class="">
+                  <div class="row-fluid">
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+                 <li class="">
+                  <div class="row-fluid">
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+                 <li class="">
+                  <div class="row-fluid">
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+                 <li class="">
+                  <div class="row-fluid">
+                      <div class="span2 photo"></div>
+                      <div class="span6 input">
+                        <div class="top">
+                            <span class="name">Willard Holden |</span>
+                            <span class="date">Mon, Jan 7, 2013 at 11:48 am</span>
+                            <span class="action">
+                                <a href="#" class="black_heart"></a>
+                                <a href="#" class="half_heart"></a>
+                                <a href="#" class="y-btn">REPLAY</a>
+                                <a href="#" class="y-btn">SHARE</a>
+                            </span>
+                        </div>
+                        <div class="text">
+                            Cupcake candy canes lollipop gingerbread icing. Sweet bear claw toffee cupcake liquorice. Cookie croissant sweet chupa chups danish tart cake powder oat cake. Soufflé danish lollipop marzipan cotton candy macaroon apple pie. Pudding gummi bears dragée macaroon faworki dessert halvah gummies.
+                        </div>
+                      </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div class="foot">
+             <span class="more-right"><span class="bold total">16 Comments</span><a href="#">Show more</a></span>
+        </div>
+    </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="space40"></div>
+
+</div>
+</div>
+
+
+
+<div class="footer-wrp">
+<div class="search-bar">
+    <div class="container">
+        <div class="tagline"> REACH HIGH.BE KNOWN.CHANGE THE WORLD </div>
+        <div class="right-side">
+        <div class="search-form">
+            <form>
+                <input class="search-input" type="text" name="keyword" value="Search Daftstar" />
+                <input class="search-btn" type="submit" value="" />
+            </form>
+        </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+</div>
+<div class="footer-body">
+    <div class="container">
+        <div class="logo"><img src="img/footer_logo.png" width="171" height="171" alt="" /></div>
+          <div  class="footer-menu-cols">
+            <ul>
+                <!-- WHO WE ARE Menu -->
+                <li class="first">
+                    <ul class="foot-menu">
+                        <li class="title">WHO WE ARE</li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="advertisement.html">ADVERTISING</a></li>
+                        <li><a href="press_100.html">PRESS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </li>
+
+                <!-- CATEGORIES Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CATEGORIES</li>
+                        <li><a href="home_login.html">HOME</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="mp3_albums.html">MP3s</a></li>
+                        <li><a href="radio.html">RADIO</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li><a href="interviews.html">INTERVIEWS</a></li>
+                        <li><a href="challenge_73.html">CHALLENGE</a></li>
+                        <li><a href="photos.html">PHOTOS</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+
+                <!-- MOBILE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">MOBILE</li>
+                        <li><a href="#">IPHONE</a></li>
+                        <li><a href="#">IPAD</a></li>
+                        <li><a href="#">ANDROID</a></li>
+                    </ul>
+                </li>
+
+                <!-- LEGAL Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">LEGAL</li>
+                        <li><a href="terms_conditions.html">TERMS OF USE</a></li>
+                        <li><a href="privacy.html">PRIVACY POLICY</a></li>
+                        <li><a href="copyright.html">COPYRIGHT</a></li>
+                    </ul>
+                </li>
+
+                <!-- CONNECT Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">CONNECT</li>
+                        <li><a href="#"><img src="img/fb_mini.png" width="21" height="20" alt="" />FACEBOOK</a></li>
+                        <li><a href="#"><img src="img/tw_mini.png" width="21" height="20" alt="" />TWITTER</a></li>
+                        <li><a href="#"><img src="img/gplus_mini.png" width="21" height="20" alt="" />GOOGLE+</a></li>
+                        <li><a href="#"><img src="img/email_mini.png" width="21" height="20" alt="" />EMAIL US</a></li>
+                    </ul>
+                </li>
+
+                <!-- WEBSITE Menu -->
+                <li>
+                    <ul class="foot-menu">
+                        <li class="title">WEBSITE</li>
+                        <li><a href="sitemap.html">SITEMAP</a></li>
+                    </ul>
+                </li>
+
+                <!-- LANGUAGE Menu -->
+                <li class="last">
+                    <ul class="foot-menu">
+                        <li class="title">LANGUAGE</li>
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SPANISH</a></li>
+                        <li><a href="#">FRENCH</a></li>
+                        <li><a href="#">GERMAN</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="footer-tag">
+    <div class="container">
+      <p>
+        Daftstar is the premiere platform for independent artists to showcase their newest and most daring media, music mp3s, videos, photos and information about their acts, upcoming shows, venues and much more. <span class="white">Reach High. Be Known. Change the World.</span>
+      </p>
+    </div>
+</div>
+<div class="footer-bar">
+    <div class="container">
+      <div class="left">Daftstar . 645 Hollywood Vine . Los Angeles, California . 90210</div>
+      <div class="right">Copyright &copy; 2013 Daftstar Communications Inc. All rights reserved.</div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>
